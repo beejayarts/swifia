@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d5317be683.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./../styles/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <!-- DASHBOARD HEADER STARTS  -->
+    <header class="header_container">
+      <div class="header_content">
+        <div class="header_content_left">
+          <img class="swifia_logo" src="./../assets/swifialogo1.png" />
+        </div>
+        <div class="header_content_right">
+          <figure class="profile_details">
+            <span class="user_initials">PG</span>
+            <figcaption class="header_username">Peter Gregory</figcaption>
+            <button class="header_profile_toggle">
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </header>
+    <!-- END OF DASHBOARD HEADER -->
+
+    <div class="dashboard_content_container">
+      <!-- SIDE BAR STARTS -->
+      <aside class="sidebar">
+        <nav>
+          <ul class="sidebar_button_list">
+            <li class="sidebar_button_list_item">
+              <button
+              onclick="()=>renderPage('dashboard')"
+                id="dashboardNav"
+                class="sidebar_button active_sidebar_btn"
+              >
+                <span class="material-symbols-rounded dash_icon">
+                  dashboard </span
+                >Dashboard
+              </button>
+            </li>
+            <li class="sidebar_button_list_item">
+              <button id="accountsNav" class="sidebar_button">
+                <span class="material-symbols-rounded">
+                  account_balance_wallet
+                </span>
+                My Accounts
+              </button>
+            </li>
+            <li class="sidebar_button_list_item">
+              <button id="transactionsNav" class="sidebar_button">
+                <span class="material-symbols-rounded">
+                  currency_exchange
+                </span>
+                Transactions
+              </button>
+            </li>
+            <li class="sidebar_button_list_item">
+              <button id="profileNav" class="sidebar_button">
+                <span class="material-symbols-rounded"> person </span>
+                Profile
+              </button>
+            </li>
+            <li class="sidebar_button_list_item">
+              <button id="supportNav" class="sidebar_button">
+                <span class="material-symbols-rounded"> contact_support </span
+                >Support
+              </button>
+            </li>
+            <li class="sidebar_button_list_item">
+              <button id="logoutNav" class="sidebar_button">
+                <span class="material-symbols-rounded"> logout </span>Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- 
+        =========================================================
+        MAIN SECTION STARTS HERE
+        =========================================================
+       -->
+
+      <main class="main_section">
+        <!-- PRINCIPAL CONTAINER -->
+        <div id="dashboard_content_container" class="dashboard_content">
+          <div class="myaccounts_Header">
+            
+          </div>
+        </div>
+        <!-- END OF PRINCIPAL CONTAINER -->
+      </main>
+    </div>
+  </body>
+  <sript type="module" src="./../scripts/dashboardPages.js"></sript>
+  <script type="module" src="./../scripts/dashboard.js"></script>
+</html>

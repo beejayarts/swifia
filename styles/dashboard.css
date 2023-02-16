@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* 
+
+=========================================================
+ROOT VARIABLES
+=========================================================
+
+*/
+
+:root {
+  --primary-color: #6b43fb;
+  --pending-color: #FFDE8A;
+  --success-color: #8AE3AB;
+
+  --gray-text: #2a2a2a;
+  --black-text: #1e1e1e;
+  --muted-text: #707070;
+  --card-border-radius: 1rem;
+  --white-color: #fff;
+  --body-background: #f5f6fa;
+  --border-radius-general: 1rem;
+  --padding-general: 2rem;
+}
+
+/* 
+
+=========================================================
+GENERAL STYLES
+=========================================================
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "poppins", sans-serif;
+  background-color: var(--body-background);
+  overflow-x: hidden;
+}
+html {
+  font-size: 16px;
+}
+
+/* 
+
+=========================================================
+HEADER STYLES
+=========================================================
+
+*/
+
+.header_container {
+  width: 96%;
+  margin: 0 auto;
+  height: 10vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+}
+
+.header_content {
+  width: 96%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swifia_logo {
+  max-width: 105px;
+}
+
+.header_content_right {
+  min-width: 13%;
+  display: flex;
+}
+.header_content_right .profile_details {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header_content_right .profile_details:hover {
+  cursor: pointer;
+}
+
+.user_initials {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  background: #1e1e1e;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.header_username {
+  width: fit-content;
+  font-size: 1rem;
+  min-width: fit-content;
+}
+.header_profile_toggle {
+  background-color: transparent;
+  color: #1e1e1e;
+  font-size: 1rem;
+  cursor: POINTER;
+  min-width: 10%;
+}
+
+/* 
+
+=========================================================
+DASHBOARD BODY STYLES
+=========================================================
+
+*/
+
+/* DASHBOARD NAVIGATION STYLES*/
+
+.dashboard_content_container {
+  width: 96%;
+  width: 96%;
+  margin: 2vh auto;
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  gap: 1%;
+}
+
+.sidebar {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.sidebar_button {
+  background-color: transparent;
+  color: var(--gray-text);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 4%;
+  font-weight: 500;
+  transition: 500ms all ease;
+  width: 90%;
+  justify-content: stretch;
+}
+
+.sidebar nav {
+  width: 80%;
+  text-align: center;
+}
+
+.sidebar_button:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.dash_icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.sidebar_button_list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sidebar_button_list_item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.active_sidebar_btn {
+  background-color: #f5f6fa;
+  padding-top: 1rem;
+  padding-right: 0.8rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/*
+
+========================================================
+DASHBOARD MAIN SECTION STYLES
+=========================================================
+
+*/
+
+.dashboard_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/*
+
+========================================================
+DASHBOARD PAGE CONTENT STYLES
+=========================================================
+
+*/
+
+.dcHeader {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: 2rem;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.dcHeader p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--black-text);
+}
+
+.dcHeader p span {
+  font-weight: 600;
+}
+
+.account_overview_card {
+  width: 100%;
+  min-height: 35vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+}
+
+.aoc_top .card_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gray-text);
+}
+
+.aoc_top {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add_send_swap_group {
+  background-color: var(--body-background);
+  height: 100%;
+  width: 40%;
+  border-radius: var(--border-radius-general);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.aoc_top_btn img {
+  max-width: 1.5rem;
+}
+
+.aoc_top_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  background-color: transparent;
+  border: 1px solid rgb(229, 229, 229);
+  padding: 1.5rem;
+  gap: 0.3rem;
+  height: 80%;
+  width: fit-content;
+  transition: 0.4s all ease;
+}
+
+.aoc_top_btn:hover {
+  cursor: pointer;
+  background-color: var(--white-color);
+}
+
+.currency_arrow {
+  background-color: var(--white-color);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-text);
+}
+
+.aoc_bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1%;
+  margin-top: 3vh;
+}
+
+.currency_card {
+  width: 23%;
+  padding: var(--padding-general);
+  border-radius: var(--border-radius-general);
+  background-color: var(--body-background);
+  transition: 0.5s all ease;
+  border: 1px solid transparent;
+}
+
+.currency_card:hover {
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+}
+
+.currency_card .currency_card_top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.currency_card_top h6 {
+  font-size: 1rem;
+  color: #2a2a2a;
+  font-weight: 500;
+}
+
+.currency_card .currency_card_top img {
+  max-width: 2rem;
+}
+.currency_card .currency_card_bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.currency_card_bottom_left small {
+  font-size: 0.8rem;
+  color: var(--gray-text);
+}
+
+.currency_card_bottom_left h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--gray-text);
+  margin: 0;
+}
+
+/* RECENT TRANSACTIONS card styles */
+
+.recent_transactions_card {
+  width: 100%;
+  min-height: 35vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+}
+
+.rtc_top .card_title {
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  font-weight: 500;
+}
+
+
+.rtc_table{
+    width: 100%;
+    margin-top: 3vh;
+    text-align: left;
+}
+
+.rtc_table thead tr th{
+   padding: 3vh 0;
+    color: var(--gray-text);
+    font-size: 1rem;
+   
+}
+
+.rtc_table tbody tr td{
+    padding: 2vh 0;
+    color: var(--gray-text);
+    font-size: .8rem;
+
+}
+
+.pending_tag{
+background-color: var(--pending-color);
+padding: .7rem;
+border-radius: var(--border-radius-general);
+width: 4rem;
+display: block;
+    width: 50%;
+    text-align: center;
+
+}
+
+.success_tag{
+    background-color: var(--success-color);
+    padding: .7rem;
+    border-radius: var(--border-radius-general);
+    width: 3rem;
+    display: block;
+    width: 50%;
+    text-align: center;
+    
+    }
+
+
+    .card_control_btn_container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3vh 0;
+    }
+
+    .card_control_btn{
+      background-color: transparent;
+      border: 1px solid var(--primary-color);
+      color: var(--gray-text);
+      padding:1rem 1.4rem;
+      border-radius: 2rem;
+      transition: .4s all ease;
+
+    }
+
+    .card_control_btn:hover{
+      background-color: var(--body-background);
+      border: 1px solid transparent;
+      color: var(--primary-color);
+      cursor: pointer;
+
+    }
+
+
+
+
+    /* CURRENCY CONVERTER card styles */
+
+.currency_converter_card {
+  width: 100%;
+  min-height: 35vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+}
+.ccc_bottom {
+  display: flex;
+  gap: 3%;
+  margin-top: 3vh;
+}
+.ccc-cards{
+  padding: var(--padding-general);
+  border-radius: var(--border-radius-general);
+  /* height: 70%; */
+  border: 1px solid #cfcfcf;
+}
+
+.ccc_bottom_left{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.ccc_bottom_left small{
+ color: var(--muted-text);
+ font-size: 1rem;
+ margin-bottom: 1.5rem;
+ display: block;
+}
+.ccc_conversion p{
+  color: var(--gray-text);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.ccc_conversion h5{
+  color: var(--gray-text);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+
+.ccc_bottom_right{
+  width: 67%;
+}
+
+
+.ccc_bottom_right_content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3vh;
+  
+}
+
+.currency_from_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4%;
+}
+
+.currency_to_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4%;
+}
+
+.currency_from_value_left, .currency_from_type_right{
+  width: 48%;
+}
+
+.currency_input{
+  border: 1px solid #EAEAEA;
+  max-height: 3vh;
+  border-radius:1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-general);
+  width: 100%;
+}
+
+
+.currency_visuals{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.currency_visuals img{
+  max-width: 1.5rem;
+}
+
+.currency_flag{
+  position: relative;
+}
+
+.currency_flag:hover{
+  cursor: pointer;
+}
+
+
+/* SELECT CURRENCY Modal styles */
+
+
+.select_currency_modal_top{
+  background-color: var(--white-color);
+  width: 20rem;
+  padding: .5rem;
+  height:fit-content;
+  border-radius: .5rem;
+  box-shadow: -10px 17px 43px 12px rgba(107,67,251,0.32);;
+  position: absolute;
+  top: -2000;
+  right:0 ;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 3;
+  display:none;
+}
+
+.select_currency_modal_bottom{
+  background-color: var(--white-color);
+  width: 20rem;
+  padding: .5rem;
+  height:fit-content;
+  border-radius: .5rem;
+  box-shadow: -10px 17px 43px 12px rgba(107,67,251,0.32);;
+  position: absolute;
+  top: -2000;
+  right:0 ;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 3;
+  display:none;
+}
+
+.choose_currency_btn img{
+  max-width: 1.5rem;
+}
+
+
+.choose_currency_btn{
+  background-color: transparent;
+  width: 100%;
+  padding: .5REM;
+  display: FLEX;
+  align-items: center;
+  gap: 1rem;
+  
+}
+.choose_currency_btn:hover{
+  background-color: transparent;
+  width: 100%;
+  padding: .5REM;
+  display: FLEX;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f2f2f2;
+  cursor: pointer;
+
+}
+
+
+
+
+.close_choose_currency{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.close_choose_currency:hover{
+  background-color: transparent;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+========================================================
+MY ACCOUNT PAGE CONTENT STYLES
+=========================================================
+
+*/
+
+
+.myaccounts_Header {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: 2rem;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
