@@ -1,4 +1,7 @@
 // import {pages} from './dashboardPages'
+
+
+
 // Handling the Modals on Dashboard home
 
 const convertFromModal = document.getElementById("convert_from_modal");
@@ -22,18 +25,58 @@ const closeconvertToModal = () => {
   convertToModal.style.display = "none";
 };
 
+// TOGGLING CURRENCY INFO BOARD
+
+const poundsBoard = document.getElementById("pounds_board");
+const dollarsBoard = document.getElementById("dollars_board");
+const eurosBoard = document.getElementById("euros_board");
+const switchPoundsBoard= document.getElementById("switchPoundsBoard")
+const switchDollarsBoard= document.getElementById("switchDollarsBoard")
+const switchEurosBoard= document.getElementById("switchEurosBoard")
+
+const showPoundsBoard = () => {
+  console.log("pounds");
+  dollarsBoard.classList.add('hide_board')
+  poundsBoard.classList.remove('hide_board')
+  eurosBoard.classList.add('hide_board')
+
+  //toggle active tab button
+  switchPoundsBoard.classList.add('select_currency_btn_active')
+  switchDollarsBoard.classList.remove('select_currency_btn_active')
+  switchEurosBoard.classList.remove('select_currency_btn_active')
+  
+};
+const showDollarsBoard = () => {
+  console.log("dollars");
+  poundsBoard.classList.add('hide_board')
+  dollarsBoard.classList.remove('hide_board')
+  eurosBoard.classList.add('hide_board')
+
+//toggle active tab button
+switchPoundsBoard.classList.remove('select_currency_btn_active')
+switchDollarsBoard.classList.add('select_currency_btn_active')
+switchEurosBoard.classList.remove('select_currency_btn_active')
 
 
+};
 
+const showEurosBoard = () => {
+  console.log("euros");
+  dollarsBoard.classList.add('hide_board')
+  poundsBoard.classList.add('hide_board')
+  eurosBoard.classList.remove('hide_board')
 
+//toggle active tab button
+switchPoundsBoard.classList.remove('select_currency_btn_active')
+switchDollarsBoard.classList.remove('select_currency_btn_active')
+switchEurosBoard.classList.add('select_currency_btn_active')
 
-
+};
 
 // import {pages} from './dashboardPages';
 
-const pages = {
-    dashboard:
-      ` <div class="dcHeader">
+const pagesx = {
+  dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
     <div class="account_overview_card">
@@ -393,54 +436,47 @@ const pages = {
         </div>
       </div>
     </div>`,
-    accounts: "<h1>ACCOUNTS</h1><p>This is the settings page.</p>",
-    transactions: "<h1>transactions</h1><p>This is the reports page.</p>",
-    profile: "<h1>profile</h1><p>This is the reports page.</p>",
-    support: "<h1>support</h1><p>This is the reports page.</p>",
-    logout: "<h1>Logout</h1><p>This is the reports page.</p>",
-  };
-  
-
-
-
+  accounts: "<h1>ACCOUNTS</h1><p>This is the settings page.</p>",
+  transactions: "<h1>transactions</h1><p>This is the reports page.</p>",
+  profile: "<h1>profile</h1><p>This is the reports page.</p>",
+  support: "<h1>support</h1><p>This is the reports page.</p>",
+  logout: "<h1>Logout</h1><p>This is the reports page.</p>",
+};
 
 // rendering the different dashboard pages
 
-// document.getElementById("dashboardNav").addEventListener("click", function () {
-//   renderPage("dashboard");
-  
-// });
+document.getElementById("dashboardNav").addEventListener("click", function () {
+  renderPage("dashboard");
 
-// document.getElementById("accountsNav").addEventListener("click", function () {
-//   renderPage("accounts");
-// });
+});
 
-// document
-//   .getElementById("transactionsNav")
-//   .addEventListener("click", function () {
-//     renderPage("transactions");
-//   });
+document.getElementById("accountsNav").addEventListener("click", function () {
+  renderPage("accounts");
+});
 
-// document.getElementById("profileNav").addEventListener("click", function () {
-//   renderPage("profile");
-// });
+document
+  .getElementById("transactionsNav")
+  .addEventListener("click", function () {
+    renderPage("transactions");
+  });
 
-// document.getElementById("supportNav").addEventListener("click", function () {
-//   renderPage("support");
-// });
+document.getElementById("profileNav").addEventListener("click", function () {
+  renderPage("profile");
+});
 
-// document.getElementById("logoutNav").addEventListener("click", function () {
-//   renderPage("logout");
-// });
+document.getElementById("supportNav").addEventListener("click", function () {
+  renderPage("support");
+});
 
-// function renderPage(page) {
-//   document.getElementById("dashboard_content_container").innerHTML =
-//     pages[page];
-// }
+document.getElementById("logoutNav").addEventListener("click", function () {
+  renderPage("logout");
+});
 
-// renderPage("dashboard");
+function renderPage(page) {
+  document.getElementById("dashboard_content_container").innerHTML =
+    pages[page];
+}
 
+renderPage("dashboard");
 
 //end of rendering the different dashboard pages
-
-

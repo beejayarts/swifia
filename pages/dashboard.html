@@ -48,7 +48,7 @@
           <ul class="sidebar_button_list">
             <li class="sidebar_button_list_item">
               <button
-              onclick="()=>renderPage('dashboard')"
+                onclick="()=>renderPage('dashboard')"
                 id="dashboardNav"
                 class="sidebar_button active_sidebar_btn"
               >
@@ -104,7 +104,173 @@
         <!-- PRINCIPAL CONTAINER -->
         <div id="dashboard_content_container" class="dashboard_content">
           <div class="myaccounts_Header">
-            
+            <button class="myaccounts_Header_btn myaccounts_Header_btn_active">
+              My Accounts
+            </button>
+            <button class="myaccounts_Header_btn">Report and Statements</button>
+          </div>
+          <!-- Select currency card -->
+          <div class="select_currency_card">
+            <div class="sc_top">
+              <div class="sc_top_left">
+                <h6 class="sc_card_title">Select Currency</h6>
+                <div class="select_currency_btn_group">
+                  <button
+                    id="switchPoundsBoard"
+                    onclick="showPoundsBoard()"
+                    class="select_currency_btn select_currency_btn_active"
+                  >
+                    <img
+                      src="./../assets/britain.png"
+                      alt=""
+                      class="sc_flag"
+                    /><span>GBP</span>
+                  </button>
+                  <button
+                    id="switchDollarsBoard"
+                    onclick="showDollarsBoard()"
+                    class="select_currency_btn"
+                  >
+                    <img
+                      src="./../assets/USA.png"
+                      alt=""
+                      class="sc_flag"
+                    /><span>USD</span>
+                  </button>
+                  <button
+                    id="switchEurosBoard"
+                    onclick="showEurosBoard()"
+                    class="select_currency_btn"
+                  >
+                    <img
+                      src="./../assets/euro.png"
+                      alt=""
+                      class="sc_flag"
+                    /><span>EUR</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="sc_top_right">
+                <button class="sc_top_btn">
+                  <img src="./../assets/addmoney.png" alt="add money" /><span
+                    >Add money</span
+                  >
+                </button>
+                <button class="sc_top_btn">
+                  <img src="./../assets/sendmoney.png" alt="send money" /><span
+                    >Send</span
+                  >
+                </button>
+                <button class="sc_top_btn">
+                  <img src="./../assets/swapmoney.png" alt="swap money" /><span
+                    >Swap currency</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- CURRENCY INFORMATION BOARD -->
+            <div id="pounds_board" class="currency_info_board">
+              <p>
+                Available <span style="font-weight: 600"> GBP</span> account
+                balance £0.00
+              </p>
+
+              <h3>£0.00</h3>
+            </div>
+            <div id="dollars_board" class="currency_info_board hide_board">
+              <p>
+                Available <span style="font-weight: 600"> USD</span> account
+                balance £0.00
+              </p>
+
+              <h3>$0.00</h3>
+            </div>
+            <div id="euros_board" class="currency_info_board hide_board">
+              <p>
+                Available <span style="font-weight: 600"> EUR</span> account
+                balance £0.00
+              </p>
+
+              <h3>€0.00</h3>
+            </div>
+          </div>
+          <!-- Bank Account Details Card -->
+          <div id="poundsBADcard" class="bank_account_details_card">
+            <div class="bad_card_header">
+              <div class="bad_card_header_left">
+                <img
+                  src="./../assets/britain.png"
+                  alt="GBP"
+                  class="bad_card_flag"
+                />
+                <p>Your USD bank account details</p>
+              </div>
+              <div class="bad_card_header_right">
+                <button>
+                  <span class="material-symbols-outlined"> content_copy </span>
+                  Copy Account Details
+                </button>
+                <button>
+                  <span class="material-symbols-outlined"> expand_less </span>
+                </button>
+              </div>
+            </div>
+            <div class="bad_card_banks">
+            <div class="bad_banks_top">
+              <div class="account_holder">
+                <h6>ACCOUNT HOLDER</h6>
+                <p>James & Co.</p>
+              </div>
+              <div class="account_holder">
+                <h6>ACCOUNT NUMBER</h6>
+                <p>
+                  3EV663630106<span class="material-symbols-outlined">
+                    content_copy
+                  </span>
+                </p>
+              </div>
+              <div class="account_holder">
+                <h6>IBAN</h6>
+                <p>
+                  GB98CLIJUO413702756641
+                  <span class="material-symbols-outlined"> content_copy </span>
+                </p>
+              </div>
+            </div>
+            <div class="bad_banks_lower">
+              <div class="account_holder">
+                <h6>ACCOUNT TYPE</h6>
+                <p>
+                  CHECKING
+                  <span class="material-symbols-outlined"> content_copy </span>
+                </p>
+              </div>
+             
+              <div class="account_holder">
+                <h6>SWIFT CODE</h6>
+                <p>
+                  SIVGSU66XXX
+                  <span class="material-symbols-outlined"> content_copy </span>
+                </p>
+              </div>
+              <div class="account_holder">
+                <h6>BANK NAME</h6>
+                <p>
+                  Wells Fargo
+                  <span class="material-symbols-outlined"> content_copy </span>
+                </p>
+              </div>
+              <div class="account_holder">
+                <h6>BANK ADDRESS</h6>
+                <p>
+                  420 Montgomery Street San Francisco, CA 94104
+                  <span class="material-symbols-outlined"> content_copy </span>
+                </p>
+              </div>
+            </div>
+          
+            </div>
           </div>
         </div>
         <!-- END OF PRINCIPAL CONTAINER -->
@@ -112,5 +278,5 @@
     </div>
   </body>
   <sript type="module" src="./../scripts/dashboardPages.js"></sript>
-  <script type="module" src="./../scripts/dashboard.js"></script>
+  <script src="./../scripts/dashboard.js"></script>
 </html>

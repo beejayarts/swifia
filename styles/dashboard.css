@@ -10,8 +10,8 @@ ROOT VARIABLES
 
 :root {
   --primary-color: #6b43fb;
-  --pending-color: #FFDE8A;
-  --success-color: #8AE3AB;
+  --pending-color: #ffde8a;
+  --success-color: #8ae3ab;
 
   --gray-text: #2a2a2a;
   --black-text: #1e1e1e;
@@ -387,79 +387,68 @@ DASHBOARD PAGE CONTENT STYLES
   font-weight: 500;
 }
 
-
-.rtc_table{
-    width: 100%;
-    margin-top: 3vh;
-    text-align: left;
+.rtc_table {
+  width: 100%;
+  margin-top: 3vh;
+  text-align: left;
 }
 
-.rtc_table thead tr th{
-   padding: 3vh 0;
-    color: var(--gray-text);
-    font-size: 1rem;
-   
+.rtc_table thead tr th {
+  padding: 3vh 0;
+  color: var(--gray-text);
+  font-size: 1rem;
 }
 
-.rtc_table tbody tr td{
-    padding: 2vh 0;
-    color: var(--gray-text);
-    font-size: .8rem;
-
+.rtc_table tbody tr td {
+  padding: 2vh 0;
+  color: var(--gray-text);
+  font-size: 0.8rem;
 }
 
-.pending_tag{
-background-color: var(--pending-color);
-padding: .7rem;
-border-radius: var(--border-radius-general);
-width: 4rem;
-display: block;
-    width: 50%;
-    text-align: center;
-
+.pending_tag {
+  background-color: var(--pending-color);
+  padding: 0.7rem;
+  border-radius: var(--border-radius-general);
+  width: 4rem;
+  display: block;
+  width: 50%;
+  text-align: center;
 }
 
-.success_tag{
-    background-color: var(--success-color);
-    padding: .7rem;
-    border-radius: var(--border-radius-general);
-    width: 3rem;
-    display: block;
-    width: 50%;
-    text-align: center;
-    
-    }
+.success_tag {
+  background-color: var(--success-color);
+  padding: 0.7rem;
+  border-radius: var(--border-radius-general);
+  width: 3rem;
+  display: block;
+  width: 50%;
+  text-align: center;
+}
 
+.card_control_btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh 0;
+}
 
-    .card_control_btn_container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 3vh 0;
-    }
+.card_control_btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--gray-text);
+  padding: 1rem 1.4rem;
+  border-radius: 2rem;
+  transition: 0.4s all ease;
+}
 
-    .card_control_btn{
-      background-color: transparent;
-      border: 1px solid var(--primary-color);
-      color: var(--gray-text);
-      padding:1rem 1.4rem;
-      border-radius: 2rem;
-      transition: .4s all ease;
+.card_control_btn:hover {
+  background-color: var(--body-background);
+  border: 1px solid transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+}
 
-    }
-
-    .card_control_btn:hover{
-      background-color: var(--body-background);
-      border: 1px solid transparent;
-      color: var(--primary-color);
-      cursor: pointer;
-
-    }
-
-
-
-
-    /* CURRENCY CONVERTER card styles */
+/* CURRENCY CONVERTER card styles */
 
 .currency_converter_card {
   width: 100%;
@@ -473,72 +462,69 @@ display: block;
   gap: 3%;
   margin-top: 3vh;
 }
-.ccc-cards{
+.ccc-cards {
   padding: var(--padding-general);
   border-radius: var(--border-radius-general);
   /* height: 70%; */
   border: 1px solid #cfcfcf;
 }
 
-.ccc_bottom_left{
+.ccc_bottom_left {
   width: 30%;
   display: flex;
   align-items: center;
 }
-.ccc_bottom_left small{
- color: var(--muted-text);
- font-size: 1rem;
- margin-bottom: 1.5rem;
- display: block;
+.ccc_bottom_left small {
+  color: var(--muted-text);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  display: block;
 }
-.ccc_conversion p{
+.ccc_conversion p {
   color: var(--gray-text);
   font-size: 1.25rem;
   font-weight: 400;
 }
-.ccc_conversion h5{
+.ccc_conversion h5 {
   color: var(--gray-text);
   font-size: 2rem;
   font-weight: 600;
 }
 
-
-
-.ccc_bottom_right{
+.ccc_bottom_right {
   width: 67%;
 }
 
-
-.ccc_bottom_right_content{
+.ccc_bottom_right_content {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 3vh;
-  
 }
 
-.currency_from_box{
+.currency_from_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4%;
 }
 
-.currency_to_box{
+.currency_to_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4%;
 }
 
-.currency_from_value_left, .currency_from_type_right{
+.currency_from_value_left,
+.currency_from_type_right {
   width: 48%;
 }
 
-.currency_input{
-  border: 1px solid #EAEAEA;
+.currency_input {
+  border: 1px solid #eaeaea;
   max-height: 3vh;
-  border-radius:1rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -546,113 +532,90 @@ display: block;
   width: 100%;
 }
 
-
-.currency_visuals{
+.currency_visuals {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.currency_visuals img{
+.currency_visuals img {
   max-width: 1.5rem;
 }
 
-.currency_flag{
+.currency_flag {
   position: relative;
 }
 
-.currency_flag:hover{
+.currency_flag:hover {
   cursor: pointer;
 }
 
-
 /* SELECT CURRENCY Modal styles */
 
-
-.select_currency_modal_top{
+.select_currency_modal_top {
   background-color: var(--white-color);
   width: 20rem;
-  padding: .5rem;
-  height:fit-content;
-  border-radius: .5rem;
-  box-shadow: -10px 17px 43px 12px rgba(107,67,251,0.32);;
+  padding: 0.5rem;
+  height: fit-content;
+  border-radius: 0.5rem;
+  box-shadow: -10px 17px 43px 12px rgba(107, 67, 251, 0.32);
   position: absolute;
   top: -2000;
-  right:0 ;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   z-index: 3;
-  display:none;
+  display: none;
 }
 
-.select_currency_modal_bottom{
+.select_currency_modal_bottom {
   background-color: var(--white-color);
   width: 20rem;
-  padding: .5rem;
-  height:fit-content;
-  border-radius: .5rem;
-  box-shadow: -10px 17px 43px 12px rgba(107,67,251,0.32);;
+  padding: 0.5rem;
+  height: fit-content;
+  border-radius: 0.5rem;
+  box-shadow: -10px 17px 43px 12px rgba(107, 67, 251, 0.32);
   position: absolute;
   top: -2000;
-  right:0 ;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   z-index: 3;
-  display:none;
+  display: none;
 }
 
-.choose_currency_btn img{
+.choose_currency_btn img {
   max-width: 1.5rem;
 }
 
-
-.choose_currency_btn{
+.choose_currency_btn {
   background-color: transparent;
   width: 100%;
-  padding: .5REM;
+  padding: 0.5rem;
   display: FLEX;
   align-items: center;
   gap: 1rem;
-  
 }
-.choose_currency_btn:hover{
+.choose_currency_btn:hover {
   background-color: transparent;
   width: 100%;
-  padding: .5REM;
+  padding: 0.5rem;
   display: FLEX;
   align-items: center;
   gap: 1rem;
   background-color: #f2f2f2;
   cursor: pointer;
-
 }
 
-
-
-
-.close_choose_currency{
+.close_choose_currency {
   display: flex;
   justify-content: flex-end;
-  
 }
-.close_choose_currency:hover{
+.close_choose_currency:hover {
   background-color: transparent;
-  
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 
@@ -662,7 +625,6 @@ MY ACCOUNT PAGE CONTENT STYLES
 
 */
 
-
 .myaccounts_Header {
   background-color: var(--white-color);
   border-radius: var(--border-radius-general);
@@ -671,4 +633,262 @@ MY ACCOUNT PAGE CONTENT STYLES
   height: 5vh;
   display: flex;
   align-items: center;
+  gap: 4%;
+}
+
+.myaccounts_Header_btn {
+  color: var(--gray-text);
+  font-size: 1.25rem;
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.myaccounts_Header_btn_active {
+  border-bottom: 5px solid var(--primary-color);
+  padding: 1rem 0;
+  color: var(--black-text);
+  font-weight: 500;
+}
+
+.select_currency_card {
+  width: 100%;
+  min-height: 35vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+}
+
+.sc_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sc_top_right {
+  background-color: var(--body-background);
+  height: 100%;
+  width: 40%;
+  border-radius: var(--border-radius-general);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.sc_top_btn img {
+  max-width: 1.5rem;
+}
+
+.sc_top_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  background-color: transparent;
+  border: 1px solid rgb(229, 229, 229);
+  padding: 1rem;
+  gap: 0.3rem;
+  height: 80%;
+  width: fit-content;
+  transition: 0.4s all ease;
+}
+
+.sc_top_btn:hover {
+  cursor: pointer;
+  background-color: var(--white-color);
+}
+
+.sc_card_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gray-text);
+  display: block;
+  margin-bottom: 2vh;
+}
+
+.sc_flag {
+  max-width: 2rem;
+}
+
+.sc_top_left {
+  width: 50%;
+}
+.select_currency_btn_group {
+  display: flex;
+  gap: 1vw;
+}
+.select_currency_btn {
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  width: fit-content;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  justify-content: center;
+  transition: 0.4s all ease;
+  cursor: pointer;
+}
+
+/* TOGGLE THIS CLASS ON CLICK */
+
+.select_currency_btn_active {
+  background: #f0ecff;
+  border: 1px solid #d1c5fe;
+}
+
+.currency_info_board {
+  background-color: var(--body-background);
+  height: 50%;
+  padding: var(--padding-general);
+  border-radius: var(--border-radius-general);
+  margin-top: 3vh;
+  color: var(--gray-text);
+  transition: 0.4s all ease;
+  opacity: 1;
+}
+
+.hide_board {
+  display: none;
+  opacity: 0;
+}
+
+.currency_info_board h3 {
+  font-size: 3rem;
+  margin-top: 4%;
+}
+
+.bank_account_details_card {
+  width: 100%;
+  min-height: 35vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+}
+
+.bad_card_header {
+  width: 100%;
+  background: rgba(245, 246, 250, 0.49);
+  border: 1px solid #f0ecff;
+  padding: var(--padding-general);
+  border-radius: var(--padding-general);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+}
+
+.bad_card_header_left {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  width: 50%;
+}
+
+.bad_card_flag {
+  max-width: 2rem;
+  object-fit: cover;
+}
+
+.bad_card_header_left p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray-text);
+}
+
+.bad_card_header_right {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+
+.bad_card_header_right button:first-child {
+  background-color: var(--white-color);
+  padding: 1rem;
+  border: 1px solid #f0ecff;
+  border-radius: 3rem;
+  color: var(--gray-text);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s all ease;
+}
+
+.bad_card_header_right button:first-child:hover {
+  color: var(--primary-color);
+  background-color: #dad5ed;
+}
+
+.bad_card_header_right button:last-child {
+  background-color: var(--white-color);
+  padding: 1rem;
+  border: 1px solid #f0ecff;
+  border-radius: 3rem;
+  color: var(--gray-text);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s all ease;
+}
+
+.bad_card_banks {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0%;
+  min-height: 30vh;
+  margin-top: 3vh;
+  gap: 6vh;
+  /* background-color: red; */
+}
+
+.bad_banks_lower,
+.bad_banks_top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+
+.bad_banks_lower {
+  gap: 9%;
+}
+
+.bad_banks_top {
+  gap: 9%;
+}
+
+.account_holder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.account_holder h6 {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 400;
+}
+
+.account_holder p {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-size: 1rem;
+  color: var(--gray-text);
+  font-weight: 400;
+}
+.account_holder p span {
+  font-size: 0.9rem;
 }
