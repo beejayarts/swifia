@@ -634,6 +634,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   display: flex;
   align-items: center;
   gap: 4%;
+ 
 }
 
 .myaccounts_Header_btn {
@@ -642,6 +643,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   font-weight: 400;
   background-color: transparent;
   cursor: pointer;
+  transition: .5s all ease;
 }
 
 .myaccounts_Header_btn_active {
@@ -657,6 +659,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   background-color: var(--white-color);
   border-radius: var(--border-radius-general);
   padding: var(--padding-general);
+  margin-bottom: 2vh;
 }
 
 .sc_top {
@@ -765,10 +768,12 @@ MY ACCOUNT PAGE CONTENT STYLES
 
 .bank_account_details_card {
   width: 100%;
-  min-height: 35vh;
+  min-height: 20vh;
   background-color: var(--white-color);
   border-radius: var(--border-radius-general);
   padding: var(--padding-general);
+  margin-bottom: 2vh;
+  transition: 0.4s all ease;
 }
 
 .bad_card_header {
@@ -891,4 +896,143 @@ MY ACCOUNT PAGE CONTENT STYLES
 }
 .account_holder p span {
   font-size: 0.9rem;
+}
+
+/* KINDLY NOTE card */
+
+.kindly_note_card {
+  width: 100%;
+  background-color: var(--body-background);
+  padding: var(--padding-general);
+  border-radius: var(--border-radius-general);
+  transition: .5s all ease;
+  display: block;
+}
+
+.kindly_note_card p:first-child {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.kindly_note_card p:last-child {
+  font-size: 1rem;
+  color: var(--gray-text);
+  font-weight: 400;
+  max-width: 43%;
+}
+
+/* ACCOUNT ACTIVITES CARD */
+.account_activites_card {
+  width: 100%;
+  min-height: 25vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+  margin-bottom: 2vh;
+}
+
+.activities_top .card_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gray-text);
+  display: block;
+  margin-bottom: 2vh;
+}
+
+.hide_BAD_card {
+  display: none;
+}
+
+.hide_rollup{
+  display: none;
+}
+
+.hide_activities{
+  display: none;
+}
+
+.reports_tab{
+  opacity: 1;
+  transition: .5s all ease;
+  display: block;
+}
+.myAccountsTab {
+  opacity: 1;
+  transition: .5s all ease;
+  display: block;
+}
+
+.hideAccTab{
+  opacity: 0;
+  transition: .5s all ease;
+  display:none;
+}
+
+.reports_tab{
+  width: 100%;
+  min-height: 80vh;
+  padding: var(--padding-general);
+  border-radius: var(--border-radius-general);
+  background-color: var(--white-color);
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.statement_box{
+  background-color: var(--body-background);
+  padding: var(--padding-general);
+  height: 25vh;
+  min-width: 20vw;
+  border-radius: var(--border-radius-general);
+  transition: .4s all ease;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  
+}
+
+.statement_box:hover{
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.statement_box_icon{
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.statement_box div span{
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statement_box div p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray-text);
+  width: 55%;
+}
+
+.statement_box div {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
 }

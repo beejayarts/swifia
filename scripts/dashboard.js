@@ -1,7 +1,5 @@
 // import {pages} from './dashboardPages'
 
-
-
 // Handling the Modals on Dashboard home
 
 const convertFromModal = document.getElementById("convert_from_modal");
@@ -30,48 +28,140 @@ const closeconvertToModal = () => {
 const poundsBoard = document.getElementById("pounds_board");
 const dollarsBoard = document.getElementById("dollars_board");
 const eurosBoard = document.getElementById("euros_board");
-const switchPoundsBoard= document.getElementById("switchPoundsBoard")
-const switchDollarsBoard= document.getElementById("switchDollarsBoard")
-const switchEurosBoard= document.getElementById("switchEurosBoard")
+const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+const switchEurosBoard = document.getElementById("switchEurosBoard");
+
+// grab BAD cards
+const poundsBADcard = document.getElementById("poundsBADcard");
+const dollarsBADcard = document.getElementById("dollarsBADcard");
+const eurosBADcard = document.getElementById("eurosBADcard");
+
+//grab ACTIVITES card
+const GBPactivities = document.getElementById("GBPactivities");
+const USDactivities = document.getElementById("USDactivities");
+const EURactivities = document.getElementById("EURactivities");
 
 const showPoundsBoard = () => {
   console.log("pounds");
-  dollarsBoard.classList.add('hide_board')
-  poundsBoard.classList.remove('hide_board')
-  eurosBoard.classList.add('hide_board')
+  dollarsBoard.classList.add("hide_board");
+  poundsBoard.classList.remove("hide_board");
+  eurosBoard.classList.add("hide_board");
 
   //toggle active tab button
-  switchPoundsBoard.classList.add('select_currency_btn_active')
-  switchDollarsBoard.classList.remove('select_currency_btn_active')
-  switchEurosBoard.classList.remove('select_currency_btn_active')
-  
+  switchPoundsBoard.classList.add("select_currency_btn_active");
+  switchDollarsBoard.classList.remove("select_currency_btn_active");
+  switchEurosBoard.classList.remove("select_currency_btn_active");
+
+  // toggle BAD cards
+  dollarsBADcard.classList.add("hide_BAD_card");
+  poundsBADcard.classList.remove("hide_BAD_card");
+  eurosBADcard.classList.add("hide_BAD_card");
+
+  //toggle activities board
+  GBPactivities.classList.remove("hide_activities");
+  USDactivities.classList.add("hide_activities");
+  EURactivities.classList.add("hide_activities");
 };
+
 const showDollarsBoard = () => {
   console.log("dollars");
-  poundsBoard.classList.add('hide_board')
-  dollarsBoard.classList.remove('hide_board')
-  eurosBoard.classList.add('hide_board')
+  poundsBoard.classList.add("hide_board");
+  dollarsBoard.classList.remove("hide_board");
+  eurosBoard.classList.add("hide_board");
 
-//toggle active tab button
-switchPoundsBoard.classList.remove('select_currency_btn_active')
-switchDollarsBoard.classList.add('select_currency_btn_active')
-switchEurosBoard.classList.remove('select_currency_btn_active')
+  //toggle active tab button
+  switchPoundsBoard.classList.remove("select_currency_btn_active");
+  switchDollarsBoard.classList.add("select_currency_btn_active");
+  switchEurosBoard.classList.remove("select_currency_btn_active");
 
+  // toggle BAD cards
+  dollarsBADcard.classList.remove("hide_BAD_card");
+  poundsBADcard.classList.add("hide_BAD_card");
+  eurosBADcard.classList.add("hide_BAD_card");
 
+  //toggle activities board
+  GBPactivities.classList.add("hide_activities");
+  USDactivities.classList.remove("hide_activities");
+  EURactivities.classList.add("hide_activities");
 };
 
 const showEurosBoard = () => {
   console.log("euros");
-  dollarsBoard.classList.add('hide_board')
-  poundsBoard.classList.add('hide_board')
-  eurosBoard.classList.remove('hide_board')
+  dollarsBoard.classList.add("hide_board");
+  poundsBoard.classList.add("hide_board");
+  eurosBoard.classList.remove("hide_board");
 
-//toggle active tab button
-switchPoundsBoard.classList.remove('select_currency_btn_active')
-switchDollarsBoard.classList.remove('select_currency_btn_active')
-switchEurosBoard.classList.add('select_currency_btn_active')
+  //toggle active tab button
+  switchPoundsBoard.classList.remove("select_currency_btn_active");
+  switchDollarsBoard.classList.remove("select_currency_btn_active");
+  switchEurosBoard.classList.add("select_currency_btn_active");
 
+  // toggle BAD cards
+  dollarsBADcard.classList.add("hide_BAD_card");
+  poundsBADcard.classList.add("hide_BAD_card");
+  eurosBADcard.classList.remove("hide_BAD_card");
+
+  //toggle activities board
+  GBPactivities.classList.add("hide_activities");
+  USDactivities.classList.add("hide_activities");
+  EURactivities.classList.remove("hide_activities");
 };
+
+// Handle BAD card ROLLUP  sections
+const rollup3a = document.getElementById("rollup3a");
+const rollup3b = document.getElementById("rollup3b");
+const rollup2a = document.getElementById("rollup2a");
+const rollup2b = document.getElementById("rollup2b");
+const rollup1a = document.getElementById("rollup1a");
+const rollup1b = document.getElementById("rollup1b");
+
+const rollup3 = () => {
+  rollup3a.classList.toggle("hide_rollup");
+  rollup3b.classList.toggle("hide_rollup");
+};
+const rollup2 = () => {
+  rollup2a.classList.toggle("hide_rollup");
+  rollup2b.classList.toggle("hide_rollup");
+};
+const rollup1 = () => {
+  rollup1a.classList.toggle("hide_rollup");
+  rollup1b.classList.toggle("hide_rollup");
+};
+
+// Switch MY ACCOUNT ACCOUNT tabs
+const AccountsTab = document.getElementById("AccountsTabId");
+const reportsTab = document.getElementById("reportsTabId");
+const accountsBtn = document.getElementById("accountsBtn");
+const reportsBtn = document.getElementById("reportsBtn");
+
+const switchAccountsTab = () => {
+  AccountsTab.classList.remove("hideAccTab");
+  reportsTab.classList.add("hideAccTab");
+  accountsBtn.classList.add("myaccounts_Header_btn_active");
+  reportsBtn.classList.remove("myaccounts_Header_btn_active");
+};
+
+function switchReportsTab() {
+  AccountsTab.classList.add("hideAccTab");
+  reportsTab.classList.remove("hideAccTab");
+  accountsBtn.classList.remove("myaccounts_Header_btn_active");
+  reportsBtn.classList.add("myaccounts_Header_btn_active");
+}
+
+// function switchAccountsTab(n) {
+//   if (n == 1) {
+//     AccountsTab.classList.remove("hideAccTab");
+//     reportsTab.classList.add("hideAccTab");
+//     accountsBtn.classList.add("myaccounts_Header_btn_active");
+//     reportsBtn.classList.remove("myaccounts_Header_btn_active");
+//   } else {
+//     AccountsTab.classList.add("hideAccTab");
+//     reportsTab.classList.remove("hideAccTab");
+//     accountsBtn.classList.remove("myaccounts_Header_btn_active");
+//     reportsBtn.classList.add("myaccounts_Header_btn_active");
+//   }
+// }
 
 // import {pages} from './dashboardPages';
 
@@ -447,7 +537,6 @@ const pagesx = {
 
 document.getElementById("dashboardNav").addEventListener("click", function () {
   renderPage("dashboard");
-
 });
 
 document.getElementById("accountsNav").addEventListener("click", function () {
