@@ -52,6 +52,9 @@ body {
 }
 html {
   font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* 
@@ -330,6 +333,10 @@ DASHBOARD PAGE CONTENT STYLES
   background-color: var(--body-background);
   transition: 0.5s all ease;
   border: 1px solid transparent;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .currency_card:hover {
@@ -634,7 +641,6 @@ MY ACCOUNT PAGE CONTENT STYLES
   display: flex;
   align-items: center;
   gap: 4%;
- 
 }
 
 .myaccounts_Header_btn {
@@ -643,7 +649,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   font-weight: 400;
   background-color: transparent;
   cursor: pointer;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .myaccounts_Header_btn_active {
@@ -905,7 +911,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   background-color: var(--body-background);
   padding: var(--padding-general);
   border-radius: var(--border-radius-general);
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   display: block;
 }
 
@@ -944,32 +950,32 @@ MY ACCOUNT PAGE CONTENT STYLES
   display: none;
 }
 
-.hide_rollup{
+.hide_rollup {
   display: none;
 }
 
-.hide_activities{
+.hide_activities {
   display: none;
 }
 
-.reports_tab{
+.reports_tab {
   opacity: 1;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   display: block;
 }
 .myAccountsTab {
   opacity: 1;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   display: block;
 }
 
-.hideAccTab{
+.hideAccTab {
   opacity: 0;
-  transition: .5s all ease;
-  display:none;
+  transition: 0.5s all ease;
+  display: none;
 }
 
-.reports_tab{
+.reports_tab {
   width: 100%;
   min-height: 80vh;
   padding: var(--padding-general);
@@ -981,26 +987,25 @@ MY ACCOUNT PAGE CONTENT STYLES
   position: relative;
 }
 
-.statement_box{
+.statement_box {
   background-color: var(--body-background);
   padding: var(--padding-general);
   height: 25vh;
   min-width: 20vw;
   border-radius: var(--border-radius-general);
-  transition: .4s all ease;
+  transition: 0.4s all ease;
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   gap: 5vh;
-  
 }
 
-.statement_box:hover{
+.statement_box:hover {
   border: 1px solid var(--primary-color);
   cursor: pointer;
 }
 
-.statement_box_icon{
+.statement_box_icon {
   font-size: 2rem;
   width: 3rem;
   height: 3rem;
@@ -1010,9 +1015,8 @@ MY ACCOUNT PAGE CONTENT STYLES
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-.statement_box div span{
+.statement_box div span {
   font-size: 1.5rem;
   width: 2rem;
   height: 2rem;
@@ -1024,7 +1028,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   justify-content: center;
 }
 
-.statement_box div p{
+.statement_box div p {
   font-size: 1rem;
   font-weight: 400;
   color: var(--gray-text);
@@ -1032,16 +1036,15 @@ MY ACCOUNT PAGE CONTENT STYLES
 }
 
 .statement_box div {
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 
 /* ACCOUNT STATEMENT FORM POP UP */
 
-.account_statement_form_container{
+.account_statement_form_container {
   /* width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,.3);
@@ -1055,54 +1058,52 @@ MY ACCOUNT PAGE CONTENT STYLES
   transition: .4s all ease; */
 }
 
-.account_statement_form{
+.account_statement_form {
   background-color: var(--white-color);
   border-radius: var(--border-radius-general);
   padding: var(--padding-general);
   width: 30%;
   min-height: 80%;
-  
-
 }
 
-.asf_form_control{
+.asf_form_control {
   width: 100%;
   min-height: 10vh;
   display: block;
   margin-top: 2vh;
 }
 
-.asf_form_control select{
+.asf_form_control select {
   height: 8vh;
   width: 100%;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 2rem;
   background-color: var(--body-background);
   overflow: hidden;
-  padding-inline:2rem ;
+  padding-inline: 2rem;
 }
-.asf_form_control input{
+.asf_form_control input {
   height: 8vh;
   width: 100%;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 2rem;
   background-color: var(--body-background);
   overflow: hidden;
-  padding-inline:2rem ;
+  padding-inline: 2rem;
 }
 
-.asf_form_control select option{
+.asf_form_control select option {
   width: 100%;
 }
 
-.asf_form_control label{
+.asf_form_control label {
   margin-bottom: 1vh;
   display: block;
   color: var(--gray-text);
   font-size: 1rem;
 }
 
-.account_statement_form h4{
+.account_statement_form h4 {
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--gray-text);
