@@ -978,6 +978,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   display: flex;
   gap: 2vw;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .statement_box{
@@ -1035,4 +1036,74 @@ MY ACCOUNT PAGE CONTENT STYLES
  justify-content: space-between;
  align-items: center;
  flex-wrap: wrap;
+}
+
+
+/* ACCOUNT STATEMENT FORM POP UP */
+
+.account_statement_form_container{
+  /* width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s all ease; */
+}
+
+.account_statement_form{
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+  width: 30%;
+  min-height: 80%;
+  
+
+}
+
+.asf_form_control{
+  width: 100%;
+  min-height: 10vh;
+  display: block;
+  margin-top: 2vh;
+}
+
+.asf_form_control select{
+  height: 8vh;
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-radius: 2rem;
+  background-color: var(--body-background);
+  overflow: hidden;
+  padding-inline:2rem ;
+}
+.asf_form_control input{
+  height: 8vh;
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-radius: 2rem;
+  background-color: var(--body-background);
+  overflow: hidden;
+  padding-inline:2rem ;
+}
+
+.asf_form_control select option{
+  width: 100%;
+}
+
+.asf_form_control label{
+  margin-bottom: 1vh;
+  display: block;
+  color: var(--gray-text);
+  font-size: 1rem;
+}
+
+.account_statement_form h4{
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray-text);
 }

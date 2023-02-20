@@ -165,7 +165,7 @@ function switchReportsTab() {
 
 // import {pages} from './dashboardPages';
 
-const pagesx = {
+const pages = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
