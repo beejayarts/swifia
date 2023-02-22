@@ -1,6 +1,6 @@
 // import {pages} from './dashboardPages'
 
-const pagesx = {
+const pagesX = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -361,7 +361,7 @@ const pagesx = {
         </div>
       </div>
     </div>`,
-  accounts: `  <div class="myaccounts_Header">
+  accounts: `   <div class="myaccounts_Header">
   <button
     id="accountsBtn"
     onclick="switchAccountsTab()"
@@ -884,7 +884,7 @@ const pagesx = {
 </div>
 <!-- REPORTS TAB -->
 <div id="reportsTabId" class="reports_tab hideAccTab">
-  <div class="statement_box">
+  <div onclick="showAccountStatementForm()" class="statement_box">
     <span class="material-symbols-outlined statement_box_icon">
       description
     </span>
@@ -903,7 +903,7 @@ const pagesx = {
     </div>
   </div>
   <!-- ACCOUNT STATEMENT FORM POP UP -->
-  <div class="account_statement_form_container">
+  <div id="statementAccountModal" class="account_statement_form_container">
     <div class="account_statement_form">
      
         <h4>Download Account Statement</h4>
@@ -939,13 +939,184 @@ const pagesx = {
       </div>
       <div class="asf_form_control">
         <label>File Format</label>
-      <input type="date"/>
+      <div class="radio_input_container">
+        <div class="csv_input">
+          <input type="radio"/>
+          <label>CSV</label>
+        </div>
+        <div class="csv_input">
+          <input type="radio"/>
+          <label>PDF</label>
+        </div>
+      </div>
+      </div>
+      <div class="asf_form_button_group">
+        <button onclick="hideAccountStatementForm()" class="asf_form_button cancel_asf">Cancel</button>
+        <button class="asf_form_button">Download</button>
       </div>
     </div>
   </div>
 </div>
 `,
-  transactions: "<h1>transactions</h1><p>This is the reports page.</p>",
+  transactions: `    <div class="dcHeader">
+  <p>Transactions</p>
+</div>
+<div class="transactions_table">
+  <div class="tt_header">
+    <div class="tt_header_left">
+      <select class="tt_header_input">
+        <option>All transactions</option>
+        <option>Deposit</option>
+        <option>Sent</option>
+        <option>Swap</option>
+      </select>
+      <select class="tt_header_input">
+        <option>All Currencies</option>
+        <option>GBP</option>
+        <option>USD</option>
+        <option>EUR</option>
+      </select>
+    </div>
+    <div class="tt_header_right">
+      <div>
+        <label>From</label>
+        <input class="tt_header_input" type="date"/>
+      </div>
+      <div>
+        <label>to</label>
+        <input class="tt_header_input" type="date"/>
+      </div>
+    </div>
+    
+  </div>
+  <table class="rtc_table tt_body">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Tendered</th>
+        <th>Received</th>
+        <th>Fee</th>
+        <th>Reference</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">Successful</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="pending_tag">Pending</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="pending_tag">Pending</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="pending_tag">Pending</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">successful</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">successful</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">successful</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">successful</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">successful</span></td>
+      </tr>
+      <tr>
+        <td>Feb 08, 2023, 12:00AM</td>
+        <td>Deposit</td>
+        <td>$5000</td>
+        <td>$4990</td>
+        <td>$10</td>
+        <td>5SWYVODSBP6</td>
+        <td><span class="success_tag">successful</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table_pagination">
+    <div class="table_pagination_left">
+      <p>Viewing <span>1-10</span> of <span>100</span></p>
+      <div>
+        <button class="table_page_left"><span class="material-symbols-outlined">
+          arrow_back_ios
+          </span></button>
+        <button class="table_page_right"><span class="material-symbols-outlined">
+          arrow_forward_ios
+          </span></button>
+      </div>
+    </div>
+    <div class="table_pagination_right">
+      <p>Number of entries per page</p>
+      <select>
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+      </select>
+    </div>
+  </div>
+</div>`,
   profile: "<h1>profile</h1><p>This is the reports page.</p>",
   support: "<h1>support</h1><p>This is the reports page.</p>",
   logout: "<h1>Logout</h1><p>This is the reports page.</p>",
@@ -1135,5 +1306,19 @@ function switchReportsTab() {
   reportsTab.classList.remove("hideAccTab");
   accountsBtn.classList.remove("myaccounts_Header_btn_active");
   reportsBtn.classList.add("myaccounts_Header_btn_active");
+}
+
+
+
+
+// Handle FORM ACCOUNT STATEMENT MODALS
+
+const statementAccountModal = document.getElementById('statementAccountModal')
+
+const showAccountStatementForm =()=>{
+  statementAccountModal.style.display='flex'
+}
+const hideAccountStatementForm =()=>{
+  statementAccountModal.style.display='none'
 }
 

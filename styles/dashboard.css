@@ -1045,17 +1045,17 @@ MY ACCOUNT PAGE CONTENT STYLES
 /* ACCOUNT STATEMENT FORM POP UP */
 
 .account_statement_form_container {
-  /* width: 100vw;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  transition: .4s all ease; */
+  transition: 0.4s all ease;
 }
 
 .account_statement_form {
@@ -1064,6 +1064,10 @@ MY ACCOUNT PAGE CONTENT STYLES
   padding: var(--padding-general);
   width: 30%;
   min-height: 80%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
 }
 
 .asf_form_control {
@@ -1082,7 +1086,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   overflow: hidden;
   padding-inline: 2rem;
 }
-.asf_form_control input {
+.asf_form_control > input {
   height: 8vh;
   width: 100%;
   border: 1px solid #eaeaea;
@@ -1107,4 +1111,233 @@ MY ACCOUNT PAGE CONTENT STYLES
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--gray-text);
+}
+
+.form_control_radio {
+  display: flex;
+}
+
+.csv_input {
+  display: flex;
+
+  gap: 20%;
+}
+
+.csv_input input {
+  appearance: auto;
+  height: 3vh;
+  width: 3vw;
+}
+
+.radio_input_container {
+  display: flex;
+  gap: 10%;
+}
+
+.asf_form_button_group {
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.asf_form_button {
+  color: var(--white-color);
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 48%;
+  border-radius: 2rem;
+  transition: 0.4s all ease;
+  cursor: pointer;
+}
+
+.asf_form_button:hover {
+  transform: scale(1.06);
+}
+
+.cancel_asf {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.cancel_asf:hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+}
+
+/* 
+
+======================
+TRANSACTIONS
+======================
+
+*/
+
+.tt_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transactions_table {
+  width: 100%;
+  padding: var(--padding-general);
+  min-height: 60vh;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+}
+
+.tt_header_input {
+  background-color: var(--body-background);
+  appearance: auto;
+  border: 1px solid #eaeaea;
+  width: 12vw;
+  height: 6vh;
+  border-radius: 0.8rem;
+  padding-inline: 2%;
+}
+
+.tt_header_right,
+.tt_header_left {
+  display: flex;
+  gap: 2vw;
+}
+
+.tt_body {
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+}
+
+.table_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+.table_pagination_right select {
+  appearance: auto;
+}
+
+.table_pagination_left,
+.table_pagination_right {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+.table_pagination_left p {
+  color: var(--black-text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.table_pagination_left p span {
+  font-weight: 700;
+  margin-inline: 0.5rem;
+}
+
+.table_page_left,
+.table_page_right {
+  height: 4vh;
+  width: 2vw;
+  color: #9d9d9d;
+  border: 1px solid #9d9d9d;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s all ease;
+  padding: 1%;
+  font-size: 0.8rem;
+}
+
+.table_page_left:hover,
+.table_page_right:hover {
+  background-color: #171717;
+  color: var(--white-color);
+  border: 0;
+}
+
+.table_pagination_left > div {
+  display: flex;
+  gap: 1vw;
+}
+
+.table_pagination_right > p {
+  font-size: 1rem;
+  color: var(--black-text);
+}
+
+.table_pagination_right > select {
+  background-color: var(--body-background);
+  border: 1px solid #eaeaea;
+  padding: 2%;
+  width: 6vw;
+  border-radius: 0.5rem;
+}
+
+/* 
+
+============================================
+PROFILE styles
+=============================================
+
+*/
+
+.profile_tabs_container {
+  background-color: var(--white-color);
+  min-height: 60vh;
+  padding: var(--padding-general);
+  border-radius: var(--border-radius-general);
+}
+
+.profile_tabs_header {
+  height: 8vh;
+  width: 100%;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  display: flex;
+  gap: 3vw;
+}
+
+.profile_tab_btn {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555555;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  border-bottom: 2px solid transparent;
+}
+
+.active_profile_tab {
+  font-weight: 600;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.basic_information_container {
+  margin-top: 5vh;
+}
+
+.basic_info_form_cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bif_card {
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: var(--border-radius-general);
+  width: 45%;
+  padding: var(--padding-general);
+}
+
+.bif_card>h6{
+  font-size: 1.25rem;
+  color: var(--gray-text);
+  font-weight: 600;
 }
