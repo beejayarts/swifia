@@ -1320,8 +1320,13 @@ PROFILE styles
   border-bottom: 4px solid var(--primary-color);
 }
 
-.basic_information_container {
+.basic_information_container,.notifications_container, .security_container {
   margin-top: 5vh;
+  display: block;
+  transition: .5s all ease;
+}
+.security_container{
+  position: relative;
 }
 
 .basic_info_form_cards {
@@ -1332,7 +1337,7 @@ PROFILE styles
 .bif_card {
   border: 1px solid rgb(223, 223, 223);
   border-radius: var(--border-radius-general);
-  width: 45%;
+  width: 48%;
   padding: var(--padding-general);
 }
 
@@ -1340,4 +1345,338 @@ PROFILE styles
   font-size: 1.25rem;
   color: var(--gray-text);
   font-weight: 600;
+  display: block;
+  margin-bottom: 4vh;
+}
+
+.bif_input{
+  height: 6vh;
+  width: 100%;
+  background-color:var(--body-background) ;
+  border: 1px solid #EAEAEA;
+  padding-left: 10%;
+  border-radius: 2rem;
+  margin-top: 1vh;
+}
+
+
+
+.bif_name{
+  display: flex;
+  gap: 2vw;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+
+.bif_full_name{
+  color: var(--gray-text);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2vh;
+
+}
+
+.bif_full_name span{
+  color: #707070;
+  font-weight: 400;
+}
+
+.bif_email,.bif_phone{
+  margin-bottom: 4vh;
+}
+
+.bif_email label,.bif_phone label{
+ font-weight: 600;
+ color: #2a2a2a;
+}
+.bif_email label span,.bif_phone label span{
+ font-weight: 400;
+ color: #2a2a2a;
+}
+
+.saveProfileBtn{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1rem;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 2rem;
+  margin-top: 3vh;
+  cursor: pointer;
+  transition: .5s all ease;
+
+}
+
+.saveProfileBtn:hover{
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.hide_tab{
+  display: none;
+
+}
+
+.alert_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+ margin-bottom: 4vh;
+}
+
+.alert_container input{
+  appearance: auto;
+}
+.alert_container h6{
+ color: var(--gray-text);
+ font-size: 1rem;
+ font-weight: 600;
+
+}
+
+.alert_container h6 span{
+ 
+  font-weight: 400;
+  
+ }
+
+ .alerts_check{
+  display: flex;
+  gap: 2vw;
+ }
+
+ .alerts_check_content{
+  display: flex;
+  align-items: center;
+  gap: .5vw;
+ }
+
+ .alerts_check_content input{
+  height: 2vh;
+  width: 2vw;
+ }
+
+
+ /* Security card */
+
+ /* SWITCH BUTTON */
+
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch_container{
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+ /* END OF SWITCH BUTTON */
+
+ .switch_container h6{
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-text);
+  
+ }
+
+ .switch_container{
+  margin-bottom: 2vh;
+ }
+
+ .tfa_desc{
+  width: 50%;
+ }
+ .profile_password{
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-text);
+  margin-top: 2vh;
+  display: inline-block;
+ }
+
+ .update_password{
+  font-size: 1rem;
+  color: #555555;
+  font-weight: 400;
+ }
+
+
+ .changePassword{
+  background-color: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin-top: 2vh;
+ }
+ .change_password_modal{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: .5s all ease;
+  opacity: 0;
+ }
+
+ .change_password_modal_content{
+  width: 25%;
+  height: 70%;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-general);
+  padding:3rem var(--padding-general);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+
+ }
+
+
+ .password_input{
+  appearance: auto;
+ }
+
+ .password_labels label{
+ font-size: 1rem;
+ color: var(--gray-text);
+ }
+
+ .password_labels {
+  position: relative;
+ }
+
+ .password_labels input{
+  display: block;
+  
+  height: 5vh;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: var(--body-background);
+  border: 1px solid #EAEAEA;
+  padding: 1rem;
+  margin-top: .5vh;
+ }
+
+ .close_eye{
+  position: absolute;
+  color: #707070;
+  right: 5%;
+  top: 58%;
+  font-size: 1rem;
+ }
+
+ .close_card{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: var(--black-text);
+  color: var(--white-color);
+  right: 5%;
+  top: 5%;
+  display: flex;
+  padding: 5px;
+  border-radius:50% ;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+ }
+
+
+ .cp_btn_group{
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cp_btn {
+  color: var(--white-color);
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 48%;
+  border-radius: 2rem;
+  transition: 0.4s all ease;
+  cursor: pointer;
+}
+
+.cp_btn:hover {
+  transform: scale(1.06);
+}
+
+.cancel_cp_btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.cph6{
+  font-size: 1.5rem;
+  color: var(--gray-text);
 }

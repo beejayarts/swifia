@@ -1,6 +1,6 @@
 // import {pages} from './dashboardPages'
 
-const pagesX = {
+const pages = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -1155,18 +1155,22 @@ function renderPage(page) {
     pages[page];
 }
 
-// renderPage("dashboard");
+renderPage("dashboard");
 
 //end of rendering the different dashboard pages
 
 // Handling the Modals on Dashboard home
 
-const convertFromModal = document.getElementById("convert_from_modal");
-const convertToModal = document.getElementById("convert_to_modal");
+
 
 const openCurrencyModal = () => {
+  const convertFromModal = document.getElementById("convert_from_modal");
+const convertToModal = document.getElementById("convert_to_modal");
+  console.log('hello Peter obi')
+  console.log(convertFromModal)
   convertFromModal.style.display = "block";
   convertToModal.style.display = "none";
+  
 };
 
 const closeCurrencyModal = () => {
@@ -1184,7 +1188,12 @@ const closeconvertToModal = () => {
 
 // TOGGLING CURRENCY INFO BOARD
 
-const poundsBoard = document.getElementById("pounds_board");
+
+
+const showPoundsBoard = () => {
+
+
+  const poundsBoard = document.getElementById("pounds_board");
 const dollarsBoard = document.getElementById("dollars_board");
 const eurosBoard = document.getElementById("euros_board");
 const switchPoundsBoard = document.getElementById("switchPoundsBoard");
@@ -1201,7 +1210,8 @@ const GBPactivities = document.getElementById("GBPactivities");
 const USDactivities = document.getElementById("USDactivities");
 const EURactivities = document.getElementById("EURactivities");
 
-const showPoundsBoard = () => {
+
+
   console.log("pounds");
   dollarsBoard.classList.add("hide_board");
   poundsBoard.classList.remove("hide_board");
@@ -1224,6 +1234,27 @@ const showPoundsBoard = () => {
 };
 
 const showDollarsBoard = () => {
+
+
+
+  const poundsBoard = document.getElementById("pounds_board");
+const dollarsBoard = document.getElementById("dollars_board");
+const eurosBoard = document.getElementById("euros_board");
+const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+const switchEurosBoard = document.getElementById("switchEurosBoard");
+
+// grab BAD cards
+const poundsBADcard = document.getElementById("poundsBADcard");
+const dollarsBADcard = document.getElementById("dollarsBADcard");
+const eurosBADcard = document.getElementById("eurosBADcard");
+
+//grab ACTIVITES card
+const GBPactivities = document.getElementById("GBPactivities");
+const USDactivities = document.getElementById("USDactivities");
+const EURactivities = document.getElementById("EURactivities");
+
+
   console.log("dollars");
   poundsBoard.classList.add("hide_board");
   dollarsBoard.classList.remove("hide_board");
@@ -1246,6 +1277,26 @@ const showDollarsBoard = () => {
 };
 
 const showEurosBoard = () => {
+
+
+  const poundsBoard = document.getElementById("pounds_board");
+const dollarsBoard = document.getElementById("dollars_board");
+const eurosBoard = document.getElementById("euros_board");
+const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+const switchEurosBoard = document.getElementById("switchEurosBoard");
+
+// grab BAD cards
+const poundsBADcard = document.getElementById("poundsBADcard");
+const dollarsBADcard = document.getElementById("dollarsBADcard");
+const eurosBADcard = document.getElementById("eurosBADcard");
+
+//grab ACTIVITES card
+const GBPactivities = document.getElementById("GBPactivities");
+const USDactivities = document.getElementById("USDactivities");
+const EURactivities = document.getElementById("EURactivities");
+
+
   console.log("euros");
   dollarsBoard.classList.add("hide_board");
   poundsBoard.classList.add("hide_board");
@@ -1289,12 +1340,15 @@ const rollup1 = () => {
 };
 
 // Switch MY ACCOUNT ACCOUNT tabs
-const AccountsTab = document.getElementById("AccountsTabId");
+
+
+const switchAccountsTab = () => {
+  // grab dom elements
+  const AccountsTab = document.getElementById("AccountsTabId");
 const reportsTab = document.getElementById("reportsTabId");
 const accountsBtn = document.getElementById("accountsBtn");
 const reportsBtn = document.getElementById("reportsBtn");
 
-const switchAccountsTab = () => {
   AccountsTab.classList.remove("hideAccTab");
   reportsTab.classList.add("hideAccTab");
   accountsBtn.classList.add("myaccounts_Header_btn_active");
@@ -1302,6 +1356,11 @@ const switchAccountsTab = () => {
 };
 
 function switchReportsTab() {
+  const AccountsTab = document.getElementById("AccountsTabId");
+const reportsTab = document.getElementById("reportsTabId");
+const accountsBtn = document.getElementById("accountsBtn");
+const reportsBtn = document.getElementById("reportsBtn");
+
   AccountsTab.classList.add("hideAccTab");
   reportsTab.classList.remove("hideAccTab");
   accountsBtn.classList.remove("myaccounts_Header_btn_active");
@@ -1313,12 +1372,51 @@ function switchReportsTab() {
 
 // Handle FORM ACCOUNT STATEMENT MODALS
 
-const statementAccountModal = document.getElementById('statementAccountModal')
+
 
 const showAccountStatementForm =()=>{
+  const statementAccountModal = document.getElementById('statementAccountModal')
   statementAccountModal.style.display='flex'
 }
 const hideAccountStatementForm =()=>{
   statementAccountModal.style.display='none'
 }
 
+
+
+//Handle account modal
+
+const accountModal = document.getElementById('passwordModal');
+
+const openPasswordModal = ()=>{
+  accountModal.style.display='flex'
+  accountModal.style.opacity='1'
+}
+
+const closePasswordModal = ()=>{
+  accountModal.style.display='none'
+  accountModal.style.opacity='0'
+}
+
+
+const basicInfo = document.getElementById('basicInfo')
+const notificationsSettings = document.getElementById('notificationsSettings')
+const securityCard = document.getElementById('securityCard')
+
+const switchBasicInfoTab = () =>{
+  basicInfo.classList.remove('hide_tab')
+  notificationsSettings.classList.add('hide_tab')
+  securityCard.classList.add('hide_tab')
+}
+
+const switchNotificationTab = () =>{
+  basicInfo.classList.add('hide_tab')
+  notificationsSettings.classList.remove('hide_tab')
+  securityCard.classList.add('hide_tab')
+}
+
+const switchSecurityTab = () =>{
+  basicInfo.classList.add('hide_tab')
+  notificationsSettings.classList.add('hide_tab')
+  securityCard.classList.remove('hide_tab')
+}
