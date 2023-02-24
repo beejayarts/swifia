@@ -1320,12 +1320,14 @@ PROFILE styles
   border-bottom: 4px solid var(--primary-color);
 }
 
-.basic_information_container,.notifications_container, .security_container {
+.basic_information_container,
+.notifications_container,
+.security_container {
   margin-top: 5vh;
   display: block;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
-.security_container{
+.security_container {
   position: relative;
 }
 
@@ -1341,7 +1343,7 @@ PROFILE styles
   padding: var(--padding-general);
 }
 
-.bif_card>h6{
+.bif_card > h6 {
   font-size: 1.25rem;
   color: var(--gray-text);
   font-weight: 600;
@@ -1349,52 +1351,52 @@ PROFILE styles
   margin-bottom: 4vh;
 }
 
-.bif_input{
+.bif_input {
   height: 6vh;
   width: 100%;
-  background-color:var(--body-background) ;
-  border: 1px solid #EAEAEA;
+  background-color: var(--body-background);
+  border: 1px solid #eaeaea;
   padding-left: 10%;
   border-radius: 2rem;
   margin-top: 1vh;
 }
 
-
-
-.bif_name{
+.bif_name {
   display: flex;
   gap: 2vw;
   justify-content: space-between;
   margin-bottom: 4vh;
 }
 
-.bif_full_name{
+.bif_full_name {
   color: var(--gray-text);
   font-weight: 600;
   display: block;
   margin-bottom: 2vh;
-
 }
 
-.bif_full_name span{
+.bif_full_name span {
   color: #707070;
   font-weight: 400;
 }
 
-.bif_email,.bif_phone{
+.bif_email,
+.bif_phone {
   margin-bottom: 4vh;
 }
 
-.bif_email label,.bif_phone label{
- font-weight: 600;
- color: #2a2a2a;
+.bif_email label,
+.bif_phone label {
+  font-weight: 600;
+  color: #2a2a2a;
 }
-.bif_email label span,.bif_phone label span{
- font-weight: 400;
- color: #2a2a2a;
+.bif_email label span,
+.bif_phone label span {
+  font-weight: 400;
+  color: #2a2a2a;
 }
 
-.saveProfileBtn{
+.saveProfileBtn {
   background-color: var(--primary-color);
   color: var(--white-color);
   font-size: 1rem;
@@ -1403,73 +1405,67 @@ PROFILE styles
   border-radius: 2rem;
   margin-top: 3vh;
   cursor: pointer;
-  transition: .5s all ease;
-
+  transition: 0.5s all ease;
 }
 
-.saveProfileBtn:hover{
+.saveProfileBtn:hover {
   background-color: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
-.hide_tab{
+.hide_tab {
   display: none;
-
 }
 
-.alert_container{
+.alert_container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4vh;
- margin-bottom: 4vh;
+  margin-bottom: 4vh;
 }
 
-.alert_container input{
+.alert_container input {
   appearance: auto;
 }
-.alert_container h6{
- color: var(--gray-text);
- font-size: 1rem;
- font-weight: 600;
-
+.alert_container h6 {
+  color: var(--gray-text);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.alert_container h6 span{
- 
+.alert_container h6 span {
   font-weight: 400;
-  
- }
+}
 
- .alerts_check{
+.alerts_check {
   display: flex;
   gap: 2vw;
- }
+}
 
- .alerts_check_content{
+.alerts_check_content {
   display: flex;
   align-items: center;
-  gap: .5vw;
- }
+  gap: 0.5vw;
+}
 
- .alerts_check_content input{
+.alerts_check_content input {
   height: 2vh;
   width: 2vw;
- }
+}
 
+/* Security card */
 
- /* Security card */
+/* SWITCH BUTTON */
 
- /* SWITCH BUTTON */
-
- .switch {
+.switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -1483,8 +1479,8 @@ PROFILE styles
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -1495,8 +1491,8 @@ PROFILE styles
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -1522,52 +1518,50 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.switch_container{
+.switch_container {
   display: flex;
   align-items: center;
   gap: 2vw;
 }
 
- /* END OF SWITCH BUTTON */
+/* END OF SWITCH BUTTON */
 
- .switch_container h6{
+.switch_container h6 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--gray-text);
-  
- }
+}
 
- .switch_container{
+.switch_container {
   margin-bottom: 2vh;
- }
+}
 
- .tfa_desc{
+.tfa_desc {
   width: 50%;
- }
- .profile_password{
+}
+.profile_password {
   font-size: 1rem;
   font-weight: 600;
   color: var(--gray-text);
   margin-top: 2vh;
   display: inline-block;
- }
+}
 
- .update_password{
+.update_password {
   font-size: 1rem;
   color: #555555;
   font-weight: 400;
- }
+}
 
-
- .changePassword{
+.changePassword {
   background-color: transparent;
   color: var(--primary-color);
   font-weight: 600;
   cursor: pointer;
   display: block;
   margin-top: 2vh;
- }
- .change_password_modal{
+}
+.change_password_modal {
   display: none;
   justify-content: center;
   align-items: center;
@@ -1577,59 +1571,56 @@ input:checked + .slider:before {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: .5s all ease;
+  transition: 0.5s all ease;
   opacity: 0;
- }
+}
 
- .change_password_modal_content{
+.change_password_modal_content {
   width: 25%;
   height: 70%;
   background-color: var(--white-color);
   border-radius: var(--border-radius-general);
-  padding:3rem var(--padding-general);
+  padding: 3rem var(--padding-general);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
 
-
- }
-
-
- .password_input{
+.password_input {
   appearance: auto;
- }
+}
 
- .password_labels label{
- font-size: 1rem;
- color: var(--gray-text);
- }
+.password_labels label {
+  font-size: 1rem;
+  color: var(--gray-text);
+}
 
- .password_labels {
+.password_labels {
   position: relative;
- }
+}
 
- .password_labels input{
+.password_labels input {
   display: block;
-  
+
   height: 5vh;
   width: 100%;
   border-radius: 2rem;
   background-color: var(--body-background);
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   padding: 1rem;
-  margin-top: .5vh;
- }
+  margin-top: 0.5vh;
+}
 
- .close_eye{
+.close_eye {
   position: absolute;
   color: #707070;
   right: 5%;
   top: 58%;
   font-size: 1rem;
- }
+}
 
- .close_card{
+.close_card {
   position: absolute;
   height: 30px;
   width: 30px;
@@ -1639,15 +1630,13 @@ input:checked + .slider:before {
   top: 5%;
   display: flex;
   padding: 5px;
-  border-radius:50% ;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
 
- }
-
-
- .cp_btn_group{
+.cp_btn_group {
   display: flex;
   align-items: center;
   height: 6vh;
@@ -1676,7 +1665,157 @@ input:checked + .slider:before {
   color: var(--primary-color);
 }
 
-.cph6{
+.cph6 {
   font-size: 1.5rem;
   color: var(--gray-text);
+}
+
+.support_message_form {
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.smf_header h4 {
+  color: #2d1c69;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+.smf_header p {
+  color: #555555;
+  font-size: 1rem;
+  width: 80%;
+}
+
+
+.smf_body {
+  width: 100%;
+}
+
+.message_title label {
+  font-size: var(--gray-text);
+  color: 1rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 1.5vh;
+}
+
+.messageTitleInput {
+  background-color: var(--body-background);
+  height: 6vh;
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 3vh;
+}
+
+.messageMessageInput {
+  width: 100%;
+  height: 20vh;
+  background-color: var(--body-background);
+  border-radius: 0.5rem;
+  display: block;
+  padding: 1.5rem;
+}
+
+.contact_details>p{
+  font-weight: 600;
+  color: var(--gray-text);
+  font-size: 1rem;
+  margin-bottom: 2.5vh;
+}
+
+.phone_number{
+  color: var(--gray-text);
+  font-weight: 400;
+  display: flex;
+  font-size: 1rem;
+  gap: 1vw;
+  margin-bottom: 2vh;
+}
+
+.whatsapp_details>p{
+  font-weight: 600;
+  color: var(--gray-text);
+  font-size: 1rem;
+  margin-bottom: 1.5vh;
+}
+.whatsapp_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  font-size: 1rem;
+  width: 12vw;
+  height: 6vh;
+  color: var(--white-color);
+  background-color: #33CE6D;
+  padding: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-top: 2vh;
+  
+}
+
+.faq_dropdown_container{
+  max-height: 40vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.faq_bag{
+  height: 38vh;
+  width: 109%;
+  overflow-y: scroll;
+}
+
+.faq_content {
+  width: 60%;
+  height: 100%;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: var(--border-radius-general);
+  padding: var(--padding-general);
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.faq_dropdown{
+  background-color: var(--body-background);
+  width: 90%;
+  border-radius: var(--border-radius-general);
+  padding: 1rem; 
+  margin-bottom: 2vh;
+
+}
+
+.faq_dropdown_header p{
+  color: #2D1C69;
+  font-weight: 600;
+}
+.faq_dropdown_header button{
+  background-color: transparent;
+  font-size: 1rem;
+  color: var(--gray-text);
+}
+
+
+.faq_dropdown_header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 2vh;
+}
+
+
+.faq_dropdown_body{
+  transition: .4s all ease;
 }

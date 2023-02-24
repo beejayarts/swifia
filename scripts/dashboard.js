@@ -957,7 +957,7 @@ const pages = {
     </div>
   </div>
 </div>
-`,
+`, global:` <h1>this is the global page</h1>`,
   transactions: `    <div class="dcHeader">
   <p>Transactions</p>
 </div>
@@ -1117,8 +1117,384 @@ const pages = {
     </div>
   </div>
 </div>`,
-  profile: "<h1>profile</h1><p>This is the reports page.</p>",
-  support: "<h1>support</h1><p>This is the reports page.</p>",
+  profile: `   <div class="dcHeader">
+  <p>Profile</p>
+</div>
+<div class="profile_tabs_container">
+  <div class="profile_tabs_header">
+    <button id="basicInfoTabBtn"
+      onclick="switchBasicInfoTab()"
+      class="profile_tab_btn active_profile_tab"
+    >
+      Basic Information
+    </button>
+    <button  id="notifyTabBtn" onclick="switchNotificationTab()" class="profile_tab_btn">Notification settings</button>
+    <button id="securityTabBtn" onclick="switchSecurityTab()" class="profile_tab_btn">Security</button>
+  </div>
+  <!-- BASIC INFO CARD -->
+  <div id="basicInfo" class="basic_information_container  ">
+    <div class="basic_info_form_cards">
+      <div class="bif_card">
+        <h6>Personal Details</h6>
+        <p class="bif_full_name">
+          Full Name <span>(Your legal full name)</span>
+        </p>
+        <!-- name -->
+        <div class="bif_name">
+          <div class="bif_firstname">
+            <label>First Name</label>
+            <input class="bif_input" type="text" value="Peter" />
+          </div>
+          <div class="bif_lastname">
+            <label>Last Name</label>
+            <input class="bif_input" type="text" value="Obi" />
+          </div>
+        </div>
+        <!-- email address -->
+        <div class="bif_email">
+          <label
+            >Email address
+            <span>(Your registered email address)</span></label
+          >
+          <input
+            class="bif_input"
+            type="email"
+            placeholder="example@gmail.com"
+          />
+        </div>
+        <!-- phone number -->
+        <div class="bif_phone">
+          <label
+            >Phone number
+            <span>(Your registered phone number)</span></label
+          >
+          <input
+            class="bif_input"
+            type="phone"
+            placeholder="07020245628"
+          />
+        </div>
+      </div>
+      <div class="bif_card">
+        <h6>Business Details</h6>
+        <!-- email address -->
+        <div class="bif_email">
+          <label
+            >Business Name
+            <span>(The business name for this account)</span></label
+          >
+          <input class="bif_input" type="email" value="Peter & co." />
+        </div>
+        <!-- phone number -->
+        <div class="bif_phone">
+          <label
+            >Business type
+            <span>(what your business does)</span></label
+          >
+          <input
+            class="bif_input"
+            type="phone"
+            placeholder="Importers & Exporters of Women Wears"
+          />
+        </div>
+      </div>
+    </div>
+    <button id="saveProfileBtnID" class="saveProfileBtn">
+      Save Changes
+    </button>
+  </div>
+  <!-- notifications card -->
+  <div
+    id="notificationsSettings"
+    class="notifications_container  hide_tab"
+  >
+    <!-- LOGIN ALERTS -->
+    <div class="alert_container">
+      <h6>
+        Login ALerts
+        <span
+          >(Notifications on successful logins to your account)</span
+        >
+      </h6>
+      <div class="alerts_check">
+        <div class="alerts_check_content">
+          <input type="checkbox" /> <label>Push Notifications</label>
+        </div>
+        <div class="alerts_check_content">
+          <input type="checkbox" /> <label>Email</label>
+        </div>
+      </div>
+    </div>
+    <!-- TRANSACTION ALERTS -->
+    <div class="alert_container">
+      <h6>
+        Transaction ALerts
+        <span
+          >(Notifications on the status of your transactions)</span
+        >
+      </h6>
+      <div class="alerts_check">
+        <div class="alerts_check_content">
+          <input type="checkbox" /> <label>Push Notifications</label>
+        </div>
+        <div class="alerts_check_content">
+          <input type="checkbox" /> <label>Email</label>
+        </div>
+      </div>
+    </div>
+    <!-- PRICE ALERTS -->
+    <div class="alert_container">
+      <h6>
+        Price Alerts
+        <span>(Notifications on fluctuations in currency rates)</span>
+      </h6>
+      <div class="alerts_check">
+        <div class="alerts_check_content">
+          <input type="checkbox" /> <label>Push Notifications</label>
+        </div>
+      </div>
+    </div>
+    <button id="saveProfileBtnID" class="saveProfileBtn">
+      Save Changes
+    </button>
+  </div>
+  <!-- security card -->
+  <div id="securityCard" class="security_container hide_tab">
+    <div class="switch_container">
+      <h6>Two Factor Authentication</h6>
+      <label class="switch">
+        <input type="checkbox" checked />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <p class="tfa_desc">
+      TFA is highly
+      <span
+        style="font-weight: 600; color: #6b43fb; font-style: italic"
+        >recommended</span
+      >because adds extra layer of security to your Swifia account to
+      protect you from unauthorized transactions
+    </p>
+    <span class="profile_password">Password</span>
+    <p class="update_password">Update existing password</p>
+    <button onclick="openPasswordModal()" class="changePassword">
+      Change password
+    </button>
+    <button id="saveProfileBtnID" class="saveProfileBtn">
+      Save Changes
+    </button>
+
+    <!-- Change password MODAL -->
+    <div id="passwordModal" class="change_password_modal">
+      <div class="change_password_modal_content">
+        <span
+          onclick="closePasswordModal()"
+          class="material-symbols-outlined close_card"
+        >
+          close
+        </span>
+        <h6 class="cph6">Change Password</h6>
+        <div class="password_labels">
+          <label>Old Password</label>
+          <span class="material-symbols-outlined close_eye">
+            visibility_off
+          </span>
+          <input
+            placeholder="Enter Old password"
+            class="password_input"
+            type="password"
+          />
+        </div>
+        <div class="password_labels">
+          <label>New Password</label>
+          <span class="material-symbols-outlined close_eye">
+            visibility_off
+          </span>
+          <input
+            placeholder="Enter New password"
+            class="password_input"
+            type="password"
+          />
+        </div>
+        <div class="password_labels">
+          <label>Confirm new Password</label>
+          <span class="material-symbols-outlined close_eye">
+            visibility_off
+          </span>
+          <input
+            placeholder="Enter new password again"
+            class="password_input"
+            type="password"
+          />
+        </div>
+        <div class="cp_btn_group">
+          <button onclick="closePasswordModal()" class="cp_btn cancel_cp_btn">Cancel</button>
+          <button class="cp_btn">Change Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>`,
+  support: `   <div class="dcHeader">
+  <p>Support</p>
+</div>
+<div class="profile_tabs_container">
+  <div class="profile_tabs_header">
+    <button
+      id="switchmessageBtn"
+      onclick="switchMessageTab()"
+      class="profile_tab_btn active_profile_tab"
+    >
+      Message
+    </button>
+    <button
+      id="switchContactBtn"
+      onclick="switchContactTab()"
+      class="profile_tab_btn"
+    >
+      Contact details
+    </button>
+    <button
+      id="switchFaqsBtn"
+      onclick="switchFaqTab()"
+      class="profile_tab_btn"
+    >
+      FAQs
+    </button>
+  </div>
+  <!-- Message container -->
+  <div id="supportMessage" class="basic_information_container ">
+    <div class="support_message_form">
+      <div class="smf_header">
+        <h4>Hi There, How can we help?</h4>
+        <p>
+          Kindly drop us a message our support team will get across to
+          you shortly
+        </p>
+      </div>
+      <div class="smf_body">
+        <div class="message_title">
+          <label>Message Title</label>
+          <input
+            class="messageTitleInput"
+            placeholder="Enter message title"
+            type="text"
+          />
+        </div>
+        <div class="message_title">
+          <label>Message</label>
+          <textarea
+            rows="10"
+            cols="10"
+            class="messageMessageInput"
+            placeholder="Type your message...."
+            tabindex="5"
+            required
+          ></textarea>
+        </div>
+        <button class="saveProfileBtn">Send Message</button>
+      </div>
+    </div>
+  </div>
+  <!-- Contact details container -->
+  <div id="supportContact" class="basic_information_container hide_tab">
+    <div class="support_message_form">
+      <div class="smf_header">
+        <h4>Get in touch</h4>
+        <p>Below are our contact details for ease of reach</p>
+      </div>
+      <div class="contact_details">
+        <p>Contact Details</p>
+        <div>
+          <div class="phone_number">
+            <span class="material-symbols-outlined"> call </span>
+            <p>+2348979573756</p>
+          </div>
+          <div class="phone_number">
+            <span class="material-symbols-rounded"> mail </span>
+            <p>Support@swifia.com</p>
+          </div>
+          <div class="phone_number">
+            <span class="material-symbols-rounded"> pin_drop </span>
+            <p>6391 Elgin St. Celina, Delaware 10299</p>
+          </div>
+        </div>
+      </div>
+      <div class="whatsapp_details">
+        <p>WhatsApp</p>
+        <span>Click here to chat with us on WhatsApp</span>
+        <div>
+          <button class="whatsapp_button">
+            <span class="material-symbols-outlined">
+              arrow_circle_right </span
+            >+2348979573756
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- FAQs container -->
+    <div id="supportFaq" class="basic_information_container hide_tab">
+      <div class="faq_content">
+        <div class="smf_header">
+          <h4>Frequently Asked Questions</h4>
+          <p>We have provided you with detailed guide and answers to most pressing questions</p>
+        </div>
+        <div class="faq_dropdown_container">
+         <div class="faq_bag">
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
+              expand_more
+              </span></button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
+            </p>
+          </div>
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
+              expand_more
+              </span></button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
+            </p>
+          </div>
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
+              expand_more
+              </span></button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
+            </p>
+          </div>
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
+              expand_more
+              </span></button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
+            </p>
+          </div>
+     
+        
+         </div>
+          
+        </div>
+        
+      </div>
+    </div>
+</div>`,
   logout: "<h1>Logout</h1><p>This is the reports page.</p>",
 };
 
@@ -1128,9 +1504,15 @@ document.getElementById("dashboardNav").addEventListener("click", function () {
   renderPage("dashboard");
 });
 
+
 document.getElementById("accountsNav").addEventListener("click", function () {
   renderPage("accounts");
 });
+
+document.getElementById("globalNav").addEventListener("click", function () {
+  renderPage("global");
+});
+
 
 document
   .getElementById("transactionsNav")
@@ -1161,16 +1543,13 @@ renderPage("dashboard");
 
 // Handling the Modals on Dashboard home
 
-
-
 const openCurrencyModal = () => {
   const convertFromModal = document.getElementById("convert_from_modal");
-const convertToModal = document.getElementById("convert_to_modal");
-  console.log('hello Peter obi')
-  console.log(convertFromModal)
+  const convertToModal = document.getElementById("convert_to_modal");
+  console.log("hello Peter obi");
+  console.log(convertFromModal);
   convertFromModal.style.display = "block";
   convertToModal.style.display = "none";
-  
 };
 
 const closeCurrencyModal = () => {
@@ -1188,29 +1567,23 @@ const closeconvertToModal = () => {
 
 // TOGGLING CURRENCY INFO BOARD
 
-
-
 const showPoundsBoard = () => {
-
-
   const poundsBoard = document.getElementById("pounds_board");
-const dollarsBoard = document.getElementById("dollars_board");
-const eurosBoard = document.getElementById("euros_board");
-const switchPoundsBoard = document.getElementById("switchPoundsBoard");
-const switchDollarsBoard = document.getElementById("switchDollarsBoard");
-const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const dollarsBoard = document.getElementById("dollars_board");
+  const eurosBoard = document.getElementById("euros_board");
+  const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+  const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+  const switchEurosBoard = document.getElementById("switchEurosBoard");
 
-// grab BAD cards
-const poundsBADcard = document.getElementById("poundsBADcard");
-const dollarsBADcard = document.getElementById("dollarsBADcard");
-const eurosBADcard = document.getElementById("eurosBADcard");
+  // grab BAD cards
+  const poundsBADcard = document.getElementById("poundsBADcard");
+  const dollarsBADcard = document.getElementById("dollarsBADcard");
+  const eurosBADcard = document.getElementById("eurosBADcard");
 
-//grab ACTIVITES card
-const GBPactivities = document.getElementById("GBPactivities");
-const USDactivities = document.getElementById("USDactivities");
-const EURactivities = document.getElementById("EURactivities");
-
-
+  //grab ACTIVITES card
+  const GBPactivities = document.getElementById("GBPactivities");
+  const USDactivities = document.getElementById("USDactivities");
+  const EURactivities = document.getElementById("EURactivities");
 
   console.log("pounds");
   dollarsBoard.classList.add("hide_board");
@@ -1234,26 +1607,22 @@ const EURactivities = document.getElementById("EURactivities");
 };
 
 const showDollarsBoard = () => {
-
-
-
   const poundsBoard = document.getElementById("pounds_board");
-const dollarsBoard = document.getElementById("dollars_board");
-const eurosBoard = document.getElementById("euros_board");
-const switchPoundsBoard = document.getElementById("switchPoundsBoard");
-const switchDollarsBoard = document.getElementById("switchDollarsBoard");
-const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const dollarsBoard = document.getElementById("dollars_board");
+  const eurosBoard = document.getElementById("euros_board");
+  const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+  const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+  const switchEurosBoard = document.getElementById("switchEurosBoard");
 
-// grab BAD cards
-const poundsBADcard = document.getElementById("poundsBADcard");
-const dollarsBADcard = document.getElementById("dollarsBADcard");
-const eurosBADcard = document.getElementById("eurosBADcard");
+  // grab BAD cards
+  const poundsBADcard = document.getElementById("poundsBADcard");
+  const dollarsBADcard = document.getElementById("dollarsBADcard");
+  const eurosBADcard = document.getElementById("eurosBADcard");
 
-//grab ACTIVITES card
-const GBPactivities = document.getElementById("GBPactivities");
-const USDactivities = document.getElementById("USDactivities");
-const EURactivities = document.getElementById("EURactivities");
-
+  //grab ACTIVITES card
+  const GBPactivities = document.getElementById("GBPactivities");
+  const USDactivities = document.getElementById("USDactivities");
+  const EURactivities = document.getElementById("EURactivities");
 
   console.log("dollars");
   poundsBoard.classList.add("hide_board");
@@ -1277,25 +1646,22 @@ const EURactivities = document.getElementById("EURactivities");
 };
 
 const showEurosBoard = () => {
-
-
   const poundsBoard = document.getElementById("pounds_board");
-const dollarsBoard = document.getElementById("dollars_board");
-const eurosBoard = document.getElementById("euros_board");
-const switchPoundsBoard = document.getElementById("switchPoundsBoard");
-const switchDollarsBoard = document.getElementById("switchDollarsBoard");
-const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const dollarsBoard = document.getElementById("dollars_board");
+  const eurosBoard = document.getElementById("euros_board");
+  const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+  const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+  const switchEurosBoard = document.getElementById("switchEurosBoard");
 
-// grab BAD cards
-const poundsBADcard = document.getElementById("poundsBADcard");
-const dollarsBADcard = document.getElementById("dollarsBADcard");
-const eurosBADcard = document.getElementById("eurosBADcard");
+  // grab BAD cards
+  const poundsBADcard = document.getElementById("poundsBADcard");
+  const dollarsBADcard = document.getElementById("dollarsBADcard");
+  const eurosBADcard = document.getElementById("eurosBADcard");
 
-//grab ACTIVITES card
-const GBPactivities = document.getElementById("GBPactivities");
-const USDactivities = document.getElementById("USDactivities");
-const EURactivities = document.getElementById("EURactivities");
-
+  //grab ACTIVITES card
+  const GBPactivities = document.getElementById("GBPactivities");
+  const USDactivities = document.getElementById("USDactivities");
+  const EURactivities = document.getElementById("EURactivities");
 
   console.log("euros");
   dollarsBoard.classList.add("hide_board");
@@ -1341,13 +1707,12 @@ const rollup1 = () => {
 
 // Switch MY ACCOUNT ACCOUNT tabs
 
-
 const switchAccountsTab = () => {
   // grab dom elements
   const AccountsTab = document.getElementById("AccountsTabId");
-const reportsTab = document.getElementById("reportsTabId");
-const accountsBtn = document.getElementById("accountsBtn");
-const reportsBtn = document.getElementById("reportsBtn");
+  const reportsTab = document.getElementById("reportsTabId");
+  const accountsBtn = document.getElementById("accountsBtn");
+  const reportsBtn = document.getElementById("reportsBtn");
 
   AccountsTab.classList.remove("hideAccTab");
   reportsTab.classList.add("hideAccTab");
@@ -1357,9 +1722,9 @@ const reportsBtn = document.getElementById("reportsBtn");
 
 function switchReportsTab() {
   const AccountsTab = document.getElementById("AccountsTabId");
-const reportsTab = document.getElementById("reportsTabId");
-const accountsBtn = document.getElementById("accountsBtn");
-const reportsBtn = document.getElementById("reportsBtn");
+  const reportsTab = document.getElementById("reportsTabId");
+  const accountsBtn = document.getElementById("accountsBtn");
+  const reportsBtn = document.getElementById("reportsBtn");
 
   AccountsTab.classList.add("hideAccTab");
   reportsTab.classList.remove("hideAccTab");
@@ -1367,56 +1732,163 @@ const reportsBtn = document.getElementById("reportsBtn");
   reportsBtn.classList.add("myaccounts_Header_btn_active");
 }
 
-
-
-
 // Handle FORM ACCOUNT STATEMENT MODALS
 
-
-
-const showAccountStatementForm =()=>{
-  const statementAccountModal = document.getElementById('statementAccountModal')
-  statementAccountModal.style.display='flex'
-}
-const hideAccountStatementForm =()=>{
-  statementAccountModal.style.display='none'
-}
-
-
+const showAccountStatementForm = () => {
+  const statementAccountModal = document.getElementById(
+    "statementAccountModal"
+  );
+  statementAccountModal.style.display = "flex";
+};
+const hideAccountStatementForm = () => {
+  statementAccountModal.style.display = "none";
+};
 
 //Handle account modal
 
-const accountModal = document.getElementById('passwordModal');
+const openPasswordModal = () => {
+  console.log("jollof");
+  const accountModal = document.getElementById("passwordModal");
+  accountModal.style.display = "flex";
+  accountModal.style.opacity = "1";
+};
 
-const openPasswordModal = ()=>{
-  accountModal.style.display='flex'
-  accountModal.style.opacity='1'
-}
+const closePasswordModal = () => {
+  const accountModal = document.getElementById("passwordModal");
+  accountModal.style.display = "none";
+  accountModal.style.opacity = "0";
+};
 
-const closePasswordModal = ()=>{
-  accountModal.style.display='none'
-  accountModal.style.opacity='0'
-}
+// HANDLE PROFILE MODAL
 
+const switchBasicInfoTab = () => {
+  //grab elements
+  const basicInfo = document.getElementById("basicInfo");
+  const notificationsSettings = document.getElementById(
+    "notificationsSettings"
+  );
+  const securityCard = document.getElementById("securityCard");
 
-const basicInfo = document.getElementById('basicInfo')
-const notificationsSettings = document.getElementById('notificationsSettings')
-const securityCard = document.getElementById('securityCard')
+  basicInfo.classList.remove("hide_tab");
+  notificationsSettings.classList.add("hide_tab");
+  securityCard.classList.add("hide_tab");
 
-const switchBasicInfoTab = () =>{
-  basicInfo.classList.remove('hide_tab')
-  notificationsSettings.classList.add('hide_tab')
-  securityCard.classList.add('hide_tab')
-}
+  const basicInfoTabBtn = document.getElementById("basicInfoTabBtn");
+  const notifyTabBtn = document.getElementById("notifyTabBtn");
+  const securityTabBtn = document.getElementById("securityTabBtn");
 
-const switchNotificationTab = () =>{
-  basicInfo.classList.add('hide_tab')
-  notificationsSettings.classList.remove('hide_tab')
-  securityCard.classList.add('hide_tab')
-}
+  basicInfoTabBtn.classList.add("active_profile_tab");
+  notifyTabBtn.classList.remove("active_profile_tab");
+  securityTabBtn.classList.remove("active_profile_tab");
+};
 
-const switchSecurityTab = () =>{
-  basicInfo.classList.add('hide_tab')
-  notificationsSettings.classList.add('hide_tab')
-  securityCard.classList.remove('hide_tab')
-}
+const switchNotificationTab = () => {
+  //grab elements
+  const basicInfo = document.getElementById("basicInfo");
+  const notificationsSettings = document.getElementById(
+    "notificationsSettings"
+  );
+  const securityCard = document.getElementById("securityCard");
+
+  basicInfo.classList.add("hide_tab");
+  notificationsSettings.classList.remove("hide_tab");
+  securityCard.classList.add("hide_tab");
+
+  const basicInfoTabBtn = document.getElementById("basicInfoTabBtn");
+  const notifyTabBtn = document.getElementById("notifyTabBtn");
+  const securityTabBtn = document.getElementById("securityTabBtn");
+
+  basicInfoTabBtn.classList.remove("active_profile_tab");
+  notifyTabBtn.classList.add("active_profile_tab");
+  securityTabBtn.classList.remove("active_profile_tab");
+};
+
+const switchSecurityTab = () => {
+  //grab elements
+  const basicInfo = document.getElementById("basicInfo");
+  const notificationsSettings = document.getElementById(
+    "notificationsSettings"
+  );
+  const securityCard = document.getElementById("securityCard");
+
+  basicInfo.classList.add("hide_tab");
+  notificationsSettings.classList.add("hide_tab");
+  securityCard.classList.remove("hide_tab");
+
+  const basicInfoTabBtn = document.getElementById("basicInfoTabBtn");
+  const notifyTabBtn = document.getElementById("notifyTabBtn");
+  const securityTabBtn = document.getElementById("securityTabBtn");
+
+  basicInfoTabBtn.classList.remove("active_profile_tab");
+  notifyTabBtn.classList.remove("active_profile_tab");
+  securityTabBtn.classList.add("active_profile_tab");
+};
+
+// HANDLE FAQS
+
+const revealFaqDesc = () => {
+  const faqDescs = document.querySelectorAll(".faq_dropdown_body");
+
+  console.log(faqDescs);
+  faqDescs.forEach((faqDesc) => {
+    faqDesc.classList.toggle("hide_tab");
+  });
+};
+
+// Support Menu tab toggling
+
+const supportMessage = document.getElementById("supportMessage");
+const supportContact = document.getElementById("supportContact");
+const supportFaq = document.getElementById("supportFaq");
+
+const switchMessageTab = () => {
+  const supportMessage = document.getElementById("supportMessage");
+  const supportContact = document.getElementById("supportContact");
+  const supportFaq = document.getElementById("supportFaq");
+  const switchmessageBtn = document.getElementById("switchmessageBtn");
+  const switchContactBtn = document.getElementById("switchContactBtn");
+  const switchFaqsBtn = document.getElementById("switchFaqsBtn");
+
+  supportMessage.classList.remove("hide_tab");
+  supportContact.classList.add("hide_tab");
+  supportFaq.classList.add("hide_tab");
+  switchmessageBtn.classList.add("active_profile_tab");
+  switchContactBtn.classList.remove("active_profile_tab");
+  switchFaqsBtn.classList.remove("active_profile_tab");
+};
+
+const switchContactTab = () => {
+  const supportMessage = document.getElementById("supportMessage");
+  const supportContact = document.getElementById("supportContact");
+  const supportFaq = document.getElementById("supportFaq");
+
+  const switchmessageBtn = document.getElementById("switchmessageBtn");
+  const switchContactBtn = document.getElementById("switchContactBtn");
+  const switchFaqsBtn = document.getElementById("switchFaqsBtn");
+
+  supportMessage.classList.add("hide_tab");
+  supportContact.classList.remove("hide_tab");
+  supportFaq.classList.add("hide_tab");
+
+  switchmessageBtn.classList.remove("active_profile_tab");
+  switchContactBtn.classList.add("active_profile_tab");
+  switchFaqsBtn.classList.remove("active_profile_tab");
+};
+
+const switchFaqTab = () => {
+  const supportMessage = document.getElementById("supportMessage");
+  const supportContact = document.getElementById("supportContact");
+  const supportFaq = document.getElementById("supportFaq");
+
+  const switchmessageBtn = document.getElementById("switchmessageBtn");
+  const switchContactBtn = document.getElementById("switchContactBtn");
+  const switchFaqsBtn = document.getElementById("switchFaqsBtn");
+
+  supportMessage.classList.add("hide_tab");
+  supportContact.classList.add("hide_tab");
+  supportFaq.classList.remove("hide_tab");
+
+  switchmessageBtn.classList.remove("active_profile_tab");
+  switchContactBtn.classList.remove("active_profile_tab");
+  switchFaqsBtn.classList.add("active_profile_tab");
+};
