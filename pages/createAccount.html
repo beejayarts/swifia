@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./../styles/dashboard.css" />
+    <title>Login | swifia</title>
+    <script src="./../scripts/dashboard.js"></script>
+  </head>
+  <body>
+    <div class="login_container">
+      <div class="login_content">
+        <div class="login_content_header">
+          <img
+            src="./../assets/swifialogo1.png"
+            alt="swifia logo"
+            class="logo_img"
+          />
+          <h5>Create an Account</h5>
+          <p>
+            Please enter name as used on your means of ID, this will help to
+            expedite your account verification process
+          </p>
+        </div>
+        <div class="login_content_form">
+          <form id="emailLoginForm" class="loginForm" action="">
+            <div class="input_container_div reg_form_name">
+              <div class="reg_input">
+                <label for="userFirstName">First name</label>
+                <input
+                  id="userFirstName"
+                  placeholder="Enter first name"
+                  class="name_loginInput"
+                  type="text"
+                />
+              </div>
+              <div class="reg_input">
+                <label for="userLastName">Last name</label>
+                <input
+                  id="userLastName"
+                  placeholder="Enter last name"
+                  class="name_loginInput"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="input_container_div reg_form_name">
+              <div class="reg_input">
+                <label for="userFirstName">Select country</label>
+                <select style="appearance: auto;" id="userFirstName" class="name_loginInput" >
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Nigeria">BRITAIN</option>
+                    <option value="Nigeria">AMERICA</option>
+                    <option value="Nigeria">EUROS</option>
+                </select>
+              
+              </div>
+              <div class="reg_input">
+                <label for="userPhone">Phone number</label>
+                <input
+                  id="userPhone"
+                  placeholder="+234"
+                  class="name_loginInput"
+                  type="phone"
+                />
+              </div>
+            </div>
+            <div class="input_container_div">
+              <label id="loginEmail">Email</label>
+              <input
+                placeholder="Enter email address"
+                class="loginInput"
+                type="email"
+              />
+            </div>
+            <div class="input_container_div">
+              <label id="loginEmail">Password</label>
+              <button class="password_visibility_icon">
+                <span class="material-symbols-outlined"> visibility_off </span>
+              </button>
+              <input
+                placeholder="Enter password (minimum of 8 characters)"
+                class="loginInput"
+                type="password"
+              />
+            </div>
+
+            <button type="button" id="submitLoginID" class="submitLogin">
+              Login
+            </button>
+            <div class="form_footer">
+              <div>
+                <span>I have an account.</span>
+                <a href="login.html">Login</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

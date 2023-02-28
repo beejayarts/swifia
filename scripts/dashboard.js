@@ -1896,7 +1896,8 @@ const switchFaqTab = () => {
 
 // LOGIN PAGE SCRIPT
 
-const switchEmailLogin = () =>{
+function switchEmailLogin (){
+  console.log('aba')
   const emailLoginBtn = document.getElementById('emailLoginBtn')
   const phoneLoginBtn = document.getElementById('phoneLoginBtn')
   const emailLoginForm = document.getElementById('emailLoginForm')
@@ -1906,4 +1907,22 @@ const switchEmailLogin = () =>{
   phoneLoginForm.classList.add('hide_loginForm')
   emailLoginBtn.classList.add('sl_active')
   phoneLoginBtn.classList.remove('sl_active')
+}
+
+function switchPhoneLogin(){
+  const emailLoginBtn = document.getElementById('emailLoginBtn')
+  const phoneLoginBtn = document.getElementById('phoneLoginBtn')
+  const emailLoginForm = document.getElementById('emailLoginForm')
+  const phoneLoginForm = document.getElementById('phoneLoginForm')
+
+  emailLoginForm.classList.add('hide_loginForm')
+  phoneLoginForm.classList.remove('hide_loginForm')
+  emailLoginBtn.classList.remove('sl_active')
+  phoneLoginBtn.classList.add('sl_active')
+}
+
+console.log('Hello')
+
+function aba (){
+  console.log('aba')
 }

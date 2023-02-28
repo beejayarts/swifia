@@ -1948,6 +1948,12 @@ LOGIN PAGE
   margin-bottom: 3vh;
 }
 
+.reg_form_name{
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 4%;
+}
+
 .forgot_password_container{
   width: 100%;
   display: flex;
@@ -2023,4 +2029,32 @@ LOGIN PAGE
   top: 55%;
   z-index: 100;
   cursor: pointer;
+}
+
+.login_content_header p{
+  color: #2A2A2A;
+  font-weight: 400;
+  text-align: center;
+  width: 70%;
+}
+
+.name_loginInput{
+  width: 100%;
+  background-color: var(--body-background);
+  height: 7vh;
+  border-radius: 2rem;
+  padding: 1%;
+  padding-inline: 5%;
+  margin-top: .5rem;
+  position: relative;
+  border: var(--input-border);
+}
+
+.name_loginInput::placeholder{
+  color: #9D9D9D;
+  
+}
+
+.reg_input{
+  flex: 1;
 }
