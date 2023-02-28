@@ -10,6 +10,7 @@ ROOT VARIABLES
 
 :root {
   --primary-color: #6b43fb;
+  --dark-purple: #2D1C69;
   --pending-color: #ffde8a;
   --success-color: #8ae3ab;
 
@@ -21,6 +22,7 @@ ROOT VARIABLES
   --body-background: #f5f6fa;
   --border-radius-general: 1rem;
   --padding-general: 2rem;
+  --input-border:1px solid #EAEAEA;
 }
 
 /* 
@@ -1693,7 +1695,6 @@ input:checked + .slider:before {
   width: 80%;
 }
 
-
 .smf_body {
   width: 100%;
 }
@@ -1725,14 +1726,14 @@ input:checked + .slider:before {
   padding: 1.5rem;
 }
 
-.contact_details>p{
+.contact_details > p {
   font-weight: 600;
   color: var(--gray-text);
   font-size: 1rem;
   margin-bottom: 2.5vh;
 }
 
-.phone_number{
+.phone_number {
   color: var(--gray-text);
   font-weight: 400;
   display: flex;
@@ -1741,13 +1742,13 @@ input:checked + .slider:before {
   margin-bottom: 2vh;
 }
 
-.whatsapp_details>p{
+.whatsapp_details > p {
   font-weight: 600;
   color: var(--gray-text);
   font-size: 1rem;
   margin-bottom: 1.5vh;
 }
-.whatsapp_button{
+.whatsapp_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1756,22 +1757,21 @@ input:checked + .slider:before {
   width: 12vw;
   height: 6vh;
   color: var(--white-color);
-  background-color: #33CE6D;
+  background-color: #33ce6d;
   padding: 1rem;
   border-radius: 2rem;
   cursor: pointer;
   margin-top: 2vh;
-  
 }
 
-.faq_dropdown_container{
+.faq_dropdown_container {
   max-height: 40vh;
   overflow-y: hidden;
   overflow-x: hidden;
   width: 100%;
 }
 
-.faq_bag{
+.faq_bag {
   height: 38vh;
   width: 109%;
   overflow-y: scroll;
@@ -1788,34 +1788,239 @@ input:checked + .slider:before {
   gap: 4vh;
 }
 
-.faq_dropdown{
+.faq_dropdown {
   background-color: var(--body-background);
   width: 90%;
   border-radius: var(--border-radius-general);
-  padding: 1rem; 
+  padding: 1rem;
   margin-bottom: 2vh;
-
 }
 
-.faq_dropdown_header p{
-  color: #2D1C69;
+.faq_dropdown_header p {
+  color: #2d1c69;
   font-weight: 600;
 }
-.faq_dropdown_header button{
+.faq_dropdown_header button {
   background-color: transparent;
   font-size: 1rem;
   color: var(--gray-text);
 }
 
-
 .faq_dropdown_header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2vh;
 }
 
+.faq_dropdown_body {
+  transition: 0.4s all ease;
+}
 
-.faq_dropdown_body{
+/* 
+
+====================================================
+GLOBAL TRANSFER STYLES
+====================================================
+
+*/
+
+.global_transfer_container {
+  background-color: var(--white-color);
+  min-height: 70vh;
+  padding: var(--padding-general);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--border-radius-general);
+}
+
+/* 
+
+====================================================
+LOGIN PAGE
+====================================================
+
+*/
+
+.login_container {
+  background-color: var(--body-background);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_content {
+  width: 40%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  align-items: center;
+}
+.login_content_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+.logo_img {
+  max-width: 100px;
+}
+
+.login_content_header h5 {
+  font-weight: 600;
+  color: #2d1c69;
+  font-size: 1.5rem;
+}
+.login_content_form {
+  border-radius: var(--border-radius-general);
+  background-color: var(--white-color);
+  padding: var(--padding-general);
+  width: 100%;
+  height: auto;
+}
+
+.login_tab_btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--body-background);
+  height: 7vh;
+  border-radius: 2rem;
+  padding: 1%;
+}
+
+.switch_login {
+  background-color: transparent;
+  border-radius: inherit;
+  width: 48%;
+  transition: 0.4s all ease;
+  cursor: pointer;
+  color: #707070;
+  font-size: 0.8rem;
+}
+
+.sl_active {
+  background-color: var(--white-color);
+  color: #2a2a2a;
+  font-size: 0.8rem;
+  box-shadow: 7px 14px 12px -3px rgba(0,0,0,0.07);
+}
+
+.sl_active:hover {
+  transform: scale(0.9);
+}
+
+.loginInput{
+  width: 100%;
+  background-color: var(--body-background);
+  height: 7vh;
+  border-radius: 2rem;
+  padding: 1%;
+  padding-inline: 3%;
+  margin-top: .5rem;
+  position: relative;
+  border: var(--input-border);
+}
+
+.loginInput::placeholder{
+  color: #9D9D9D;
+  
+}
+.loginForm{
+  margin-top: 6vh;
+  opacity: 1;
+  transform: translateX(0vw);
   transition: .4s all ease;
+  display: block;
+}
+.hide_loginForm{
+  opacity: 0;
+  transform: translateX(70vw);
+  display: none;
+}
+.input_container_div{
+  margin-bottom: 3vh;
+}
+
+.forgot_password_container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.forgot_password{
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #2D1C69;
+  text-align: right;
+  background-color: transparent;
+  transition: .4s all ease;
+}
+
+.forgot_password:hover{
+  color: var(--primary-color);
+}
+
+.submitLogin{
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 7vh;
+  border-radius: 2rem;
+  padding: 1%;
+  padding-inline: 3%;
+  margin-top: .5rem;
+  color: #FFF;
+  font-size: 1rem;
+  transition: .4s all ease;
+  margin-top: 3vh;
+}
+
+.submitLogin:hover{
+  background-color: #2D1C69;
+  cursor: pointer;
+}
+
+.form_footer{
+  width: 100%;
+  margin-top: 4vh;
+  display: flex;
+  justify-content: center;
+}
+.form_footer div span{
+  font-style: 1rem;
+}
+.form_footer div a{
+  color: var(--primary-color);
+  background-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .4s all ease;
+
+}
+.form_footer div a:hover{
+  color: var(--dark-color);
+ 
+
+}
+
+.input_container_div{
+  position: relative;
+
+}
+
+.password_visibility_icon{
+  position: absolute;
+  font-size: 1rem;
+  color: #707070;
+  background-color: transparent;
+  right: 4%;
+  top: 55%;
+  z-index: 100;
+  cursor: pointer;
 }

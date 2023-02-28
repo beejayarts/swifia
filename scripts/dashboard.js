@@ -1,6 +1,6 @@
 // import {pages} from './dashboardPages'
 
-const pages = {
+const pagesx = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -1537,7 +1537,7 @@ function renderPage(page) {
     pages[page];
 }
 
-renderPage("dashboard");
+// renderPage("dashboard");
 
 //end of rendering the different dashboard pages
 
@@ -1892,3 +1892,18 @@ const switchFaqTab = () => {
   switchContactBtn.classList.remove("active_profile_tab");
   switchFaqsBtn.classList.add("active_profile_tab");
 };
+
+
+// LOGIN PAGE SCRIPT
+
+const switchEmailLogin = () =>{
+  const emailLoginBtn = document.getElementById('emailLoginBtn')
+  const phoneLoginBtn = document.getElementById('phoneLoginBtn')
+  const emailLoginForm = document.getElementById('emailLoginForm')
+  const phoneLoginForm = document.getElementById('phoneLoginForm')
+
+  emailLoginForm.classList.remove('hide_loginForm')
+  phoneLoginForm.classList.add('hide_loginForm')
+  emailLoginBtn.classList.add('sl_active')
+  phoneLoginBtn.classList.remove('sl_active')
+}

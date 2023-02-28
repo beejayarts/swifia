@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./../styles/dashboard.css" />
+    <title>Login | swifia</title>
+  </head>
+  <body>
+    <div class="login_container">
+      <div class="login_content">
+        <div class="login_content_header">
+          <img
+            src="./../assets/swifialogo1.png"
+            alt="swifia logo"
+            class="logo_img"
+          />
+          <h5>Login to your account</h5>
+        </div>
+        <div class="login_content_form">
+          <div class="login_tab_btns">
+            <button onclick="switchEmailLogin()" id="emailLoginBtn" class="switch_login sl_active">
+              Email
+            </button>
+            <button id="phoneLoginBtn" class="switch_login">Phone Number</button>
+          </div>
+          <!-- Email login form -->
+          <form id="emailLoginForm" class="loginForm" action="">
+            <div class="input_container_div">
+              <label id="loginEmail">Email</label>
+              <input
+                placeholder="Enter email address"
+                class="loginInput"
+                type="email"
+              />
+            </div>
+            <div class="input_container_div">
+              <label id="loginEmail">Password</label>
+              <button class="password_visibility_icon">
+                <span class="material-symbols-outlined"> visibility_off </span>
+              </button>
+              <input
+                placeholder="Password"
+                class="loginInput"
+                type="password"
+              />
+            </div>
+            <div class="forgot_password_container">
+              <a href="forgotPassword.html" class="forgot_password">
+                Forgot Password
+              </a>
+            </div>
+            <button type="button" id="submitLoginID" class="submitLogin">
+              Login
+            </button>
+            <div class="form_footer">
+              <div>
+                <span>I am a new user.</span>
+                <a href="createAccount.html">Create an Account</a>
+              </div>
+            </div>
+          </form>
+               <!-- Phone login form -->
+               <form id="phoneLoginForm" class="loginForm hide_loginForm" action="">
+                <div class="input_container_div">
+                  <label id="loginEmail">Email</label>
+                  <input
+                    placeholder="Enter email address"
+                    class="loginInput"
+                    type="email"
+                  />
+                </div>
+                <div class="input_container_div">
+                  <label id="loginEmail">Password</label>
+                  <button class="password_visibility_icon">
+                    <span class="material-symbols-outlined"> visibility_off </span>
+                  </button>
+                  <input
+                    placeholder="Password"
+                    class="loginInput"
+                    type="password"
+                  />
+                </div>
+                <div class="forgot_password_container">
+                  <a href="forgotPassword.html" class="forgot_password">
+                    Forgot Password
+                  </a>
+                </div>
+                <button type="button" id="submitLoginID" class="submitLogin">
+                  Login
+                </button>
+                <div class="form_footer">
+                  <div>
+                    <span>I am a new user.</span>
+                    <a href="createAccount.html">Create an Account</a>
+                  </div>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
