@@ -67,10 +67,8 @@
             </li>
             <li class="sidebar_button_list_item">
               <button id="globalNav" class="sidebar_button">
-                <span class="material-symbols-outlined">
-                  publish
-                  </span>
-               Global Transfer
+                <span class="material-symbols-outlined"> publish </span>
+                Global Transfer
               </button>
             </li>
             <li class="sidebar_button_list_item">
@@ -110,16 +108,87 @@
 
       <main class="main_section">
         <!-- PRINCIPAL CONTAINER -->
-        <div id="dashboard_content_container" class="dashboard_content"> 
+        <div id="dashboard_content_container" class="dashboard_content">
           <div class="dcHeader">
             <p>Global Transfer</p>
           </div>
           <div class="global_transfer_container">
             <div class="transfer_form_container">
               <div class="tfc_header">
-                
+                <h5>Send Money</h5>
+                <div class="switchSingleBulk">
+                  <div class="single_transfer">
+                    <input
+                      value="singleTransfer"
+                      class="radio_transfer"
+                      id="selectSingleTransfer"
+                      type="radio"
+                    />
+                    <label>Single Transfer</label>
+                  </div>
+                  <div class="bulk_transfer">
+                    <input
+                      value="bulkTransfer"
+                      class="radio_transfer"
+                      id="selectBulkTransfer"
+                      type="radio"
+                    />
+                    <label>Bulk Transfer</label>
+                  </div>
+                </div>
               </div>
-              <div class="tfc_body"></div>
+              <div class="tfc_body">
+                <!-- Global transfer page 4 -->
+                <div id="page4" class="singleTransfer_Page4">
+                  <h5>Send Money</h5>
+                  <p>
+                    Kindly ensure that you initiate a transfer of the desired
+                    amount to the following specified account details. Upon
+                    successful receipt of the payment, your transfer request
+                    will be promptly processed and you will be notified via an
+                    official confirmation.
+                  </p>
+                  <div class="pay_details_card">
+                    <h6>Bank Details To Pay Your Money Into</h6>
+                    <div class="pay_details_card_details">
+                      <div class="bank_detail">
+                        <p>Bank name:</p>
+                        <p>Wema Bank</p>
+                      </div>
+                      <div class="bank_detail">
+                        <p>Account name:</p>
+                        <p>James Alimo-Swifia</p>
+                      </div>
+                      <div class="bank_detail">
+                        <p>Account number:</p>
+                        <div class="copy_bank_details">
+                          <p>7902058884</p>
+                          <button class="copy_button">
+                            copy
+                            <span class="material-symbols-rounded">
+                              content_copy
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="bank_detail transfer_amount">
+                        <h6>Total Amount to be transferred</h6>
+                        <h6 NGN>205,694 NGN</h6>
+                      </div>
+                    </div>
+                    <!-- successful payment -->
+                    <div id="globalSuccessModal" class="global_success_pay_card">
+                      <div class="global_success_pay">
+                        <img src='./../assets/Check.png'/>
+                        <p>Global Payment Request
+                          Submitted Successfully!</p>
+                          <button onclick="hideGlobalModal()" class="page_progress_btn">close</button>
+                      </div>
+                    </div>
+                  </div>
+                  <button onclick="showGlobalModal()" id="finalPayBtn" class="page_progress_btn">Initiate payment</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
