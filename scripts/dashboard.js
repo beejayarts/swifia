@@ -1,5 +1,7 @@
 // import {pages} from './dashboardPages'
 
+
+
 const pagesx = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
@@ -1978,6 +1980,35 @@ $(function() {
 })
 
 
+
+// =========================GLOBAL TRANSFER PAGE
+
+const globalTransferPages ={
+  page1:`<h1>This is page1</h1>`,
+  page2:`<h1>This is page2</h1>`,
+  page3:`<h1>This is page3</h1>`,
+  page4:`<h1>This is page4</h1>`,
+  page5:`<h1>This is page5</h1>`,
+  page6:`<h1>This is page6</h1>`,
+  page7:`<h1>This is page7</h1>`,
+  page8:`<h1>This is page8</h1>`
+  
+}
+
+
+
+document.getElementById("page1").addEventListener("click", function () {
+  renderGlobalPages("page1");
+});
+
+
+
+function renderGlobalPages(page) {
+  document.getElementById("tfcBodyId").innerHTML =
+  globalTransferPages[page];
+}
+
+renderGlobalPages('page1')
 
 // Global SUCCESS PAY MODAL
 
