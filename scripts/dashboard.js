@@ -1,8 +1,6 @@
 // import {pages} from './dashboardPages'
 
-
-
-const pagesx = {
+const pages = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -959,8 +957,207 @@ const pagesx = {
     </div>
   </div>
 </div>
-`, global:` <h1>this is the global page</h1>`,
-  transactions: `    <div class="dcHeader">
+`,
+  global: `  <div class="dcHeader">
+  <p>Global Transfer</p>
+</div>
+<div class="global_transfer_container">
+  <div class="transfer_form_container">
+    <div class="tfc_header">
+      <h5>Send Money</h5>
+      <div class="switchSingleBulk">
+        <div class="single_transfer">
+          <input
+            value="singleTransfer"
+            class="radio_transfer"
+            id="selectSingleTransfer"
+            type="radio"
+            name="transfers"
+            onchange="handleChange(1)"
+            checked
+          />
+          <label for="selectSingleTransfer">Single Transfer</label>
+        </div>
+        <div class="bulk_transfer">
+          <input
+            value="bulkTransfer"
+            class="radio_transfer"
+            id="selectBulkTransfer"
+            type="radio"
+            name="transfers" 
+            onchange="handleChange(5)"
+          />
+          <label  for="selectBulkTransfer">Bulk Transfer</label>
+        </div>
+      </div>
+    </div>
+    <div id="tfcBodyId" class="tfc_body">
+  
+  <div id="page1"  class="singleTransfer_Page1">
+  <div class="exchange_Rate_box">
+    <p>Exchange Rate:</p>
+    <p>750 NGN = 1 USD</p>
+  </div>
+  <!-- country/amount converter input -->
+  <div class="country_amount_box">
+    <p class="send_amount">₦0</p>
+    <label>Country/amount to send</label>
+    <input
+      type="text"
+      placeholder="NGN"
+      class="country_amount_input"
+      readonly
+    />
+    <!-- Modal for currency converter -->
+    <div class="tfc_currency_options">
+      <div class="tfc_currency_btn usa_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/USA.png" alt="USA" />
+          <span>United states</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn uk_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/britain.png" alt="UK" />
+          <span>United Kingdom</span>
+        </div>
+        <span>GBP</span>
+      </div>
+      <div class="tfc_currency_btn india_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>INR</span>
+      </div>
+      <div class="tfc_currency_btn india2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>YUAN</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/nigeria.png" alt="china" />
+          <span>Nigeria</span>
+        </div>
+        <span>NGN</span>
+      </div>
+    </div>
+    <!-- end of Modal for currency converter -->
+  </div>
+      <!-- select receipient input -->
+      <div class="country_amount_box">
+        <p class="send_amount">¥2,985.47</p>
+        <label>Select recipient country/currency</label>
+        <input
+          type="text"
+          placeholder="YUAN"
+          class="country_amount_input"
+          readonly
+        />
+        <!-- Modal for currency converter -->
+        <div class="tfc_currency_options">
+          <div class="tfc_currency_btn usa_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/USA.png" alt="USA" />
+              <span>United states</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn uk_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/britain.png" alt="UK" />
+              <span>United Kingdom</span>
+            </div>
+            <span>GBP</span>
+          </div>
+          <div class="tfc_currency_btn india_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/india.png" alt="india" />
+              <span>India</span>
+            </div>
+            <span>INR</span>
+          </div>
+          <div class="tfc_currency_btn india2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/india.png" alt="india" />
+              <span>India</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn china_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/china.png" alt="china" />
+              <span>China</span>
+            </div>
+            <span>YUAN</span>
+          </div>
+          <div class="tfc_currency_btn china2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/china.png" alt="china" />
+              <span>China</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn china2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/nigeria.png" alt="china" />
+              <span>Nigeria</span>
+            </div>
+            <span>NGN</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="feeTransferBoard">
+        <div class="fee_line">
+          <div class="fl_left"><p>Fee</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">5,694 NGN</p></div>
+        </div>
+        <div class="fee_line">
+          <div class="fl_left"><p>Transfer time</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">Within 24 hours</p><button title="Excludes weekends & Public holidays" class="info_btn"><span class="material-symbols-rounded">
+            info
+            </span></button></div>
+            <!-- Additional info board -->
+            
+        </div>
+        <div class="fee_line"></div>
+      </div>
+      <div class="feeTransferBoard">
+        <div class="fee_line">
+          <div class="fl_left"><p>Amount to pay</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">205,694 NGN</p></div>
+        </div>
+        <div class="fee_line">
+          <div class="fl_left"><p>Recipient gets</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">2,985.47 YUAN</p></div>
+        </div>
+        <div class="fee_line"></div>
+      </div>
+      <button onclick='handlePageTwo()' id='pageOneBtn' class="page_progress_btn">Continue</button>
+</div>
+    </div>
+  </div>
+</div>`,
+  transactions: `<div class="dcHeader">
   <p>Transactions</p>
 </div>
 <div class="transactions_table">
@@ -1506,7 +1703,6 @@ document.getElementById("dashboardNav").addEventListener("click", function () {
   renderPage("dashboard");
 });
 
-
 document.getElementById("accountsNav").addEventListener("click", function () {
   renderPage("accounts");
 });
@@ -1514,7 +1710,6 @@ document.getElementById("accountsNav").addEventListener("click", function () {
 document.getElementById("globalNav").addEventListener("click", function () {
   renderPage("global");
 });
-
 
 document
   .getElementById("transactionsNav")
@@ -1539,7 +1734,7 @@ function renderPage(page) {
     pages[page];
 }
 
-// renderPage("dashboard");
+renderPage("dashboard");
 
 //end of rendering the different dashboard pages
 
@@ -1895,130 +2090,637 @@ const switchFaqTab = () => {
   switchFaqsBtn.classList.add("active_profile_tab");
 };
 
-
 // LOGIN PAGE SCRIPT
 
-function switchEmailLogin (){
-  console.log('aba')
-  const emailLoginBtn = document.getElementById('emailLoginBtn')
-  const phoneLoginBtn = document.getElementById('phoneLoginBtn')
-  const emailLoginForm = document.getElementById('emailLoginForm')
-  const phoneLoginForm = document.getElementById('phoneLoginForm')
+function switchEmailLogin() {
+  console.log("aba");
+  const emailLoginBtn = document.getElementById("emailLoginBtn");
+  const phoneLoginBtn = document.getElementById("phoneLoginBtn");
+  const emailLoginForm = document.getElementById("emailLoginForm");
+  const phoneLoginForm = document.getElementById("phoneLoginForm");
 
-  emailLoginForm.classList.remove('hide_loginForm')
-  phoneLoginForm.classList.add('hide_loginForm')
-  emailLoginBtn.classList.add('sl_active')
-  phoneLoginBtn.classList.remove('sl_active')
+  emailLoginForm.classList.remove("hide_loginForm");
+  phoneLoginForm.classList.add("hide_loginForm");
+  emailLoginBtn.classList.add("sl_active");
+  phoneLoginBtn.classList.remove("sl_active");
 }
 
-function switchPhoneLogin(){
-  const emailLoginBtn = document.getElementById('emailLoginBtn')
-  const phoneLoginBtn = document.getElementById('phoneLoginBtn')
-  const emailLoginForm = document.getElementById('emailLoginForm')
-  const phoneLoginForm = document.getElementById('phoneLoginForm')
+function switchPhoneLogin() {
+  const emailLoginBtn = document.getElementById("emailLoginBtn");
+  const phoneLoginBtn = document.getElementById("phoneLoginBtn");
+  const emailLoginForm = document.getElementById("emailLoginForm");
+  const phoneLoginForm = document.getElementById("phoneLoginForm");
 
-  emailLoginForm.classList.add('hide_loginForm')
-  phoneLoginForm.classList.remove('hide_loginForm')
-  emailLoginBtn.classList.remove('sl_active')
-  phoneLoginBtn.classList.add('sl_active')
+  emailLoginForm.classList.add("hide_loginForm");
+  phoneLoginForm.classList.remove("hide_loginForm");
+  emailLoginBtn.classList.remove("sl_active");
+  phoneLoginBtn.classList.add("sl_active");
 }
 
-console.log('Hello')
-
-function aba (){
-  console.log('aba')
+function aba() {
+  console.log("aba");
 }
-
-
 
 // VERIFY PAGE FORM PIN INPUT LOGIC
 
-$(function() {
-  'use strict';
+// $(function () {
+//   "use strict";
 
-  var body = $('body');
+//   var body = $("body");
 
-  function goToNextInput(e) {
-    var key = e.which,
-      t = $(e.target),
-      sib = t.next('input');
+//   function goToNextInput(e) {
+//     var key = e.which,
+//       t = $(e.target),
+//       sib = t.next("input");
 
-    if (key != 9 && (key < 48 || key > 57)) {
-      e.preventDefault();
-      return false;
-    }
+//     if (key != 9 && (key < 48 || key > 57)) {
+//       e.preventDefault();
+//       return false;
+//     }
 
-    if (key === 9) {
-      return true;
-    }
+//     if (key === 9) {
+//       return true;
+//     }
 
-    if (!sib || !sib.length) {
-      sib = body.find('input').eq(0);
-    }
-    sib.select().focus();
-  }
+//     if (!sib || !sib.length) {
+//       sib = body.find("input").eq(0);
+//     }
+//     sib.select().focus();
+//   }
 
-  function onKeyDown(e) {
-    var key = e.which;
+//   function onKeyDown(e) {
+//     var key = e.which;
 
-    if (key === 9 || (key >= 48 && key <= 57)) {
-      return true;
-    }
+//     if (key === 9 || (key >= 48 && key <= 57)) {
+//       return true;
+//     }
 
-    e.preventDefault();
-    return false;
-  }
-  
-  function onFocus(e) {
-    $(e.target).select();
-  }
+//     e.preventDefault();
+//     return false;
+//   }
 
-  body.on('keyup', 'input', goToNextInput);
-  body.on('keydown', 'input', onKeyDown);
-  body.on('click', 'input', onFocus);
+//   function onFocus(e) {
+//     $(e.target).select();
+//   }
 
-})
-
-
+//   body.on("keyup", "input", goToNextInput);
+//   body.on("keydown", "input", onKeyDown);
+//   body.on("click", "input", onFocus);
+// });
 
 // =========================GLOBAL TRANSFER PAGE
 
-const globalTransferPages ={
-  page1:`<h1>This is page1</h1>`,
-  page2:`<h1>This is page2</h1>`,
-  page3:`<h1>This is page3</h1>`,
-  page4:`<h1>This is page4</h1>`,
-  page5:`<h1>This is page5</h1>`,
-  page6:`<h1>This is page6</h1>`,
-  page7:`<h1>This is page7</h1>`,
-  page8:`<h1>This is page8</h1>`
-  
-}
+const globalTransferPages = {
+  page1: `<div id="page1"  class="singleTransfer_Page1">
+  <div class="exchange_Rate_box">
+    <p>Exchange Rate:</p>
+    <p>750 NGN = 1 USD</p>
+  </div>
+  <!-- country/amount converter input -->
+  <div class="country_amount_box">
+    <p class="send_amount">₦0</p>
+    <label>Country/amount to send</label>
+    <input
+      type="text"
+      placeholder="NGN"
+      class="country_amount_input"
+      readonly
+    />
+    <!-- Modal for currency converter -->
+    <div class="tfc_currency_options">
+      <div class="tfc_currency_btn usa_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/USA.png" alt="USA" />
+          <span>United states</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn uk_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/britain.png" alt="UK" />
+          <span>United Kingdom</span>
+        </div>
+        <span>GBP</span>
+      </div>
+      <div class="tfc_currency_btn india_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>INR</span>
+      </div>
+      <div class="tfc_currency_btn india2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>YUAN</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/nigeria.png" alt="china" />
+          <span>Nigeria</span>
+        </div>
+        <span>NGN</span>
+      </div>
+    </div>
+    <!-- end of Modal for currency converter -->
+  </div>
+      <!-- select receipient input -->
+      <div class="country_amount_box">
+        <p class="send_amount">¥2,985.47</p>
+        <label>Select recipient country/currency</label>
+        <input
+          type="text"
+          placeholder="YUAN"
+          class="country_amount_input"
+          readonly
+        />
+        <!-- Modal for currency converter -->
+        <div class="tfc_currency_options">
+          <div class="tfc_currency_btn usa_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/USA.png" alt="USA" />
+              <span>United states</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn uk_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/britain.png" alt="UK" />
+              <span>United Kingdom</span>
+            </div>
+            <span>GBP</span>
+          </div>
+          <div class="tfc_currency_btn india_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/india.png" alt="india" />
+              <span>India</span>
+            </div>
+            <span>INR</span>
+          </div>
+          <div class="tfc_currency_btn india2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/india.png" alt="india" />
+              <span>India</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn china_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/china.png" alt="china" />
+              <span>China</span>
+            </div>
+            <span>YUAN</span>
+          </div>
+          <div class="tfc_currency_btn china2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/china.png" alt="china" />
+              <span>China</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn china2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/nigeria.png" alt="china" />
+              <span>Nigeria</span>
+            </div>
+            <span>NGN</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="feeTransferBoard">
+        <div class="fee_line">
+          <div class="fl_left"><p>Fee</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">5,694 NGN</p></div>
+        </div>
+        <div class="fee_line">
+          <div class="fl_left"><p>Transfer time</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">Within 24 hours</p><button title="Excludes weekends & Public holidays" class="info_btn"><span class="material-symbols-rounded">
+            info
+            </span></button></div>
+            <!-- Additional info board -->
+            
+        </div>
+        <div class="fee_line"></div>
+      </div>
+      <div class="feeTransferBoard">
+        <div class="fee_line">
+          <div class="fl_left"><p>Amount to pay</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">205,694 NGN</p></div>
+        </div>
+        <div class="fee_line">
+          <div class="fl_left"><p>Recipient gets</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">2,985.47 YUAN</p></div>
+        </div>
+        <div class="fee_line"></div>
+      </div>
+      <button onclick='handlePageTwo()' id='pageOneBtn' class="page_progress_btn">Continue</button>
+</div>`,
+  page2: ` <div id="page2" class="singleTransfer_Page2">
+  <p>Recipients account detail (paste payment details as copied)</p>
+  <textarea class="" rows="12" cols="12" placeholder="paste details"></textarea>
+  <div class="invoice_upload_area">
+    <p>Upload Invoices</p>
+    <p>Click to upload proforma invoices and invoices (optional)</p>
+    <div class="invoice_upload_box">
+      <div class="invoice_upload_box_btn"><span class="material-symbols-rounded">
+        upload
+        </span>upload invoice</div>
+      <input  type="file"/>
+    </div>
+    <button onclick='handlePageThree()' id='pageTwoBtn' class="page_progress_btn">Continue</button>
+  </div>
+</div>`,
+  page3: `<div id="page3" class="singleTransfer_Page3">
+  <div class="bank_details_summary_card">
+    <h6>Bank Details To Pay Your Money Into</h6>
+    <div class="bank_details_content">
+      <div class="bank_detail">
+        <p>Bank name:</p>
+        <p>Wema Bank</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account name:</p>
+        <p>James Alimo-Swifia</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account number:</p>
+        <div class="copy_bank_details">
+          <p>7902058884</p>
+          <button class="copy_button">
+            copy
+            <span class="material-symbols-rounded">
+              content_copy
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recipients_summary_details">
+    <p>Recipients account detail</p>
+    <div class="bank_details_summary_card bds_blocks_container">
+      <div class="bds_block">
+        <p>BENEFICIARY : ALPA LABORATORIES LTD.</p>
+        <p>Add: 33/2 AGRA BOMBAY ROAD, PIGDAMBER , INDORE</p>
+        <p>EMAIL: pchawla@alpalabs.in</p>
+        <p>Phone : +91 9893355336</p>
+      </div>
+      <div class="bds_block">
+        <p>ACCOUNT NO. : 556011037074</p>
+      </div>
+      <div class="bds_block">
+        <p>BANK DETAILS</p>
+        <p>
+          KOTAK MAHINDRA BANK, 10 M.G.Road INDORE BRANCH INDORE
+          (MP) INDIA
+        </p>
+      </div>
+      <div class="bds_block">
+        <p>SWIFT CODE : KKBKINBBXXX</p>
+        <p>IFSC : KKBK0005933</p>
+      </div>
+      <div class="bds_block">
+        <p>PAYMENT ROUTING : THE BANK OF NEW YORK MELLON</p>
+        <p>SWIFT CODE : IRVTUS3NXXX</p>
+        <p>ACCOUNT NO.: 8900517794</p>
+      </div>
+    </div>
+  </div>
+  <div class="invoice_upload_area">
+    <p>Upload Invoices</p>
+    <p>
+      Click to change proforma invoices and invoices (optional)
+    </p>
+    <div class="invoice_upload_box">
+      <div class="invoice_upload_box_btn">
+        <span class="material-symbols-rounded"> upload </span
+        >upload invoice
+      </div>
+      <input type="file" />
+    </div>
+  </div>
 
+  <div class="bank_details_summary_card">
+    <div class="sum_head">
+      <h5>Summary</h5>
+      <p>1 NGN = 0.015 YUAN</p>
+    </div>
+    <div class="bds_internal_card">
+      <div class="sum_head">
+        <h6>Payment Summary</h6>
+        <button>
+          <span class="material-symbols-rounded"> edit </span
+          >Edit
+        </button>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Originating Country</p>
+        <p>Nigeria</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Amount to send</p>
+        <p>200,000 NGN</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Amount to pay</p>
+        <p>205,694 NGN</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Fee</p>
+        <p>5, 694 NGN</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Recipients Country</p>
+        <p>China</p>
+      </div>
+      <div class="receiving_amount">
+        <h6>Amount to receive</h6>
+        <h6>2,985.47 YUAN</h6>
+      </div>
+    </div>
+  </div>
 
-
-document.getElementById("page1").addEventListener("click", function () {
-  renderGlobalPages("page1");
-});
-
-
+  <button onclick='handlePageFour()' id='pageThreeBtn' class="page_progress_btn">Initiate payment</button>
+</div>`,
+  page4: `    <div id="page4" class="singleTransfer_Page4">
+  <h5>Send Money</h5>
+  <p>
+    Kindly ensure that you initiate a transfer of the desired
+    amount to the following specified account details. Upon
+    successful receipt of the payment, your transfer request
+    will be promptly processed and you will be notified via an
+    official confirmation.
+  </p>
+  <div class="pay_details_card">
+    <h6>Bank Details To Pay Your Money Into</h6>
+    <div class="pay_details_card_details">
+      <div class="bank_detail">
+        <p>Bank name:</p>
+        <p>Wema Bank</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account name:</p>
+        <p>James Alimo-Swifia</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account number:</p>
+        <div class="copy_bank_details">
+          <p>7902058884</p>
+          <button class="copy_button">
+            copy
+            <span class="material-symbols-rounded">
+              content_copy
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="bank_detail transfer_amount">
+        <h6>Total Amount to be transferred</h6>
+        <h6 NGN>205,694 NGN</h6>
+      </div>
+    </div>
+    <!-- successful payment -->
+    <div id="globalSuccessModal" class="global_success_pay_card">
+      <div class="global_success_pay">
+        <img src='./../assets/Check.png'/>
+        <p>Global Payment Request
+          Submitted Successfully!</p>
+          <button onclick="hideGlobalModal()" class="page_progress_btn">close</button>
+      </div>
+    </div>
+  </div>
+  <button onclick="showGlobalModal()" id="finalPayBtn" class="page_progress_btn">Initiate payment</button>
+</div>`,
+  page5: `<div id="page1"  class="singleTransfer_Page1">
+  <div class="exchange_Rate_box">
+    <p>Exchange Rate:</p>
+    <p>750 NGN = 1 USD</p>
+  </div>
+  <!-- country/amount converter input -->
+  <div class="country_amount_box">
+    <p class="send_amount">₦0</p>
+    <label>Country/amount to send</label>
+    <input
+      type="text"
+      placeholder="NGN"
+      class="country_amount_input"
+      readonly
+    />
+    <!-- Modal for currency converter -->
+    <div class="tfc_currency_options">
+      <div class="tfc_currency_btn usa_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/USA.png" alt="USA" />
+          <span>United states</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn uk_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/britain.png" alt="UK" />
+          <span>United Kingdom</span>
+        </div>
+        <span>GBP</span>
+      </div>
+      <div class="tfc_currency_btn india_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>INR</span>
+      </div>
+      <div class="tfc_currency_btn india2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>YUAN</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/nigeria.png" alt="china" />
+          <span>Nigeria</span>
+        </div>
+        <span>NGN</span>
+      </div>
+    </div>
+    <!-- end of Modal for currency converter --> 
+  </div>
+      <!-- select receipient input -->
+      <div class="country_amount_box">
+        <p class="send_amount">¥2,985.47</p>
+        <label>Select recipient country/currency</label>
+        <input
+          type="text"
+          placeholder="YUAN"
+          class="country_amount_input"
+          readonly
+        />
+        <!-- Modal for currency converter -->
+        <div class="tfc_currency_options">
+          <div class="tfc_currency_btn usa_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/USA.png" alt="USA" />
+              <span>United states</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn uk_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/britain.png" alt="UK" />
+              <span>United Kingdom</span>
+            </div>
+            <span>GBP</span>
+          </div>
+          <div class="tfc_currency_btn india_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/india.png" alt="india" />
+              <span>India</span>
+            </div>
+            <span>INR</span>
+          </div>
+          <div class="tfc_currency_btn india2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/india.png" alt="india" />
+              <span>India</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn china_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/china.png" alt="china" />
+              <span>China</span>
+            </div>
+            <span>YUAN</span>
+          </div>
+          <div class="tfc_currency_btn china2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/china.png" alt="china" />
+              <span>China</span>
+            </div>
+            <span>USD</span>
+          </div>
+          <div class="tfc_currency_btn china2_btn">
+            <div class="tfc_c_btn_left">
+              <img src="./../assets/nigeria.png" alt="china" />
+              <span>Nigeria</span>
+            </div>
+            <span>NGN</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="feeTransferBoard">
+        <div class="fee_line">
+          <div class="fl_left"><p>Fee</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">5,694 NGN</p></div>
+        </div>
+        <div class="fee_line">
+          <div class="fl_left"><p>Transfer time</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">Within 24 hours</p><button title="Excludes weekends & Public holidays" class="info_btn"><span class="material-symbols-rounded">
+            info
+            </span></button></div>
+            <!-- Additional info board -->
+            
+        </div>
+        <div class="fee_line"></div>
+      </div>
+      <div class="feeTransferBoard">
+        <div class="fee_line">
+          <div class="fl_left"><p>Amount to pay</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">205,694 NGN</p></div>
+        </div>
+        <div class="fee_line">
+          <div class="fl_left"><p>Recipient gets</p></div>
+          <div class="fl_right"><p style="font-weight: 600;">2,985.47 YUAN</p></div>
+        </div>
+        <div class="fee_line"></div>
+      </div>
+      <button onclick='handlePageSix()' id='pageOneBtn' class="page_progress_btn">Continue</button>
+</div>`,
+  page6: `<h1>This is page6</h1>`,
+  page7: `<h1>This is page7</h1>`,
+  page8: `<h1>This is page8</h1>`,
+};
 
 function renderGlobalPages(page) {
-  document.getElementById("tfcBodyId").innerHTML =
-  globalTransferPages[page];
+  console.log(page);
+  document.getElementById("tfcBodyId").innerHTML = globalTransferPages[page];
 }
 
-renderGlobalPages('page1')
+renderGlobalPages("page1");
+
+function handlePageTwo() {
+  console.log("papa2");
+  renderGlobalPages("page2");
+}
+
+function handlePageThree() {
+  console.log("papa3");
+  renderGlobalPages("page3");
+}
+function handlePageFour() {
+  console.log("papa4");
+  renderGlobalPages("page4");
+}
+function handlePageSix() {
+  console.log("papa6");
+  renderGlobalPages("page6");
+}
+
+// TOGGLE SINGLE OR BULK TRANSFER RADIO BUTTONS
+
+function handleChange(n) {
+  const pageOne = document.querySelectorAll("page1");
+  const pageFive = document.querySelectorAll("page5");
+
+  if (n === 1) {
+    renderGlobalPages("page1");
+  } else if (n === 5) {
+    renderGlobalPages("page5");
+  }
+}
 
 // Global SUCCESS PAY MODAL
 
-function showGlobalModal(){
-  const finalPayBtn = document.getElementById('finalPayBtn')
-  const globalSuccessModal = document.getElementById('globalSuccessModal')
-  globalSuccessModal.style.display='flex'
+function showGlobalModal() {
+  const finalPayBtn = document.getElementById("finalPayBtn");
+  const globalSuccessModal = document.getElementById("globalSuccessModal");
+  globalSuccessModal.style.display = "flex";
 }
-function hideGlobalModal(){
-  const finalPayBtn = document.getElementById('finalPayBtn')
-  const globalSuccessModal = document.getElementById('globalSuccessModal')
-  globalSuccessModal.style.display='none'
+function hideGlobalModal() {
+  const finalPayBtn = document.getElementById("finalPayBtn");
+  const globalSuccessModal = document.getElementById("globalSuccessModal");
+  globalSuccessModal.style.display = "none";
 }
