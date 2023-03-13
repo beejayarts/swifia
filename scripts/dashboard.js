@@ -1701,28 +1701,65 @@ const pages = {
 
 document.getElementById("dashboardNav").addEventListener("click", function () {
   renderPage("dashboard");
+  this.classList.add('active_sidebar_btn')
+  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
+  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
+  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
 });
 
 document.getElementById("accountsNav").addEventListener("click", function () {
   renderPage("accounts");
+  this.classList.add('active_sidebar_btn')
+  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
+  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
+  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
+  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
+
 });
 
 document.getElementById("globalNav").addEventListener("click", function () {
   renderPage("global");
+  this.classList.add('active_sidebar_btn')
+  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
+  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
+  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
 });
 
 document
   .getElementById("transactionsNav")
   .addEventListener("click", function () {
     renderPage("transactions");
+    this.classList.add('active_sidebar_btn')
+  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
+  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
+  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
+  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
   });
 
 document.getElementById("profileNav").addEventListener("click", function () {
   renderPage("profile");
+  this.classList.add('active_sidebar_btn')
+  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
+  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
+  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
 });
 
 document.getElementById("supportNav").addEventListener("click", function () {
   renderPage("support");
+  this.classList.add('active_sidebar_btn')
+  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
+  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
+  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
+  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
 });
 
 document.getElementById("logoutNav").addEventListener("click", function () {
