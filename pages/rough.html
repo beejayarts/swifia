@@ -305,15 +305,6 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
 <!-- 
 
 
@@ -323,10 +314,7 @@
 
  -->
 
-
-
-
- <div class="myaccounts_Header">
+<div class="myaccounts_Header">
   <button
     id="accountsBtn"
     onclick="switchAccountsTab()"
@@ -344,7 +332,7 @@
 </div>
 
 <!-- MY ACCOUNTS TAB -->
-<div id="AccountsTabId" class="myAccountsTab ">
+<div id="AccountsTabId" class="myAccountsTab">
   <!-- Select currency card -->
   <div class="select_currency_card">
     <div class="sc_top">
@@ -356,33 +344,36 @@
             onclick="showPoundsBoard()"
             class="select_currency_btn select_currency_btn_active"
           >
-            <img
-              src="./../assets/britain.png"
-              alt=""
-              class="sc_flag"
-            /><span>GBP</span>
+            <img src="./../assets/britain.png" alt="" class="sc_flag" /><span
+              >GBP</span
+            >
           </button>
           <button
             id="switchDollarsBoard"
             onclick="showDollarsBoard()"
             class="select_currency_btn"
           >
-            <img
-              src="./../assets/USA.png"
-              alt=""
-              class="sc_flag"
-            /><span>USD</span>
+            <img src="./../assets/USA.png" alt="" class="sc_flag" /><span
+              >USD</span
+            >
           </button>
           <button
             id="switchEurosBoard"
             onclick="showEurosBoard()"
             class="select_currency_btn"
           >
-            <img
-              src="./../assets/euro.png"
-              alt=""
-              class="sc_flag"
-            /><span>EUR</span>
+            <img src="./../assets/euro.png" alt="" class="sc_flag" /><span
+              >EUR</span
+            >
+          </button>
+          <button
+            id="switchNaijaBoard"
+            onclick="showNaijaBoard()"
+            class="select_currency_btn"
+          >
+            <img src="./../assets/nigeria.png" alt="" class="sc_flag" /><span
+              >NGN</span
+            >
           </button>
         </div>
       </div>
@@ -394,40 +385,38 @@
           >
         </button>
         <button class="sc_top_btn">
-          <img
-            src="./../assets/sendmoney.png"
-            alt="send money"
-          /><span>Send</span>
+          <img src="./../assets/sendmoney.png" alt="send money" /><span
+            >Send</span
+          >
         </button>
         <button class="sc_top_btn">
-          <img
-            src="./../assets/swapmoney.png"
-            alt="swap money"
-          /><span>Swap currency</span>
+          <img src="./../assets/swapmoney.png" alt="swap money" /><span
+            >Swap currency</span
+          >
         </button>
       </div>
     </div>
     <!-- CURRENCY INFORMATION BOARD -->
     <div id="pounds_board" class="currency_info_board">
       <p>
-        Available <span style="font-weight: 600"> GBP</span> account
-        balance £0.00
+        Available <span style="font-weight: 600"> GBP</span> account balance
+        £0.00
       </p>
 
       <h3>£0.00</h3>
     </div>
     <div id="dollars_board" class="currency_info_board hide_board">
       <p>
-        Available <span style="font-weight: 600"> USD</span> account
-        balance £0.00
+        Available <span style="font-weight: 600"> USD</span> account balance
+        £0.00
       </p>
 
       <h3>$0.00</h3>
     </div>
     <div id="euros_board" class="currency_info_board hide_board">
       <p>
-        Available <span style="font-weight: 600"> EUR</span> account
-        balance £0.00
+        Available <span style="font-weight: 600"> EUR</span> account balance
+        £0.00
       </p>
 
       <h3>€0.00</h3>
@@ -437,18 +426,12 @@
   <div id="poundsBADcard" class="bank_account_details_card">
     <div class="bad_card_header">
       <div class="bad_card_header_left">
-        <img
-          src="./../assets/britain.png"
-          alt="GBP"
-          class="bad_card_flag"
-        />
+        <img src="./../assets/britain.png" alt="GBP" class="bad_card_flag" />
         <p>Your GBP bank account details</p>
       </div>
       <div class="bad_card_header_right">
         <button>
-          <span class="material-symbols-outlined">
-            content_copy
-          </span>
+          <span class="material-symbols-outlined"> content_copy </span>
           Copy Account Details
         </button>
         <button onclick="rollup1()">
@@ -474,9 +457,7 @@
           <h6>IBAN</h6>
           <p>
             GB98CLIJUO413702756641
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
       </div>
@@ -485,9 +466,7 @@
           <h6>SORT CODE</h6>
           <p>
             703401
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
 
@@ -495,27 +474,21 @@
           <h6>SWIFT CODE</h6>
           <p>
             CLUJGB31XXX
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
         <div class="account_holder">
           <h6>BANK NAME</h6>
           <p>
             Lloyds Banking Group
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
         <div class="account_holder">
           <h6>BANK ADDRESS</h6>
           <p>
             25 Gresham Street, London EC2V 7HN
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
       </div>
@@ -524,9 +497,8 @@
     <div id="rollup1b" class="kindly_note_card">
       <p>Kindly note:</p>
       <p>
-        Account can only receive funds in the Great Britain Pounds
-        (GBP). You'll be charged a 1% fee on payments made into this
-        acount
+        Account can only receive funds in the Great Britain Pounds (GBP). You'll
+        be charged a 1% fee on payments made into this acount
       </p>
     </div>
   </div>
@@ -535,18 +507,12 @@
   <div id="dollarsBADcard" class="bank_account_details_card">
     <div class="bad_card_header">
       <div class="bad_card_header_left">
-        <img
-          src="./../assets/USA.png"
-          alt="GBP"
-          class="bad_card_flag"
-        />
+        <img src="./../assets/USA.png" alt="GBP" class="bad_card_flag" />
         <p>Your USD bank account details</p>
       </div>
       <div class="bad_card_header_right">
         <button>
-          <span class="material-symbols-outlined">
-            content_copy
-          </span>
+          <span class="material-symbols-outlined"> content_copy </span>
           Copy Account Details
         </button>
         <button onclick="rollup2()">
@@ -572,9 +538,7 @@
           <h6>IBAN</h6>
           <p>
             GB98CLIJUO413702756641
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
       </div>
@@ -583,9 +547,7 @@
           <h6>ACCOUNT TYPE</h6>
           <p>
             CHECKING
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
 
@@ -593,27 +555,21 @@
           <h6>SWIFT CODE</h6>
           <p>
             SIVGSU66XXX
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
         <div class="account_holder">
           <h6>BANK NAME</h6>
           <p>
             Wells Fargo
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
         <div class="account_holder">
           <h6>BANK ADDRESS</h6>
           <p>
             420 Montgomery Street San Francisco, CA 94104
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
       </div>
@@ -622,33 +578,24 @@
     <div id="rollup2b" class="kindly_note_card">
       <p>Kindly note:</p>
       <p>
-        Account can only receive funds in the United States Dollar
-        (USD). You will be charged a 1% fee on payments made into this
-        account. USD payments cannot be received from countries within
-        restricted jurisdictions.
+        Account can only receive funds in the United States Dollar (USD). You
+        will be charged a 1% fee on payments made into this account. USD
+        payments cannot be received from countries within restricted
+        jurisdictions.
       </p>
     </div>
   </div>
 
   <!-- Bank Account Details Card for Euros -->
-  <div
-    id="eurosBADcard"
-    class="bank_account_details_card hide_BAD_card"
-  >
+  <div id="eurosBADcard" class="bank_account_details_card hide_BAD_card">
     <div class="bad_card_header">
       <div class="bad_card_header_left">
-        <img
-          src="./../assets/euro.png"
-          alt="GBP"
-          class="bad_card_flag"
-        />
+        <img src="./../assets/euro.png" alt="GBP" class="bad_card_flag" />
         <p>Your EUR bank account details</p>
       </div>
       <div class="bad_card_header_right">
         <button>
-          <span class="material-symbols-outlined">
-            content_copy
-          </span>
+          <span class="material-symbols-outlined"> content_copy </span>
           Copy Account Details
         </button>
         <button onclick="rollup3()">
@@ -674,9 +621,7 @@
           <h6>IBAN</h6>
           <p>
             GB98CLIJUO413702756661
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
       </div>
@@ -685,9 +630,7 @@
           <h6>SORT CODE</h6>
           <p>
             703401
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
 
@@ -695,27 +638,21 @@
           <h6>SWIFT CODE</h6>
           <p>
             CLUJGB31XXX
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
         <div class="account_holder">
           <h6>BANK NAME</h6>
           <p>
             Commerzbank, Frankfurt
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
         <div class="account_holder">
           <h6>BANK ADDRESS</h6>
           <p>
             Commerzbank AG 60261 Frankfurt/Main
-            <span class="material-symbols-outlined">
-              content_copy
-            </span>
+            <span class="material-symbols-outlined"> content_copy </span>
           </p>
         </div>
       </div>
@@ -724,8 +661,8 @@
     <div id="rollup3b" class="kindly_note_card">
       <p>Kindly note:</p>
       <p>
-        Account can only receive funds in Euros (Eur). You will be
-        charged a 1% fee on payments made into this account.
+        Account can only receive funds in Euros (Eur). You will be charged a 1%
+        fee on payments made into this account.
       </p>
     </div>
   </div>
@@ -767,10 +704,7 @@
     </div>
   </div>
   <!-- ACCOUNT ACTIVITIES card for dollars -->
-  <div
-    id="USDactivities"
-    class="account_activites_card hide_activities"
-  >
+  <div id="USDactivities" class="account_activites_card hide_activities">
     <div class="activities_top">
       <h6 class="card_title">USD Account Activities</h6>
     </div>
@@ -807,10 +741,7 @@
     </div>
   </div>
   <!-- ACCOUNT ACTIVITIES card for EUROS -->
-  <div
-    id="EURactivities"
-    class="account_activites_card hide_activities"
-  >
+  <div id="EURactivities" class="account_activites_card hide_activities">
     <div class="activities_top">
       <h6 class="card_title">EUR Account Activities</h6>
     </div>
@@ -870,9 +801,8 @@
   <!-- ACCOUNT STATEMENT FORM POP UP -->
   <div id="statementAccountModal" class="account_statement_form_container">
     <div class="account_statement_form">
-     
-        <h4>Download Account Statement</h4>
-     
+      <h4>Download Account Statement</h4>
+
       <div class="asf_form_control">
         <label>Select currency</label>
         <select>
@@ -896,38 +826,37 @@
       </div>
       <div class="asf_form_control">
         <label>Start Date</label>
-      <input type="date"/>
+        <input type="date" />
       </div>
       <div class="asf_form_control">
         <label>End Date</label>
-      <input type="date"/>
+        <input type="date" />
       </div>
       <div class="asf_form_control">
         <label>File Format</label>
-      <div class="radio_input_container">
-        <div class="csv_input">
-          <input type="radio"/>
-          <label>CSV</label>
+        <div class="radio_input_container">
+          <div class="csv_input">
+            <input type="radio" />
+            <label>CSV</label>
+          </div>
+          <div class="csv_input">
+            <input type="radio" />
+            <label>PDF</label>
+          </div>
         </div>
-        <div class="csv_input">
-          <input type="radio"/>
-          <label>PDF</label>
-        </div>
-      </div>
       </div>
       <div class="asf_form_button_group">
-        <button onclick="hideAccountStatementForm()" class="asf_form_button cancel_asf">Cancel</button>
+        <button
+          onclick="hideAccountStatementForm()"
+          class="asf_form_button cancel_asf"
+        >
+          Cancel
+        </button>
         <button class="asf_form_button">Download</button>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
 <!-- 
 
@@ -937,8 +866,7 @@ MARKUP FOR TRANSACTIONS
 
  -->
 
-
- <div class="dcHeader">
+<div class="dcHeader">
   <p>Transactions</p>
 </div>
 <div class="transactions_table">
@@ -960,14 +888,13 @@ MARKUP FOR TRANSACTIONS
     <div class="tt_header_right">
       <div>
         <label>From</label>
-        <input class="tt_header_input" type="date"/>
+        <input class="tt_header_input" type="date" />
       </div>
       <div>
         <label>to</label>
-        <input class="tt_header_input" type="date"/>
+        <input class="tt_header_input" type="date" />
       </div>
     </div>
-    
   </div>
   <table class="rtc_table tt_body">
     <thead>
@@ -1079,12 +1006,12 @@ MARKUP FOR TRANSACTIONS
     <div class="table_pagination_left">
       <p>Viewing <span>1-10</span> of <span>100</span></p>
       <div>
-        <button class="table_page_left"><span class="material-symbols-outlined">
-          arrow_back_ios
-          </span></button>
-        <button class="table_page_right"><span class="material-symbols-outlined">
-          arrow_forward_ios
-          </span></button>
+        <button class="table_page_left">
+          <span class="material-symbols-outlined"> arrow_back_ios </span>
+        </button>
+        <button class="table_page_right">
+          <span class="material-symbols-outlined"> arrow_forward_ios </span>
+        </button>
       </div>
     </div>
     <div class="table_pagination_right">
@@ -1098,9 +1025,6 @@ MARKUP FOR TRANSACTIONS
   </div>
 </div>
 
-
-
-
 <!-- 
 =====================================================================================================
 MARKUP FOR PROFILE PAGE
@@ -1108,24 +1032,35 @@ MARKUP FOR PROFILE PAGE
 
  -->
 
-
-
- <div class="dcHeader">
+<div class="dcHeader">
   <p>Profile</p>
 </div>
 <div class="profile_tabs_container">
   <div class="profile_tabs_header">
-    <button id="basicInfoTabBtn"
+    <button
+      id="basicInfoTabBtn"
       onclick="switchBasicInfoTab()"
       class="profile_tab_btn active_profile_tab"
     >
       Basic Information
     </button>
-    <button  id="notifyTabBtn" onclick="switchNotificationTab()" class="profile_tab_btn">Notification settings</button>
-    <button id="securityTabBtn" onclick="switchSecurityTab()" class="profile_tab_btn">Security</button>
+    <button
+      id="notifyTabBtn"
+      onclick="switchNotificationTab()"
+      class="profile_tab_btn"
+    >
+      Notification settings
+    </button>
+    <button
+      id="securityTabBtn"
+      onclick="switchSecurityTab()"
+      class="profile_tab_btn"
+    >
+      Security
+    </button>
   </div>
   <!-- BASIC INFO CARD -->
-  <div id="basicInfo" class="basic_information_container  ">
+  <div id="basicInfo" class="basic_information_container">
     <div class="basic_info_form_cards">
       <div class="bif_card">
         <h6>Personal Details</h6>
@@ -1146,8 +1081,7 @@ MARKUP FOR PROFILE PAGE
         <!-- email address -->
         <div class="bif_email">
           <label
-            >Email address
-            <span>(Your registered email address)</span></label
+            >Email address <span>(Your registered email address)</span></label
           >
           <input
             class="bif_input"
@@ -1158,14 +1092,9 @@ MARKUP FOR PROFILE PAGE
         <!-- phone number -->
         <div class="bif_phone">
           <label
-            >Phone number
-            <span>(Your registered phone number)</span></label
+            >Phone number <span>(Your registered phone number)</span></label
           >
-          <input
-            class="bif_input"
-            type="phone"
-            placeholder="07020245628"
-          />
+          <input class="bif_input" type="phone" placeholder="07020245628" />
         </div>
       </div>
       <div class="bif_card">
@@ -1180,10 +1109,7 @@ MARKUP FOR PROFILE PAGE
         </div>
         <!-- phone number -->
         <div class="bif_phone">
-          <label
-            >Business type
-            <span>(what your business does)</span></label
-          >
+          <label>Business type <span>(what your business does)</span></label>
           <input
             class="bif_input"
             type="phone"
@@ -1192,22 +1118,15 @@ MARKUP FOR PROFILE PAGE
         </div>
       </div>
     </div>
-    <button id="saveProfileBtnID" class="saveProfileBtn">
-      Save Changes
-    </button>
+    <button id="saveProfileBtnID" class="saveProfileBtn">Save Changes</button>
   </div>
   <!-- notifications card -->
-  <div
-    id="notificationsSettings"
-    class="notifications_container  hide_tab"
-  >
+  <div id="notificationsSettings" class="notifications_container hide_tab">
     <!-- LOGIN ALERTS -->
     <div class="alert_container">
       <h6>
         Login ALerts
-        <span
-          >(Notifications on successful logins to your account)</span
-        >
+        <span>(Notifications on successful logins to your account)</span>
       </h6>
       <div class="alerts_check">
         <div class="alerts_check_content">
@@ -1222,9 +1141,7 @@ MARKUP FOR PROFILE PAGE
     <div class="alert_container">
       <h6>
         Transaction ALerts
-        <span
-          >(Notifications on the status of your transactions)</span
-        >
+        <span>(Notifications on the status of your transactions)</span>
       </h6>
       <div class="alerts_check">
         <div class="alerts_check_content">
@@ -1247,9 +1164,7 @@ MARKUP FOR PROFILE PAGE
         </div>
       </div>
     </div>
-    <button id="saveProfileBtnID" class="saveProfileBtn">
-      Save Changes
-    </button>
+    <button id="saveProfileBtnID" class="saveProfileBtn">Save Changes</button>
   </div>
   <!-- security card -->
   <div id="securityCard" class="security_container hide_tab">
@@ -1262,20 +1177,17 @@ MARKUP FOR PROFILE PAGE
     </div>
     <p class="tfa_desc">
       TFA is highly
-      <span
-        style="font-weight: 600; color: #6b43fb; font-style: italic"
+      <span style="font-weight: 600; color: #6b43fb; font-style: italic"
         >recommended</span
-      >because adds extra layer of security to your Swifia account to
-      protect you from unauthorized transactions
+      >because adds extra layer of security to your Swifia account to protect
+      you from unauthorized transactions
     </p>
     <span class="profile_password">Password</span>
     <p class="update_password">Update existing password</p>
     <button onclick="openPasswordModal()" class="changePassword">
       Change password
     </button>
-    <button id="saveProfileBtnID" class="saveProfileBtn">
-      Save Changes
-    </button>
+    <button id="saveProfileBtnID" class="saveProfileBtn">Save Changes</button>
 
     <!-- Change password MODAL -->
     <div id="passwordModal" class="change_password_modal">
@@ -1321,25 +1233,15 @@ MARKUP FOR PROFILE PAGE
           />
         </div>
         <div class="cp_btn_group">
-          <button onclick="closePasswordModal()" class="cp_btn cancel_cp_btn">Cancel</button>
+          <button onclick="closePasswordModal()" class="cp_btn cancel_cp_btn">
+            Cancel
+          </button>
           <button class="cp_btn">Change Password</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- 
 
@@ -1349,9 +1251,7 @@ MARKUP FOR PROFILE PAGE
 
  -->
 
-
-
- <div class="dcHeader">
+<div class="dcHeader">
   <p>Support</p>
 </div>
 <div class="profile_tabs_container">
@@ -1370,22 +1270,18 @@ MARKUP FOR PROFILE PAGE
     >
       Contact details
     </button>
-    <button
-      id="switchFaqsBtn"
-      onclick="switchFaqTab()"
-      class="profile_tab_btn"
-    >
+    <button id="switchFaqsBtn" onclick="switchFaqTab()" class="profile_tab_btn">
       FAQs
     </button>
   </div>
   <!-- Message container -->
-  <div id="supportMessage" class="basic_information_container ">
+  <div id="supportMessage" class="basic_information_container">
     <div class="support_message_form">
       <div class="smf_header">
         <h4>Hi There, How can we help?</h4>
         <p>
-          Kindly drop us a message our support team will get across to
-          you shortly
+          Kindly drop us a message our support team will get across to you
+          shortly
         </p>
       </div>
       <div class="smf_body">
@@ -1441,83 +1337,86 @@ MARKUP FOR PROFILE PAGE
         <span>Click here to chat with us on WhatsApp</span>
         <div>
           <button class="whatsapp_button">
-            <span class="material-symbols-outlined">
-              arrow_circle_right </span
+            <span class="material-symbols-outlined"> arrow_circle_right </span
             >+2348979573756
           </button>
         </div>
       </div>
     </div>
   </div>
-    <!-- FAQs container -->
-    <div id="supportFaq" class="basic_information_container hide_tab">
-      <div class="faq_content">
-        <div class="smf_header">
-          <h4>Frequently Asked Questions</h4>
-          <p>We have provided you with detailed guide and answers to most pressing questions</p>
+  <!-- FAQs container -->
+  <div id="supportFaq" class="basic_information_container hide_tab">
+    <div class="faq_content">
+      <div class="smf_header">
+        <h4>Frequently Asked Questions</h4>
+        <p>
+          We have provided you with detailed guide and answers to most pressing
+          questions
+        </p>
+      </div>
+      <div class="faq_dropdown_container">
+        <div class="faq_bag">
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+              <button onclick="revealFaqDesc()">
+                <span class="material-symbols-outlined"> expand_more </span>
+              </button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              necessitatibus voluptate officia magnam nobis nihil cum pariatur,
+              quo maxime consequatur suscipit ut velit nesciunt optio, id nam
+              deleniti amet! Enim!
+            </p>
+          </div>
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+              <button onclick="revealFaqDesc()">
+                <span class="material-symbols-outlined"> expand_more </span>
+              </button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              necessitatibus voluptate officia magnam nobis nihil cum pariatur,
+              quo maxime consequatur suscipit ut velit nesciunt optio, id nam
+              deleniti amet! Enim!
+            </p>
+          </div>
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+              <button onclick="revealFaqDesc()">
+                <span class="material-symbols-outlined"> expand_more </span>
+              </button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              necessitatibus voluptate officia magnam nobis nihil cum pariatur,
+              quo maxime consequatur suscipit ut velit nesciunt optio, id nam
+              deleniti amet! Enim!
+            </p>
+          </div>
+          <div class="faq_dropdown">
+            <div class="faq_dropdown_header">
+              <p>How do I send my foreign account to my business partners?</p>
+              <button onclick="revealFaqDesc()">
+                <span class="material-symbols-outlined"> expand_more </span>
+              </button>
+            </div>
+            <p class="faq_dropdown_body hide_tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              necessitatibus voluptate officia magnam nobis nihil cum pariatur,
+              quo maxime consequatur suscipit ut velit nesciunt optio, id nam
+              deleniti amet! Enim!
+            </p>
+          </div>
         </div>
-        <div class="faq_dropdown_container">
-         <div class="faq_bag">
-          <div class="faq_dropdown">
-            <div class="faq_dropdown_header">
-              <p>How do I send my foreign account to my business partners?</p>
-             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
-              expand_more
-              </span></button>
-            </div>
-            <p class="faq_dropdown_body hide_tab">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
-            </p>
-          </div>
-          <div class="faq_dropdown">
-            <div class="faq_dropdown_header">
-              <p>How do I send my foreign account to my business partners?</p>
-             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
-              expand_more
-              </span></button>
-            </div>
-            <p class="faq_dropdown_body hide_tab">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
-            </p>
-          </div>
-          <div class="faq_dropdown">
-            <div class="faq_dropdown_header">
-              <p>How do I send my foreign account to my business partners?</p>
-             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
-              expand_more
-              </span></button>
-            </div>
-            <p class="faq_dropdown_body hide_tab">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
-            </p>
-          </div>
-          <div class="faq_dropdown">
-            <div class="faq_dropdown_header">
-              <p>How do I send my foreign account to my business partners?</p>
-             <button onclick="revealFaqDesc()"> <span class="material-symbols-outlined">
-              expand_more
-              </span></button>
-            </div>
-            <p class="faq_dropdown_body hide_tab">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima necessitatibus voluptate officia magnam nobis nihil cum pariatur, quo maxime consequatur suscipit ut velit nesciunt optio, id nam deleniti amet! Enim!
-            </p>
-          </div>
-     
-        
-         </div>
-          
-        </div>
-        
       </div>
     </div>
+  </div>
 </div>
-
-
-
-
-
-
-
 
 <!-- 
 
@@ -1527,373 +1426,994 @@ GLOBAL TRANSFER PAGES
 
  -->
 
-
-
-       <!-- Global transfer page 1 -->
-       <div id="page1"  class="singleTransfer_Page1">
-        <div class="exchange_Rate_box">
-          <p>Exchange Rate:</p>
-          <p>750 NGN = 1 USD</p>
+<!-- Global transfer page 1 -->
+<div id="page1" class="singleTransfer_Page1">
+  <div class="exchange_Rate_box">
+    <p>Exchange Rate:</p>
+    <p>750 NGN = 1 USD</p>
+  </div>
+  <!-- country/amount converter input -->
+  <div class="country_amount_box">
+    <p class="send_amount">₦0</p>
+    <label>Country/amount to send</label>
+    <input
+      type="text"
+      placeholder="NGN"
+      class="country_amount_input"
+      readonly
+    />
+    <!-- Modal for currency converter -->
+    <div class="tfc_currency_options">
+      <div class="tfc_currency_btn usa_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/USA.png" alt="USA" />
+          <span>United states</span>
         </div>
-        <!-- country/amount converter input -->
-        <div class="country_amount_box">
-          <p class="send_amount">₦0</p>
-          <label>Country/amount to send</label>
-          <input
-            type="text"
-            placeholder="NGN"
-            class="country_amount_input"
-            readonly
-          />
-          <!-- Modal for currency converter -->
-          <div class="tfc_currency_options">
-            <div class="tfc_currency_btn usa_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/USA.png" alt="USA" />
-                <span>United states</span>
-              </div>
-              <span>USD</span>
-            </div>
-            <div class="tfc_currency_btn uk_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/britain.png" alt="UK" />
-                <span>United Kingdom</span>
-              </div>
-              <span>GBP</span>
-            </div>
-            <div class="tfc_currency_btn india_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/india.png" alt="india" />
-                <span>India</span>
-              </div>
-              <span>INR</span>
-            </div>
-            <div class="tfc_currency_btn india2_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/india.png" alt="india" />
-                <span>India</span>
-              </div>
-              <span>USD</span>
-            </div>
-            <div class="tfc_currency_btn china_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/china.png" alt="china" />
-                <span>China</span>
-              </div>
-              <span>YUAN</span>
-            </div>
-            <div class="tfc_currency_btn china2_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/china.png" alt="china" />
-                <span>China</span>
-              </div>
-              <span>USD</span>
-            </div>
-            <div class="tfc_currency_btn china2_btn">
-              <div class="tfc_c_btn_left">
-                <img src="./../assets/nigeria.png" alt="china" />
-                <span>Nigeria</span>
-              </div>
-              <span>NGN</span>
-            </div>
-          </div>
-          <!-- end of Modal for currency converter -->
-        </div>
-            <!-- select receipient input -->
-            <div class="country_amount_box">
-              <p class="send_amount">¥2,985.47</p>
-              <label>Select recipient country/currency</label>
-              <input
-                type="text"
-                placeholder="YUAN"
-                class="country_amount_input"
-                readonly
-              />
-              <!-- Modal for currency converter -->
-              <div class="tfc_currency_options">
-                <div class="tfc_currency_btn usa_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/USA.png" alt="USA" />
-                    <span>United states</span>
-                  </div>
-                  <span>USD</span>
-                </div>
-                <div class="tfc_currency_btn uk_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/britain.png" alt="UK" />
-                    <span>United Kingdom</span>
-                  </div>
-                  <span>GBP</span>
-                </div>
-                <div class="tfc_currency_btn india_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/india.png" alt="india" />
-                    <span>India</span>
-                  </div>
-                  <span>INR</span>
-                </div>
-                <div class="tfc_currency_btn india2_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/india.png" alt="india" />
-                    <span>India</span>
-                  </div>
-                  <span>USD</span>
-                </div>
-                <div class="tfc_currency_btn china_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/china.png" alt="china" />
-                    <span>China</span>
-                  </div>
-                  <span>YUAN</span>
-                </div>
-                <div class="tfc_currency_btn china2_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/china.png" alt="china" />
-                    <span>China</span>
-                  </div>
-                  <span>USD</span>
-                </div>
-                <div class="tfc_currency_btn china2_btn">
-                  <div class="tfc_c_btn_left">
-                    <img src="./../assets/nigeria.png" alt="china" />
-                    <span>Nigeria</span>
-                  </div>
-                  <span>NGN</span>
-                </div>
-              </div>
-              
-            </div>
-            <div class="feeTransferBoard">
-              <div class="fee_line">
-                <div class="fl_left"><p>Fee</p></div>
-                <div class="fl_right"><p style="font-weight: 600;">5,694 NGN</p></div>
-              </div>
-              <div class="fee_line">
-                <div class="fl_left"><p>Transfer time</p></div>
-                <div class="fl_right"><p style="font-weight: 600;">Within 24 hours</p><button title="Excludes weekends & Public holidays" class="info_btn"><span class="material-symbols-rounded">
-                  info
-                  </span></button></div>
-                  <!-- Additional info board -->
-                  
-              </div>
-              <div class="fee_line"></div>
-            </div>
-            <div class="feeTransferBoard">
-              <div class="fee_line">
-                <div class="fl_left"><p>Amount to pay</p></div>
-                <div class="fl_right"><p style="font-weight: 600;">205,694 NGN</p></div>
-              </div>
-              <div class="fee_line">
-                <div class="fl_left"><p>Recipient gets</p></div>
-                <div class="fl_right"><p style="font-weight: 600;">2,985.47 YUAN</p></div>
-              </div>
-              <div class="fee_line"></div>
-            </div>
-            <button class="page_progress_btn">Continue</button>
+        <span>USD</span>
       </div>
+      <div class="tfc_currency_btn uk_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/britain.png" alt="UK" />
+          <span>United Kingdom</span>
+        </div>
+        <span>GBP</span>
+      </div>
+      <div class="tfc_currency_btn india_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>INR</span>
+      </div>
+      <div class="tfc_currency_btn india2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>YUAN</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/nigeria.png" alt="china" />
+          <span>Nigeria</span>
+        </div>
+        <span>NGN</span>
+      </div>
+    </div>
+    <!-- end of Modal for currency converter -->
+  </div>
+  <!-- select receipient input -->
+  <div class="country_amount_box">
+    <p class="send_amount">¥2,985.47</p>
+    <label>Select recipient country/currency</label>
+    <input
+      type="text"
+      placeholder="YUAN"
+      class="country_amount_input"
+      readonly
+    />
+    <!-- Modal for currency converter -->
+    <div class="tfc_currency_options">
+      <div class="tfc_currency_btn usa_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/USA.png" alt="USA" />
+          <span>United states</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn uk_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/britain.png" alt="UK" />
+          <span>United Kingdom</span>
+        </div>
+        <span>GBP</span>
+      </div>
+      <div class="tfc_currency_btn india_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>INR</span>
+      </div>
+      <div class="tfc_currency_btn india2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/india.png" alt="india" />
+          <span>India</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>YUAN</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/china.png" alt="china" />
+          <span>China</span>
+        </div>
+        <span>USD</span>
+      </div>
+      <div class="tfc_currency_btn china2_btn">
+        <div class="tfc_c_btn_left">
+          <img src="./../assets/nigeria.png" alt="china" />
+          <span>Nigeria</span>
+        </div>
+        <span>NGN</span>
+      </div>
+    </div>
+  </div>
+  <div class="feeTransferBoard">
+    <div class="fee_line">
+      <div class="fl_left"><p>Fee</p></div>
+      <div class="fl_right"><p style="font-weight: 600">5,694 NGN</p></div>
+    </div>
+    <div class="fee_line">
+      <div class="fl_left"><p>Transfer time</p></div>
+      <div class="fl_right">
+        <p style="font-weight: 600">Within 24 hours</p>
+        <button title="Excludes weekends & Public holidays" class="info_btn">
+          <span class="material-symbols-rounded"> info </span>
+        </button>
+      </div>
+      <!-- Additional info board -->
+    </div>
+    <div class="fee_line"></div>
+  </div>
+  <div class="feeTransferBoard">
+    <div class="fee_line">
+      <div class="fl_left"><p>Amount to pay</p></div>
+      <div class="fl_right"><p style="font-weight: 600">205,694 NGN</p></div>
+    </div>
+    <div class="fee_line">
+      <div class="fl_left"><p>Recipient gets</p></div>
+      <div class="fl_right"><p style="font-weight: 600">2,985.47 YUAN</p></div>
+    </div>
+    <div class="fee_line"></div>
+  </div>
+  <button class="page_progress_btn">Continue</button>
+</div>
 
-
-
-      <!-- 
+<!-- 
 
         ======================================================= PAGE 2
        -->
 
+<!-- Global transfer page 2 -->
+<div id="page2" class="singleTransfer_Page2">
+  <p>Recipients account detail (paste payment details as copied)</p>
+  <textarea class="" rows="12" cols="12" placeholder="paste details"></textarea>
+  <div class="invoice_upload_area">
+    <p>Upload Invoices</p>
+    <p>Click to upload proforma invoices and invoices (optional)</p>
+    <div class="invoice_upload_box">
+      <div class="invoice_upload_box_btn">
+        <span class="material-symbols-rounded"> upload </span>upload invoice
+      </div>
+      <input type="file" />
+    </div>
+    <div class="page_progress_btn">Continue</div>
+  </div>
+</div>
 
-
-        <!-- Global transfer page 2 -->
-        <div id="page2" class="singleTransfer_Page2">
-          <p>Recipients account detail (paste payment details as copied)</p>
-          <textarea class="" rows="12" cols="12" placeholder="paste details"></textarea>
-          <div class="invoice_upload_area">
-            <p>Upload Invoices</p>
-            <p>Click to upload proforma invoices and invoices (optional)</p>
-            <div class="invoice_upload_box">
-              <div class="invoice_upload_box_btn"><span class="material-symbols-rounded">
-                upload
-                </span>upload invoice</div>
-              <input  type="file"/>
-            </div>
-            <div class="page_progress_btn">Continue</div>
-          </div>
-        </div>
-
-
-
-        <!-- 
+<!-- 
           ====================================================PAGE 3
          -->
 
-             <!-- Global transfer page 3 -->
-             <div id="page3" class="singleTransfer_Page3">
-              <div class="bank_details_summary_card">
-                <h6>Bank Details To Pay Your Money Into</h6>
-                <div class="bank_details_content">
-                  <div class="bank_detail">
-                    <p>Bank name:</p>
-                    <p>Wema Bank</p>
-                  </div>
-                  <div class="bank_detail">
-                    <p>Account name:</p>
-                    <p>James Alimo-Swifia</p>
-                  </div>
-                  <div class="bank_detail">
-                    <p>Account number:</p>
-                    <div class="copy_bank_details">
-                      <p>7902058884</p>
-                      <button class="copy_button">
-                        copy
-                        <span class="material-symbols-rounded">
-                          content_copy
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="recipients_summary_details">
-                <p>Recipients account detail</p>
-                <div class="bank_details_summary_card bds_blocks_container">
-                  <div class="bds_block">
-                    <p>BENEFICIARY : ALPA LABORATORIES LTD.</p>
-                    <p>Add: 33/2 AGRA BOMBAY ROAD, PIGDAMBER , INDORE</p>
-                    <p>EMAIL: pchawla@alpalabs.in</p>
-                    <p>Phone : +91 9893355336</p>
-                  </div>
-                  <div class="bds_block">
-                    <p>ACCOUNT NO. : 556011037074</p>
-                  </div>
-                  <div class="bds_block">
-                    <p>BANK DETAILS</p>
-                    <p>
-                      KOTAK MAHINDRA BANK, 10 M.G.Road INDORE BRANCH INDORE
-                      (MP) INDIA
-                    </p>
-                  </div>
-                  <div class="bds_block">
-                    <p>SWIFT CODE : KKBKINBBXXX</p>
-                    <p>IFSC : KKBK0005933</p>
-                  </div>
-                  <div class="bds_block">
-                    <p>PAYMENT ROUTING : THE BANK OF NEW YORK MELLON</p>
-                    <p>SWIFT CODE : IRVTUS3NXXX</p>
-                    <p>ACCOUNT NO.: 8900517794</p>
-                  </div>
-                </div>
-              </div>
-              <div class="invoice_upload_area">
-                <p>Upload Invoices</p>
-                <p>
-                  Click to change proforma invoices and invoices (optional)
-                </p>
-                <div class="invoice_upload_box">
-                  <div class="invoice_upload_box_btn">
-                    <span class="material-symbols-rounded"> upload </span
-                    >upload invoice
-                  </div>
-                  <input type="file" />
-                </div>
-              </div>
+<!-- Global transfer page 3 -->
+<div id="page3" class="singleTransfer_Page3">
+  <div class="bank_details_summary_card">
+    <h6>Bank Details To Pay Your Money Into</h6>
+    <div class="bank_details_content">
+      <div class="bank_detail">
+        <p>Bank name:</p>
+        <p>Wema Bank</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account name:</p>
+        <p>James Alimo-Swifia</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account number:</p>
+        <div class="copy_bank_details">
+          <p>7902058884</p>
+          <button class="copy_button">
+            copy
+            <span class="material-symbols-rounded"> content_copy </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recipients_summary_details">
+    <p>Recipients account detail</p>
+    <div class="bank_details_summary_card bds_blocks_container">
+      <div class="bds_block">
+        <p>BENEFICIARY : ALPA LABORATORIES LTD.</p>
+        <p>Add: 33/2 AGRA BOMBAY ROAD, PIGDAMBER , INDORE</p>
+        <p>EMAIL: pchawla@alpalabs.in</p>
+        <p>Phone : +91 9893355336</p>
+      </div>
+      <div class="bds_block">
+        <p>ACCOUNT NO. : 556011037074</p>
+      </div>
+      <div class="bds_block">
+        <p>BANK DETAILS</p>
+        <p>KOTAK MAHINDRA BANK, 10 M.G.Road INDORE BRANCH INDORE (MP) INDIA</p>
+      </div>
+      <div class="bds_block">
+        <p>SWIFT CODE : KKBKINBBXXX</p>
+        <p>IFSC : KKBK0005933</p>
+      </div>
+      <div class="bds_block">
+        <p>PAYMENT ROUTING : THE BANK OF NEW YORK MELLON</p>
+        <p>SWIFT CODE : IRVTUS3NXXX</p>
+        <p>ACCOUNT NO.: 8900517794</p>
+      </div>
+    </div>
+  </div>
+  <div class="invoice_upload_area">
+    <p>Upload Invoices</p>
+    <p>Click to change proforma invoices and invoices (optional)</p>
+    <div class="invoice_upload_box">
+      <div class="invoice_upload_box_btn">
+        <span class="material-symbols-rounded"> upload </span>upload invoice
+      </div>
+      <input type="file" />
+    </div>
+  </div>
 
-              <div class="bank_details_summary_card">
-                <div class="sum_head">
-                  <h5>Summary</h5>
-                  <p>1 NGN = 0.015 YUAN</p>
-                </div>
-                <div class="bds_internal_card">
-                  <div class="sum_head">
-                    <h6>Payment Summary</h6>
-                    <button>
-                      <span class="material-symbols-rounded"> edit </span
-                      >Edit
-                    </button>
-                  </div>
-                  <div class="originating_country flank_detail">
-                    <p>Originating Country</p>
-                    <p>Nigeria</p>
-                  </div>
-                  <div class="originating_country flank_detail">
-                    <p>Amount to send</p>
-                    <p>200,000 NGN</p>
-                  </div>
-                  <div class="originating_country flank_detail">
-                    <p>Amount to pay</p>
-                    <p>205,694 NGN</p>
-                  </div>
-                  <div class="originating_country flank_detail">
-                    <p>Fee</p>
-                    <p>5, 694 NGN</p>
-                  </div>
-                  <div class="originating_country flank_detail">
-                    <p>Recipients Country</p>
-                    <p>China</p>
-                  </div>
-                  <div class="receiving_amount">
-                    <h6>Amount to receive</h6>
-                    <h6>2,985.47 YUAN</h6>
-                  </div>
-                </div>
-              </div>
+  <div class="bank_details_summary_card">
+    <div class="sum_head">
+      <h5>Summary</h5>
+      <p>1 NGN = 0.015 YUAN</p>
+    </div>
+    <div class="bds_internal_card">
+      <div class="sum_head">
+        <h6>Payment Summary</h6>
+        <button>
+          <span class="material-symbols-rounded"> edit </span>Edit
+        </button>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Originating Country</p>
+        <p>Nigeria</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Amount to send</p>
+        <p>200,000 NGN</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Amount to pay</p>
+        <p>205,694 NGN</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Fee</p>
+        <p>5, 694 NGN</p>
+      </div>
+      <div class="originating_country flank_detail">
+        <p>Recipients Country</p>
+        <p>China</p>
+      </div>
+      <div class="receiving_amount">
+        <h6>Amount to receive</h6>
+        <h6>2,985.47 YUAN</h6>
+      </div>
+    </div>
+  </div>
 
-              <div class="page_progress_btn">Initiate payment</div>
-            </div>
+  <div class="page_progress_btn">Initiate payment</div>
+</div>
 
+<!-- Global transfer page 4 -->
+<div id="page4" class="singleTransfer_Page4">
+  <h5>Send Money</h5>
+  <p>
+    Kindly ensure that you initiate a transfer of the desired amount to the
+    following specified account details. Upon successful receipt of the payment,
+    your transfer request will be promptly processed and you will be notified
+    via an official confirmation.
+  </p>
+  <div class="pay_details_card">
+    <h6>Bank Details To Pay Your Money Into</h6>
+    <div class="pay_details_card_details">
+      <div class="bank_detail">
+        <p>Bank name:</p>
+        <p>Wema Bank</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account name:</p>
+        <p>James Alimo-Swifia</p>
+      </div>
+      <div class="bank_detail">
+        <p>Account number:</p>
+        <div class="copy_bank_details">
+          <p>7902058884</p>
+          <button class="copy_button">
+            copy
+            <span class="material-symbols-rounded"> content_copy </span>
+          </button>
+        </div>
+      </div>
+      <div class="bank_detail transfer_amount">
+        <h6>Total Amount to be transferred</h6>
+        <h6 NGN>205,694 NGN</h6>
+      </div>
+    </div>
+    <!-- successful payment -->
+    <div id="globalSuccessModal" class="global_success_pay_card">
+      <div class="global_success_pay">
+        <img src="./../assets/Check.png" />
+        <p>Global Payment Request Submitted Successfully!</p>
+        <button onclick="hideGlobalModal()" class="page_progress_btn">
+          close
+        </button>
+      </div>
+    </div>
+  </div>
+  <button
+    onclick="showGlobalModal()"
+    id="finalPayBtn"
+    class="page_progress_btn"
+  >
+    Initiate payment
+  </button>
+</div>
 
+<!-- REMIXER -->
 
+<div class="myaccounts_Header">
+  <button
+    id="accountsBtn"
+    onclick="switchAccountsTab()"
+    class="myaccounts_Header_btn myaccounts_Header_btn_active"
+  >
+    My Accounts
+  </button>
+  <button
+    id="reportsBtn"
+    onclick="switchReportsTab()"
+    class="myaccounts_Header_btn"
+  >
+    Report and Statements
+  </button>
+</div>
 
+<!-- MY ACCOUNTS TAB -->
+<div id="AccountsTabId" class="myAccountsTab">
+  <!-- Select currency card -->
+  <div class="select_currency_card">
+    <div class="sc_top">
+      <div class="sc_top_left">
+        <h6 class="sc_card_title">Select Currency</h6>
+        <div class="select_currency_btn_group">
+          <button
+            id="switchPoundsBoard"
+            onclick="showPoundsBoard()"
+            class="select_currency_btn select_currency_btn_active"
+          >
+            <img src="./../assets/britain.png" alt="" class="sc_flag" /><span
+              >GBP</span
+            >
+          </button>
+          <button
+            id="switchDollarsBoard"
+            onclick="showDollarsBoard()"
+            class="select_currency_btn"
+          >
+            <img src="./../assets/USA.png" alt="" class="sc_flag" /><span
+              >USD</span
+            >
+          </button>
+          <button
+            id="switchEurosBoard"
+            onclick="showEurosBoard()"
+            class="select_currency_btn"
+          >
+            <img src="./../assets/euro.png" alt="" class="sc_flag" /><span
+              >EUR</span
+            >
+          </button>
+          <button
+            id="switchEurosBoard"
+            onclick="showNaijaBoard()"
+            class="select_currency_btn"
+          >
+            <img src="./../assets/nigeria.png" alt="" class="sc_flag" /><span
+              >NGN</span
+            >
+          </button>
+        </div>
+      </div>
 
+      <div class="sc_top_right">
+        <button class="sc_top_btn">
+          <img src="./../assets/addmoney.png" alt="add money" /><span
+            >Add money</span
+          >
+        </button>
+        <button class="sc_top_btn">
+          <img src="./../assets/sendmoney.png" alt="send money" /><span
+            >Send</span
+          >
+        </button>
+        <button class="sc_top_btn">
+          <img src="./../assets/swapmoney.png" alt="swap money" /><span
+            >Swap currency</span
+          >
+        </button>
+      </div>
+    </div>
+    <!-- CURRENCY INFORMATION BOARD -->
+    <div id="pounds_board" class="currency_info_board">
+      <p>
+        Available <span style="font-weight: 600"> GBP</span> account balance
+        £0.00
+      </p>
 
+      <h3>£0.00</h3>
+    </div>
+    <div id="dollars_board" class="currency_info_board hide_board">
+      <p>
+        Available <span style="font-weight: 600"> USD</span> account balance
+        £0.00
+      </p>
 
+      <h3>$0.00</h3>
+    </div>
+    <div id="euros_board" class="currency_info_board hide_board">
+      <p>
+        Available <span style="font-weight: 600"> EUR</span> account balance
+        £0.00
+      </p>
 
+      <h3>€0.00</h3>
+    </div>
+    <div id="naija_board" class="currency_info_board hide_board">
+      <p>
+        Available <span style="font-weight: 600"> NGN</span> account balance
+        N0.00
+      </p>
 
+      <h3>N0.00</h3>
+    </div>
+  </div>
+  <!-- Bank Account Details Card for Pounds-->
+  <div id="poundsBADcard" class="bank_account_details_card">
+    <div class="bad_card_header">
+      <div class="bad_card_header_left">
+        <img src="./../assets/britain.png" alt="GBP" class="bad_card_flag" />
+        <p>Your GBP bank account details</p>
+      </div>
+      <div class="bad_card_header_right">
+        <button>
+          <span class="material-symbols-outlined"> content_copy </span>
+          Copy Account Details
+        </button>
+        <button onclick="rollup1()">
+          <span class="material-symbols-outlined"> expand_less </span>
+        </button>
+      </div>
+    </div>
+    <div id="rollup1a" class="bad_card_banks">
+      <div class="bad_banks_top">
+        <div class="account_holder">
+          <h6>ACCOUNT HOLDER</h6>
+          <p>James & Co.</p>
+        </div>
+        <div class="account_holder">
+          <h6>ACCOUNT NUMBER</h6>
+          <p>
+            24166357<span class="material-symbols-outlined">
+              content_copy
+            </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>IBAN</h6>
+          <p>
+            GB98CLIJUO413702756641
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+      <div class="bad_banks_lower">
+        <div class="account_holder">
+          <h6>SORT CODE</h6>
+          <p>
+            703401
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
 
-                <!-- Global transfer page 4 -->
-                <div id="page4" class="singleTransfer_Page4">
-                  <h5>Send Money</h5>
-                  <p>
-                    Kindly ensure that you initiate a transfer of the desired
-                    amount to the following specified account details. Upon
-                    successful receipt of the payment, your transfer request
-                    will be promptly processed and you will be notified via an
-                    official confirmation.
-                  </p>
-                  <div class="pay_details_card">
-                    <h6>Bank Details To Pay Your Money Into</h6>
-                    <div class="pay_details_card_details">
-                      <div class="bank_detail">
-                        <p>Bank name:</p>
-                        <p>Wema Bank</p>
-                      </div>
-                      <div class="bank_detail">
-                        <p>Account name:</p>
-                        <p>James Alimo-Swifia</p>
-                      </div>
-                      <div class="bank_detail">
-                        <p>Account number:</p>
-                        <div class="copy_bank_details">
-                          <p>7902058884</p>
-                          <button class="copy_button">
-                            copy
-                            <span class="material-symbols-rounded">
-                              content_copy
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="bank_detail transfer_amount">
-                        <h6>Total Amount to be transferred</h6>
-                        <h6 NGN>205,694 NGN</h6>
-                      </div>
-                    </div>
-                    <!-- successful payment -->
-                    <div id="globalSuccessModal" class="global_success_pay_card">
-                      <div class="global_success_pay">
-                        <img src='./../assets/Check.png'/>
-                        <p>Global Payment Request
-                          Submitted Successfully!</p>
-                          <button onclick="hideGlobalModal()" class="page_progress_btn">close</button>
-                      </div>
-                    </div>
-                  </div>
-                  <button onclick="showGlobalModal()" id="finalPayBtn" class="page_progress_btn">Initiate payment</button>
-                </div>
+        <div class="account_holder">
+          <h6>SWIFT CODE</h6>
+          <p>
+            CLUJGB31XXX
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK NAME</h6>
+          <p>
+            Lloyds Banking Group
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK ADDRESS</h6>
+          <p>
+            25 Gresham Street, London EC2V 7HN
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- KINDLY NOTE card -->
+    <div id="rollup1b" class="kindly_note_card">
+      <p>Kindly note:</p>
+      <p>
+        Account can only receive funds in the Great Britain Pounds (GBP). You'll
+        be charged a 1% fee on payments made into this acount
+      </p>
+    </div>
+  </div>
+
+  <!-- Bank Account Details Card for Dollars -->
+  <div id="dollarsBADcard" class="bank_account_details_card">
+    <div class="bad_card_header">
+      <div class="bad_card_header_left">
+        <img src="./../assets/USA.png" alt="GBP" class="bad_card_flag" />
+        <p>Your USD bank account details</p>
+      </div>
+      <div class="bad_card_header_right">
+        <button>
+          <span class="material-symbols-outlined"> content_copy </span>
+          Copy Account Details
+        </button>
+        <button onclick="rollup2()">
+          <span class="material-symbols-outlined"> expand_less </span>
+        </button>
+      </div>
+    </div>
+    <div id="rollup2a" class="bad_card_banks">
+      <div class="bad_banks_top">
+        <div class="account_holder">
+          <h6>ACCOUNT HOLDER</h6>
+          <p>Peter Obi & Co.</p>
+        </div>
+        <div class="account_holder">
+          <h6>ACCOUNT NUMBER</h6>
+          <p>
+            3EV663630106<span class="material-symbols-outlined">
+              content_copy
+            </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>IBAN</h6>
+          <p>
+            GB98CLIJUO413702756641
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+      <div class="bad_banks_lower">
+        <div class="account_holder">
+          <h6>ACCOUNT TYPE</h6>
+          <p>
+            CHECKING
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+
+        <div class="account_holder">
+          <h6>SWIFT CODE</h6>
+          <p>
+            SIVGSU66XXX
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK NAME</h6>
+          <p>
+            Wells Fargo
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK ADDRESS</h6>
+          <p>
+            420 Montgomery Street San Francisco, CA 94104
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- KINDLY NOTE card -->
+    <div id="rollup2b" class="kindly_note_card">
+      <p>Kindly note:</p>
+      <p>
+        Account can only receive funds in the United States Dollar (USD). You
+        will be charged a 1% fee on payments made into this account. USD
+        payments cannot be received from countries within restricted
+        jurisdictions.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bank Account Details Card for Euros -->
+  <div id="eurosBADcard" class="bank_account_details_card hide_BAD_card">
+    <div class="bad_card_header">
+      <div class="bad_card_header_left">
+        <img src="./../assets/euro.png" alt="GBP" class="bad_card_flag" />
+        <p>Your EUR bank account details</p>
+      </div>
+      <div class="bad_card_header_right">
+        <button>
+          <span class="material-symbols-outlined"> content_copy </span>
+          Copy Account Details
+        </button>
+        <button onclick="rollup3()">
+          <span class="material-symbols-outlined"> expand_less </span>
+        </button>
+      </div>
+    </div>
+    <div id="rollup3a" class="bad_card_banks">
+      <div class="bad_banks_top">
+        <div class="account_holder">
+          <h6>ACCOUNT HOLDER</h6>
+          <p>James & Co.</p>
+        </div>
+        <div class="account_holder">
+          <h6>ACCOUNT NUMBER</h6>
+          <p>
+            723524661<span class="material-symbols-outlined">
+              content_copy
+            </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>IBAN</h6>
+          <p>
+            GB98CLIJUO413702756661
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+      <div class="bad_banks_lower">
+        <div class="account_holder">
+          <h6>SORT CODE</h6>
+          <p>
+            703401
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+
+        <div class="account_holder">
+          <h6>SWIFT CODE</h6>
+          <p>
+            CLUJGB31XXX
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK NAME</h6>
+          <p>
+            Commerzbank, Frankfurt
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK ADDRESS</h6>
+          <p>
+            Commerzbank AG 60261 Frankfurt/Main
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- KINDLY NOTE card -->
+    <div id="rollup3b" class="kindly_note_card">
+      <p>Kindly note:</p>
+      <p>
+        Account can only receive funds in Euros (Eur). You will be charged a 1%
+        fee on payments made into this account.
+      </p>
+    </div>
+  </div>
+
+   <!-- Bank Account Details Card for Naira -->
+   <div id="nairaBADcard" class="bank_account_details_card hide_BAD_card">
+    <div class="bad_card_header">
+      <div class="bad_card_header_left">
+        <img src="./../assets/nigeria.png" alt="NGN" class="bad_card_flag" />
+        <p>Your NGN bank account details</p>
+      </div>
+      <div class="bad_card_header_right">
+        <button>
+          <span class="material-symbols-outlined"> content_copy </span>
+          Copy Account Details
+        </button>
+        <button onclick="rollup4()">
+          <span class="material-symbols-outlined"> expand_less </span>
+        </button>
+      </div>
+    </div>
+    <div id="rollup3a" class="bad_card_banks">
+      <div class="bad_banks_top">
+        <div class="account_holder">
+          <h6>ACCOUNT HOLDER</h6>
+          <p>James & Co.</p>
+        </div>
+        <div class="account_holder">
+          <h6>ACCOUNT NUMBER</h6>
+          <p>
+            723524661<span class="material-symbols-outlined">
+              content_copy
+            </span>
+          </p>
+        </div>
+        <div class="account_holder">
+          <h6>BANK NAME</h6>
+          <p>
+            WEMA
+            <span class="material-symbols-outlined"> content_copy </span>
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    <!-- KINDLY NOTE card -->
+    <div id="rollup4b" class="kindly_note_card">
+      <p>Kindly note:</p>
+      <p>
+        Account can only receive funds in Naira (NGN). You will be charged a 1%
+        fee on payments made into this account.
+      </p>
+    </div>
+  </div>
+  <!-- ACCOUNT ACTIVITIES card for pounds -->
+  <div id="GBPactivities" class="account_activites_card">
+    <div class="activities_top">
+      <h6 class="card_title">GBP Account Activities</h6>
+    </div>
+    <table class="rtc_table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Tendered</th>
+          <th>Received</th>
+          <th>Fee</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Feb 08, 2023, 12:00AM</td>
+          <td>Deposit</td>
+          <td>$5000</td>
+          <td>$4990</td>
+          <td>$10</td>
+          <td>5SWYVODSBP6</td>
+          <td><span class="success_tag">Successful</span></td>
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <div class="card_control_btn_container">
+      <button id="test" type button class="card_control_btn">
+        View all transactions
+      </button>
+    </div>
+  </div>
+  <!-- ACCOUNT ACTIVITIES card for dollars -->
+  <div id="USDactivities" class="account_activites_card hide_activities">
+    <div class="activities_top">
+      <h6 class="card_title">USD Account Activities</h6>
+    </div>
+    <table class="rtc_table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Tendered</th>
+          <th>Received</th>
+          <th>Fee</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Feb 08, 2023, 12:00AM</td>
+          <td>Deposit</td>
+          <td>$5000</td>
+          <td>$4990</td>
+          <td>$10</td>
+          <td>5SWYVODSBP6</td>
+          <td><span class="success_tag">Successful</span></td>
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <div class="card_control_btn_container">
+      <button id="test" type button class="card_control_btn">
+        View all transactions
+      </button>
+    </div>
+  </div>
+  <!-- ACCOUNT ACTIVITIES card for EUROS -->
+  <div id="EURactivities" class="account_activites_card hide_activities">
+    <div class="activities_top">
+      <h6 class="card_title">EUR Account Activities</h6>
+    </div>
+    <table class="rtc_table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Tendered</th>
+          <th>Received</th>
+          <th>Fee</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Feb 08, 2023, 12:00AM</td>
+          <td>Deposit</td>
+          <td>$5000</td>
+          <td>$4990</td>
+          <td>$10</td>
+          <td>5SWYVODSBP6</td>
+          <td><span class="success_tag">Successful</span></td>
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <div class="card_control_btn_container">
+      <button id="test" type button class="card_control_btn">
+        View all transactions
+      </button>
+    </div>
+  </div>
+  <!-- ACCOUNT ACTIVITIES card for Naira -->
+  <div id="NGNactivities" class="account_activites_card hide_activities">
+    <div class="activities_top">
+      <h6 class="card_title">NGN Account Activities</h6>
+    </div>
+    <table class="rtc_table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Tendered</th>
+          <th>Received</th>
+          <th>Fee</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Feb 08, 2023, 12:00AM</td>
+          <td>Deposit</td>
+          <td>$5000</td>
+          <td>$4990</td>
+          <td>$10</td>
+          <td>5SWYVODSBP6</td>
+          <td><span class="success_tag">Successful</span></td>
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <div class="card_control_btn_container">
+      <button id="test" type button class="card_control_btn">
+        View all transactions
+      </button>
+    </div>
+  </div>
+</div>
+<!-- REPORTS TAB -->
+<div id="reportsTabId" class="reports_tab hideAccTab">
+  <div onclick="showAccountStatementForm()" class="statement_box">
+    <span class="material-symbols-outlined statement_box_icon">
+      description
+    </span>
+    <div>
+      <p>Get your statement of account</p>
+      <span class="material-symbols-outlined"> download </span>
+    </div>
+  </div>
+  <div class="statement_box">
+    <span class="material-symbols-outlined statement_box_icon">
+      description
+    </span>
+    <div>
+      <p>Get your proof of account</p>
+      <span class="material-symbols-outlined"> download </span>
+    </div>
+  </div>
+  <!-- ACCOUNT STATEMENT FORM POP UP -->
+  <div id="statementAccountModal" class="account_statement_form_container">
+    <div class="account_statement_form">
+      <h4>Download Account Statement</h4>
+
+      <div class="asf_form_control">
+        <label>Select currency</label>
+        <select>
+          <option value="GBP">
+            <img src="./../assets/britain.png" />
+            GBP
+          </option>
+          <option value="USD">
+            <img src="./../assets/USA.png" />
+            USA
+          </option>
+          <option value="EUR">
+            <img src="./../assets/USA.png" />
+            EUR
+          </option>
+          <option value="NGN">
+            <img src="./../assets/nigeria.png" />
+            NGN
+          </option>
+        </select>
+      </div>
+      <div class="asf_form_control">
+        <label>Start Date</label>
+        <input type="date" />
+      </div>
+      <div class="asf_form_control">
+        <label>End Date</label>
+        <input type="date" />
+      </div>
+      <div class="asf_form_control">
+        <label>File Format</label>
+        <div class="radio_input_container">
+          <div class="csv_input">
+            <input type="radio" />
+            <label>CSV</label>
+          </div>
+          <div class="csv_input">
+            <input type="radio" />
+            <label>PDF</label>
+          </div>
+        </div>
+      </div>
+      <div class="asf_form_button_group">
+        <button
+          onclick="hideAccountStatementForm()"
+          class="asf_form_button cancel_asf"
+        >
+          Cancel
+        </button>
+        <button class="asf_form_button">Download</button>
+      </div>
+    </div>
+  </div>
+</div>

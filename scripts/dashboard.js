@@ -419,6 +419,16 @@ const pages = {
               class="sc_flag"
             /><span>EUR</span>
           </button>
+          <button
+          id="switchNaijaBoard"
+          onclick="showNaijaBoard()"
+          class="select_currency_btn"
+        >
+          <img src="./../assets/nigeria.png" alt="" class="sc_flag" /><span
+            >NGN</span
+          >
+        </button>
+         
         </div>
       </div>
 
@@ -466,6 +476,14 @@ const pages = {
       </p>
 
       <h3>€0.00</h3>
+    </div>
+    <div id="naija_board" class="currency_info_board hide_board">
+      <p>
+        Available <span style="font-weight: 600"> NGN</span> account balance
+        N0.00
+      </p>
+
+      <h3>N0.00</h3>
     </div>
   </div>
   <!-- Bank Account Details Card for Pounds-->
@@ -567,7 +585,7 @@ const pages = {
   </div>
 
   <!-- Bank Account Details Card for Dollars -->
-  <div id="dollarsBADcard" class="bank_account_details_card">
+  <div id="dollarsBADcard" class="bank_account_details_card hide_BAD_card">
     <div class="bad_card_header">
       <div class="bad_card_header_left">
         <img
@@ -764,6 +782,57 @@ const pages = {
       </p>
     </div>
   </div>
+
+  <!-- Bank Account Details Card for Naira -->
+  <div id="nairaBADcard" class="bank_account_details_card hide_BAD_card">
+   <div class="bad_card_header">
+     <div class="bad_card_header_left">
+       <img src="./../assets/nigeria.png" alt="NGN" class="bad_card_flag" />
+       <p>Your NGN bank account details</p>
+     </div>
+     <div class="bad_card_header_right">
+       <button>
+         <span class="material-symbols-outlined"> content_copy </span>
+         Copy Account Details
+       </button>
+       <button onclick="rollup4()">
+         <span class="material-symbols-outlined"> expand_less </span>
+       </button>
+     </div>
+   </div>
+   <div id="rollup4a" class="bad_card_banks">
+     <div class="bad_banks_top">
+       <div class="account_holder">
+         <h6>ACCOUNT HOLDER</h6>
+         <p>James & Co.</p>
+       </div>
+       <div class="account_holder">
+         <h6>ACCOUNT NUMBER</h6>
+         <p>
+           723524661<span class="material-symbols-outlined">
+             content_copy
+           </span>
+         </p>
+       </div>
+       <div class="account_holder">
+         <h6>BANK NAME</h6>
+         <p>
+           WEMA
+           <span class="material-symbols-outlined"> content_copy </span>
+         </p>
+       </div>
+     </div>
+     
+   </div>
+   <!-- KINDLY NOTE card -->
+   <div id="rollup4b" class="kindly_note_card">
+     <p>Kindly note:</p>
+     <p>
+       Account can only receive funds in Naira (NGN). You will be charged a 1%
+       fee on payments made into this account.
+     </p>
+   </div>
+ </div>
   <!-- ACCOUNT ACTIVITIES card for pounds -->
   <div id="GBPactivities" class="account_activites_card">
     <div class="activities_top">
@@ -848,6 +917,44 @@ const pages = {
   >
     <div class="activities_top">
       <h6 class="card_title">EUR Account Activities</h6>
+    </div>
+    <table class="rtc_table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Tendered</th>
+          <th>Received</th>
+          <th>Fee</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Feb 08, 2023, 12:00AM</td>
+          <td>Deposit</td>
+          <td>$5000</td>
+          <td>$4990</td>
+          <td>$10</td>
+          <td>5SWYVODSBP6</td>
+          <td><span class="success_tag">Successful</span></td>
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <div class="card_control_btn_container">
+      <button id="test" type button class="card_control_btn">
+        View all transactions
+      </button>
+    </div>
+  </div>
+
+  <!-- ACCOUNT ACTIVITIES card for Naira -->
+  <div id="NGNactivities" class="account_activites_card hide_activities">
+    <div class="activities_top">
+      <h6 class="card_title">NGN Account Activities</h6>
     </div>
     <table class="rtc_table">
       <thead>
@@ -1701,65 +1808,90 @@ const pages = {
 
 document.getElementById("dashboardNav").addEventListener("click", function () {
   renderPage("dashboard");
-  this.classList.add('active_sidebar_btn')
-  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
-  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
-  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
+  this.classList.add("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 });
 
 document.getElementById("accountsNav").addEventListener("click", function () {
   renderPage("accounts");
-  this.classList.add('active_sidebar_btn')
-  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
-  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
-  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
-  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
-
+  this.classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 });
 
 document.getElementById("globalNav").addEventListener("click", function () {
   renderPage("global");
-  this.classList.add('active_sidebar_btn')
-  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
-  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
-  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
+  this.classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 });
 
 document
   .getElementById("transactionsNav")
   .addEventListener("click", function () {
     renderPage("transactions");
-    this.classList.add('active_sidebar_btn')
-  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
-  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
-  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
-  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
+    this.classList.add("active_sidebar_btn");
+    document
+      .getElementById("dashboardNav")
+      .classList.remove("active_sidebar_btn");
+    document
+      .getElementById("accountsNav")
+      .classList.remove("active_sidebar_btn");
+    document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+    document
+      .getElementById("profileNav")
+      .classList.remove("active_sidebar_btn");
+    document
+      .getElementById("supportNav")
+      .classList.remove("active_sidebar_btn");
   });
 
 document.getElementById("profileNav").addEventListener("click", function () {
   renderPage("profile");
-  this.classList.add('active_sidebar_btn')
-  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
-  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
-  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("supportNav").classList.remove('active_sidebar_btn')
+  this.classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 });
 
 document.getElementById("supportNav").addEventListener("click", function () {
   renderPage("support");
-  this.classList.add('active_sidebar_btn')
-  document.getElementById("dashboardNav").classList.remove('active_sidebar_btn')
-  document.getElementById("accountsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("globalNav").classList.remove('active_sidebar_btn')
-  document.getElementById("transactionsNav").classList.remove('active_sidebar_btn')
-  document.getElementById("profileNav").classList.remove('active_sidebar_btn')
+  this.classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
 });
 
 document.getElementById("logoutNav").addEventListener("click", function () {
@@ -1805,136 +1937,214 @@ const showPoundsBoard = () => {
   const poundsBoard = document.getElementById("pounds_board");
   const dollarsBoard = document.getElementById("dollars_board");
   const eurosBoard = document.getElementById("euros_board");
+  const naijaBoard = document.getElementById("naija_board");
   const switchPoundsBoard = document.getElementById("switchPoundsBoard");
   const switchDollarsBoard = document.getElementById("switchDollarsBoard");
   const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const switchNaijaBoard = document.getElementById("switchNaijaBoard");
 
   // grab BAD cards
   const poundsBADcard = document.getElementById("poundsBADcard");
   const dollarsBADcard = document.getElementById("dollarsBADcard");
   const eurosBADcard = document.getElementById("eurosBADcard");
+  const nairaBADcard = document.getElementById("nairaBADcard");
 
   //grab ACTIVITES card
   const GBPactivities = document.getElementById("GBPactivities");
   const USDactivities = document.getElementById("USDactivities");
   const EURactivities = document.getElementById("EURactivities");
+  const NGNactivities = document.getElementById("NGNactivities");
 
   console.log("pounds");
   dollarsBoard.classList.add("hide_board");
   poundsBoard.classList.remove("hide_board");
   eurosBoard.classList.add("hide_board");
+  naijaBoard.classList.add("hide_board");
 
   //toggle active tab button
   switchPoundsBoard.classList.add("select_currency_btn_active");
   switchDollarsBoard.classList.remove("select_currency_btn_active");
   switchEurosBoard.classList.remove("select_currency_btn_active");
+  switchNaijaBoard.classList.remove("select_currency_btn_active");
 
   // toggle BAD cards
   dollarsBADcard.classList.add("hide_BAD_card");
   poundsBADcard.classList.remove("hide_BAD_card");
   eurosBADcard.classList.add("hide_BAD_card");
+  nairaBADcard.classList.add("hide_BAD_card");
 
   //toggle activities board
   GBPactivities.classList.remove("hide_activities");
   USDactivities.classList.add("hide_activities");
   EURactivities.classList.add("hide_activities");
+  NGNactivities.classList.add("hide_activities");
 };
 
 const showDollarsBoard = () => {
   const poundsBoard = document.getElementById("pounds_board");
   const dollarsBoard = document.getElementById("dollars_board");
   const eurosBoard = document.getElementById("euros_board");
+  const naijaBoard = document.getElementById("naija_board");
   const switchPoundsBoard = document.getElementById("switchPoundsBoard");
   const switchDollarsBoard = document.getElementById("switchDollarsBoard");
   const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const switchNaijaBoard = document.getElementById("switchNaijaBoard");
 
   // grab BAD cards
   const poundsBADcard = document.getElementById("poundsBADcard");
   const dollarsBADcard = document.getElementById("dollarsBADcard");
   const eurosBADcard = document.getElementById("eurosBADcard");
+  const nairaBADcard = document.getElementById("nairaBADcard");
 
   //grab ACTIVITES card
   const GBPactivities = document.getElementById("GBPactivities");
   const USDactivities = document.getElementById("USDactivities");
   const EURactivities = document.getElementById("EURactivities");
+  const NGNactivities = document.getElementById("NGNactivities");
 
   console.log("dollars");
   poundsBoard.classList.add("hide_board");
   dollarsBoard.classList.remove("hide_board");
   eurosBoard.classList.add("hide_board");
+  naijaBoard.classList.add("hide_board");
 
   //toggle active tab button
   switchPoundsBoard.classList.remove("select_currency_btn_active");
   switchDollarsBoard.classList.add("select_currency_btn_active");
   switchEurosBoard.classList.remove("select_currency_btn_active");
+  switchNaijaBoard.classList.remove("select_currency_btn_active");
 
   // toggle BAD cards
   dollarsBADcard.classList.remove("hide_BAD_card");
   poundsBADcard.classList.add("hide_BAD_card");
   eurosBADcard.classList.add("hide_BAD_card");
+  nairaBADcard.classList.add("hide_BAD_card");
 
   //toggle activities board
   GBPactivities.classList.add("hide_activities");
   USDactivities.classList.remove("hide_activities");
   EURactivities.classList.add("hide_activities");
+  NGNactivities.classList.add("hide_activities");
 };
 
 const showEurosBoard = () => {
   const poundsBoard = document.getElementById("pounds_board");
   const dollarsBoard = document.getElementById("dollars_board");
   const eurosBoard = document.getElementById("euros_board");
+  const naijaBoard = document.getElementById("naija_board");
   const switchPoundsBoard = document.getElementById("switchPoundsBoard");
   const switchDollarsBoard = document.getElementById("switchDollarsBoard");
   const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const switchNaijaBoard = document.getElementById("switchNaijaBoard");
 
   // grab BAD cards
   const poundsBADcard = document.getElementById("poundsBADcard");
   const dollarsBADcard = document.getElementById("dollarsBADcard");
   const eurosBADcard = document.getElementById("eurosBADcard");
+  const nairaBADcard = document.getElementById("nairaBADcard");
 
   //grab ACTIVITES card
   const GBPactivities = document.getElementById("GBPactivities");
   const USDactivities = document.getElementById("USDactivities");
   const EURactivities = document.getElementById("EURactivities");
+  const NGNactivities = document.getElementById("NGNactivities");
 
   console.log("euros");
   dollarsBoard.classList.add("hide_board");
   poundsBoard.classList.add("hide_board");
+  naijaBoard.classList.add("hide_board");
   eurosBoard.classList.remove("hide_board");
 
   //toggle active tab button
   switchPoundsBoard.classList.remove("select_currency_btn_active");
   switchDollarsBoard.classList.remove("select_currency_btn_active");
   switchEurosBoard.classList.add("select_currency_btn_active");
+  switchNaijaBoard.classList.remove("select_currency_btn_active");
 
   // toggle BAD cards
   dollarsBADcard.classList.add("hide_BAD_card");
   poundsBADcard.classList.add("hide_BAD_card");
   eurosBADcard.classList.remove("hide_BAD_card");
+  nairaBADcard.classList.add("hide_BAD_card");
 
   //toggle activities board
   GBPactivities.classList.add("hide_activities");
   USDactivities.classList.add("hide_activities");
   EURactivities.classList.remove("hide_activities");
+  NGNactivities.classList.add("hide_activities");
+};
+
+const showNaijaBoard = () => {
+  const poundsBoard = document.getElementById("pounds_board");
+  const dollarsBoard = document.getElementById("dollars_board");
+  const eurosBoard = document.getElementById("euros_board");
+  const naijaBoard = document.getElementById("naija_board");
+  const switchPoundsBoard = document.getElementById("switchPoundsBoard");
+  const switchDollarsBoard = document.getElementById("switchDollarsBoard");
+  const switchEurosBoard = document.getElementById("switchEurosBoard");
+  const switchNaijaBoard = document.getElementById("switchNaijaBoard");
+
+  // grab BAD cards
+  const poundsBADcard = document.getElementById("poundsBADcard");
+  const dollarsBADcard = document.getElementById("dollarsBADcard");
+  const eurosBADcard = document.getElementById("eurosBADcard");
+  const nairaBADcard = document.getElementById("nairaBADcard");
+
+  //grab ACTIVITES card
+  const GBPactivities = document.getElementById("GBPactivities");
+  const USDactivities = document.getElementById("USDactivities");
+  const EURactivities = document.getElementById("EURactivities");
+  const NGNactivities = document.getElementById("NGNactivities");
+
+  console.log("naija");
+  dollarsBoard.classList.add("hide_board");
+  poundsBoard.classList.add("hide_board");
+  eurosBoard.classList.add("hide_board");
+  naijaBoard.classList.remove("hide_board");
+
+  //toggle active tab button
+  switchPoundsBoard.classList.remove("select_currency_btn_active");
+  switchDollarsBoard.classList.remove("select_currency_btn_active");
+  switchEurosBoard.classList.remove("select_currency_btn_active");
+  switchNaijaBoard.classList.add("select_currency_btn_active");
+
+  // toggle BAD cards
+  dollarsBADcard.classList.add("hide_BAD_card");
+  poundsBADcard.classList.add("hide_BAD_card");
+  eurosBADcard.classList.add("hide_BAD_card");
+  nairaBADcard.classList.remove("hide_BAD_card");
+
+  //toggle activities board
+  GBPactivities.classList.add("hide_activities");
+  USDactivities.classList.add("hide_activities");
+  EURactivities.classList.add("hide_activities");
+  NGNactivities.classList.remove("hide_activities");
 };
 
 // Handle BAD card ROLLUP  sections
-const rollup3a = document.getElementById("rollup3a");
-const rollup3b = document.getElementById("rollup3b");
-const rollup2a = document.getElementById("rollup2a");
-const rollup2b = document.getElementById("rollup2b");
-const rollup1a = document.getElementById("rollup1a");
-const rollup1b = document.getElementById("rollup1b");
+
+const rollup4 = () => {
+  const rollup4a = document.getElementById("rollup4a");
+  const rollup4b = document.getElementById("rollup4b");
+  rollup4a.classList.toggle("hide_rollup");
+  rollup4b.classList.toggle("hide_rollup");
+};
 
 const rollup3 = () => {
+  const rollup3a = document.getElementById("rollup3a");
+  const rollup3b = document.getElementById("rollup3b");
   rollup3a.classList.toggle("hide_rollup");
   rollup3b.classList.toggle("hide_rollup");
 };
 const rollup2 = () => {
+  const rollup2a = document.getElementById("rollup2a");
+  const rollup2b = document.getElementById("rollup2b");
   rollup2a.classList.toggle("hide_rollup");
   rollup2b.classList.toggle("hide_rollup");
 };
 const rollup1 = () => {
+  const rollup1a = document.getElementById("rollup1a");
+  const rollup1b = document.getElementById("rollup1b");
   rollup1a.classList.toggle("hide_rollup");
   rollup1b.classList.toggle("hide_rollup");
 };
