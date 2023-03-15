@@ -29,13 +29,20 @@
           <img class="swifia_logo" src="./../assets/swifialogo1.png" />
         </div>
         <div class="header_content_right">
-          <figure class="profile_details">
+          <figure onclick="revealMenuPopup()" class="profile_details">
             <span class="user_initials">PG</span>
             <figcaption class="header_username">Peter Gregory</figcaption>
             <button class="header_profile_toggle">
               <i class="fa-solid fa-angle-down"></i>
             </button>
           </figure>
+        </div>
+        <!-- Menu Profile Popup -->
+        <div id="menuPopupID" class="menu_popup ">
+          <button onclick="menuProfile()" class="popup_btn"><span class="material-symbols-rounded">
+            person
+            </span> Profile</button>
+          <button  onclick="menuLogout()" class="popup_btn"><span class="material-symbols-rounded"> logout </span> Logout</button>
         </div>
       </div>
     </header>

@@ -2971,3 +2971,43 @@ function hideGlobalModal() {
   const globalSuccessModal = document.getElementById("globalSuccessModal");
   globalSuccessModal.style.display = "none";
 }
+
+// HANDLE MENU POPUP
+function revealMenuPopup() {
+  document.getElementById("menuPopupID").classList.toggle("menu_popup_active");
+}
+
+function menuProfile() {
+  console.log("menuprofile");
+  renderPage("profile");
+  const profileNav = document.getElementById("profileNav");
+  profileNav.classList.add("active_sidebar_btn");
+
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
+
+
+function menuLogout() {
+  
+  renderPage("logout");
+  const profileNav = document.getElementById("profileNav");
+  profileNav.classList.remove("active_sidebar_btn");
+
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
