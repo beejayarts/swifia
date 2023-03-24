@@ -38,11 +38,13 @@
           </figure>
         </div>
         <!-- Menu Profile Popup -->
-        <div id="menuPopupID" class="menu_popup ">
-          <button onclick="menuProfile()" class="popup_btn"><span class="material-symbols-rounded">
-            person
-            </span> Profile</button>
-          <button  onclick="menuLogout()" class="popup_btn"><span class="material-symbols-rounded"> logout </span> Logout</button>
+        <div id="menuPopupID" class="menu_popup">
+          <button onclick="menuProfile()" class="popup_btn">
+            <span class="material-symbols-rounded"> person </span> Profile
+          </button>
+          <button onclick="menuLogout()" class="popup_btn">
+            <span class="material-symbols-rounded"> logout </span> Logout
+          </button>
         </div>
       </div>
     </header>
@@ -116,7 +118,73 @@
       <main class="main_section">
         <!-- PRINCIPAL CONTAINER -->
         <div id="dashboard_content_container" class="dashboard_content">
- 
+          <div class="myaccounts_Header">
+            <button class="pageBackBtn">
+              <span class="material-symbols-outlined"> arrow_back </span>
+              Add Money
+            </button>
+          </div>
+
+          <!-- MY ACCOUNTS TAB -->
+
+          <!-- Select currency card -->
+          <div class="select_currency_card">
+            <div class="accountForm_container">
+              <div class="accountForm_header">
+                <h5>Add Money</h5>
+              </div>
+              <div class="accountForm_content">
+                <div class="dynamicInputContainer accountSelect">
+                  <label>Select account</label>
+                  <div onclick="showAccountOptions()" class="selectControlInput">
+                   <div class="sci_left"> <img
+                    src="./../assets/USA.png"
+                    alt=""
+                    id="sci_currency_img"
+                    class="currency_img"
+                  /> <span id="accountTypeValue">USD</span
+                    ></div>
+                    <span class="material-symbols-rounded"> expand_more </span>
+                  </div>
+                  <ul id="accountSelectListID" class="accountSelectList">
+                    <li onclick="setAccountType('USD')" class="asl_item">
+                      <img
+                        src="./../assets/USA.png"
+                        alt=""
+                        class="currency_img"
+                      />
+                      <span>USD</span>
+                    </li>
+                    <li onclick="setAccountType('GBP')" class="asl_item">
+                      <img
+                        src="./../assets/britain.png"
+                        alt=""
+                        class="currency_img"
+                      />
+                      <span>GBP</span>
+                    </li>
+                    <li onclick="setAccountType('EUR')" class="asl_item">
+                      <img
+                        src="./../assets/euro.png"
+                        alt=""
+                        class="currency_img"
+                      />
+                      <span>EUR</span>
+                    </li>
+                    <li onclick="setAccountType('NGN')" class="asl_item">
+                      <img
+                        src="./../assets/nigeria.png"
+                        alt=""
+                        class="currency_img"
+                      />
+                      <span>NGN</span>
+                    </li>
+                  </ul>
+                </div>
+                <div><h1>Hello</h1></div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- END OF PRINCIPAL CONTAINER -->
       </main>

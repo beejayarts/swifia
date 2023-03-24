@@ -1,6 +1,6 @@
 // import {pages} from './dashboardPages'
 
-const pages = {
+const pagesx = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -361,7 +361,7 @@ const pages = {
         </div>
       </div>
     </div>`,
-  accounts: `   <div class="myaccounts_Header">
+  accounts: `<div class="myaccounts_Header">
   <button
     id="accountsBtn"
     onclick="switchAccountsTab()"
@@ -1903,7 +1903,7 @@ function renderPage(page) {
     pages[page];
 }
 
-renderPage("dashboard");
+// renderPage("dashboard");
 
 //end of rendering the different dashboard pages
 
@@ -2926,7 +2926,7 @@ function renderGlobalPages(page) {
   document.getElementById("tfcBodyId").innerHTML = globalTransferPages[page];
 }
 
-renderGlobalPages("page1");
+// renderGlobalPages("page1");
 
 function handlePageTwo() {
   console.log("papa2");
@@ -2994,9 +2994,7 @@ function menuProfile() {
   document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 }
 
-
 function menuLogout() {
-  
   renderPage("logout");
   const profileNav = document.getElementById("profileNav");
   profileNav.classList.remove("active_sidebar_btn");
@@ -3010,4 +3008,35 @@ function menuLogout() {
     .getElementById("transactionsNav")
     .classList.remove("active_sidebar_btn");
   document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
+
+// =========================ACCOUNTS PAGES
+
+const accountPages = {
+  acc1: ``,
+  acc2: ``,
+};
+
+function setAccountType(n) {
+  document.getElementById("accountTypeValue").innerText = n;
+  if (n == "USD") {
+    document.getElementById("sci_currency_img").src = "./../assets/USA.png";
+  } else if (n == "GBP") {
+    document.getElementById("sci_currency_img").src = "./../assets/britain.png";
+  } else if (n === "EUR") {
+    document.getElementById("sci_currency_img").src = "./../assets/euro.png";
+  } else {
+    document.getElementById("sci_currency_img").src = "./../assets/nigeria.png";
+  }
+
+  document.getElementById("accountSelectListID").style.display = "none";
+}
+
+function showAccountOptions() {
+  const accountsElement = document.getElementById("accountSelectListID");
+  if (accountsElement.style.display === "none") {
+    accountsElement.style.display = "flex";
+  } else {
+    accountsElement.style.display = "none";
+  }
 }

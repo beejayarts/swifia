@@ -1081,7 +1081,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   font-size: 1rem;
   font-weight: 400;
   color: var(--gray-text);
-  width: 55%;
+  width: 60%;
 }
 
 .statement_box div {
@@ -1218,11 +1218,107 @@ MY ACCOUNT PAGE CONTENT STYLES
   color: var(--white-color);
 }
 
+
+.pageBackBtn{
+   background-color: transparent;
+   color: #1E1E1E;
+   font-size: 1.2rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   gap: .5vw;
+   cursor: pointer;
+}
+
+.accountForm_container{
+  min-height: 65vh;
+  border:1px solid #EAEAEA;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: var(--card-border-radius);
+  padding: var(--padding-general);
+
+}
+
+.accountForm_header h5{
+  font-size: 1.8rem;
+  color: var(--gray-text);
+  font-weight: 600;
+}
+
+.selectControlInput{
+  background: #F5F6FA;
+  width: 100%;
+  height: 6vh;
+  border-radius: 3rem;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #EAEAEA;
+  font-size: 1rem;
+  color: var(--gray-text);
+  cursor: pointer;
+  margin: 1vh 0;
+
+}
+
+
+
+.accountSelectList{
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+  padding: var(--padding-general);
+  border-radius: 3%;
+display: none;
+flex-direction: column;
+row-gap: 2vh;
+position: absolute;
+z-index: 2000;
+
+
+}
+
+.asl_item {
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+  cursor: pointer;
+  padding: 4% 5%;
+  border-radius: .4rem;
+}
+
+.asl_item:hover{
+ background-color: var(--body-background);
+ 
+}
+.asl_item span{
+  font-size: .8rem;
+  color: var(--gray-text);
+  font-weight: 500;
+}
+
+.dynamicInputContainer {
+  position: relative;
+}
+
+.currency_img{
+  max-width: 1.3rem;
+}
+
+.sci_left{
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+}
+
+
 /* 
 
-======================
+======================================================================
 TRANSACTIONS
-======================
+======================================================================
 
 */
 
@@ -2310,8 +2406,8 @@ GLOBAL TRANSFER STYLES
 }
 
 .global_success_pay {
-  width: 20%;
-  height: 40%;
+  width: 26%;
+  height: 50%;
   background-color: white;
   border-radius: var(--card-border-radius);
   padding: var(--padding-general);
