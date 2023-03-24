@@ -1233,7 +1233,7 @@ MY ACCOUNT PAGE CONTENT STYLES
 .accountForm_container{
   min-height: 65vh;
   border:1px solid #EAEAEA;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   border-radius: var(--card-border-radius);
   padding: var(--padding-general);
@@ -1256,7 +1256,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   align-items: center;
   justify-content: space-between;
   border: 1px solid #EAEAEA;
-  font-size: 1rem;
+  font-size: .8rem;
   color: var(--gray-text);
   cursor: pointer;
   margin: 1vh 0;
@@ -1280,6 +1280,18 @@ z-index: 2000;
 
 }
 
+.paymentSelectList{
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+  padding: var(--padding-general);
+  border-radius: 3%;
+display: none;
+flex-direction: column;
+row-gap: 2vh;
+position: absolute;
+z-index: 2000;
+}
 .asl_item {
   display: flex;
   align-items: center;
@@ -1301,6 +1313,7 @@ z-index: 2000;
 
 .dynamicInputContainer {
   position: relative;
+  margin-bottom: 4vh;
 }
 
 .currency_img{
@@ -1313,6 +1326,22 @@ z-index: 2000;
   column-gap: 1vw;
 }
 
+
+.acc_primary_btn{
+  width: 100%;
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: var(--white-color);
+  height: 5vh;
+
+}
+
+.footerSubText{
+  color: var(--dark-purple);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 3vh;
+}
 
 /* 
 

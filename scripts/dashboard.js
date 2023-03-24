@@ -3017,6 +3017,7 @@ const accountPages = {
   acc2: ``,
 };
 
+// functions for account type input
 function setAccountType(n) {
   document.getElementById("accountTypeValue").innerText = n;
   if (n == "USD") {
@@ -3038,5 +3039,27 @@ function showAccountOptions() {
     accountsElement.style.display = "flex";
   } else {
     accountsElement.style.display = "none";
+  }
+}
+
+
+// functions for payment type input
+
+function setPaymentType(n){
+if (n=='card'){
+ document.getElementById('paymentTypeValue').innerText='via Card'
+}else{
+  document.getElementById('paymentTypeValue').innerText='via Transfer'
+}
+
+document.getElementById("paymentSelectListID").style.display = "none";
+}
+
+function showPaymentOptions() {
+  const paymentElement = document.getElementById("paymentSelectListID");
+  if (paymentElement.style.display === "none") {
+    paymentElement.style.display = "flex";
+  } else {
+    paymentElement.style.display = "none";
   }
 }
