@@ -1,6 +1,6 @@
 // import {pages} from './dashboardPages'
 
-const pagesx = {
+const pages = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -8,17 +8,17 @@ const pagesx = {
       <div class="aoc_top">
         <h6 class="card_title">Account Overview</h6>
         <div class="add_send_swap_group">
-          <button class="aoc_top_btn">
+          <button onclick='ShowAccPageTwo()' class="aoc_top_btn">
             <img src="./../assets/addmoney.png" alt="add money" /><span
               >Add money</span
             >
           </button>
-          <button class="aoc_top_btn">
+          <button onclick='sendViaGlobalTransfer()' class="aoc_top_btn">
             <img src="./../assets/sendmoney.png" alt="send money" /><span
               >Send</span
             >
           </button>
-          <button class="aoc_top_btn">
+          <button onclick='ShowAccPageFour()' class="aoc_top_btn">
             <img src="./../assets/swapmoney.png" alt="swap money" /><span
               >Swap currency</span
             >
@@ -433,18 +433,18 @@ const pagesx = {
       </div>
 
       <div class="sc_top_right">
-        <button class="sc_top_btn">
+        <button onclick='ShowAccPageTwo()' class="sc_top_btn">
           <img src="./../assets/addmoney.png" alt="add money" /><span
             >Add money</span
           >
         </button>
-        <button class="sc_top_btn">
+        <button onclick='sendViaGlobalTransfer()' class="sc_top_btn">
           <img
             src="./../assets/sendmoney.png"
             alt="send money"
           /><span>Send</span>
         </button>
-        <button class="sc_top_btn">
+        <button onclick='ShowAccPageFour()' class="sc_top_btn">
           <img
             src="./../assets/swapmoney.png"
             alt="swap money"
@@ -1903,7 +1903,7 @@ function renderPage(page) {
     pages[page];
 }
 
-// renderPage("dashboard");
+renderPage("dashboard");
 
 //end of rendering the different dashboard pages
 
@@ -3010,12 +3010,442 @@ function menuLogout() {
   document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 }
 
-// =========================ACCOUNTS PAGES
+
+// =========================ACCOUNTS PAGES=========================================
 
 const accountPages = {
   acc1: ``,
-  acc2: ``,
+  acc2: ` <div class="myaccounts_Header">
+  <button class="pageBackBtn">
+    <span class="material-symbols-outlined"> arrow_back </span>
+    Add Money
+  </button>
+</div>
+
+<!-- MY ACCOUNTS TAB -->
+
+<!-- Select currency card -->
+<div class="select_currency_card">
+  <div class="accountForm_container">
+    <div class="accountForm_header">
+      <h5>Add Money</h5>
+    </div>
+    <div class="accountForm_content">
+      <div class="dynamicInputContainer accountSelect">
+        <label>Select account</label>
+        <div
+          onclick="showAccountOptions()"
+          class="selectControlInput"
+        >
+          <div class="sci_left">
+            <img
+              src="./../assets/USA.png"
+              alt=""
+              id="sci_currency_img"
+              class="currency_img"
+            />
+            <span id="accountTypeValue">USD</span>
+          </div>
+          <span class="material-symbols-rounded"> expand_more </span>
+        </div>
+        <ul id="accountSelectListID" class="accountSelectList">
+          <li onclick="setAccountType('USD')" class="asl_item">
+            <img
+              src="./../assets/USA.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>USD</span>
+          </li>
+          <li onclick="setAccountType('GBP')" class="asl_item">
+            <img
+              src="./../assets/britain.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>GBP</span>
+          </li>
+          <li onclick="setAccountType('EUR')" class="asl_item">
+            <img
+              src="./../assets/euro.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>EUR</span>
+          </li>
+          <li onclick="setAccountType('NGN')" class="asl_item">
+            <img
+              src="./../assets/nigeria.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>NGN</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Payment method -->
+      <div class="dynamicInputContainer accountSelect">
+        <label>Payment Method</label>
+        <div
+          onclick="showPaymentOptions()"
+          class="selectControlInput"
+        >
+          <span id="paymentTypeValue">Via Card</span>
+          <span class="material-symbols-rounded"> expand_more </span>
+        </div>
+        <ul id="paymentSelectListID" class="paymentSelectList">
+          <li onclick="setPaymentType('card')" class="asl_item">
+            <span>Via Card</span>
+          </li>
+          <li onclick="setPaymentType('transfer')" class="asl_item">
+            <span>Via Transfer</span>
+          </li>
+        </ul>
+      </div>
+      <!-- amount top up -->
+      <div class="dynamicInputContainer accountSelect">
+        <label for="amountTopUpId">Amount to top-up</label>
+        <input
+          type="number"
+          placeholder="NGN"
+          id="amountTopUpId"
+          class="selectControlInput"
+        />
+      </div>
+      <!-- amount to receive -->
+      <div class="dynamicInputContainer accountSelect">
+        <label for="amountTopUpId">Amount you will receive</label>
+        <div
+          type="number"
+          placeholder="USD"
+          id="amountTopUpId"
+          class="selectControlInput"
+        >
+          $400
+        </div>
+      </div>
+      <div class="fee_percentage">
+        <p>Fee</p>
+        <p>$8 <span>(2% of amount)</span></p>
+      </div>
+      <button onclick='renderAccountPages("acc3")' class="page_progress_btn">Continue</button>
+      <p class="footerSubText">
+        Exchange Rate is ₦735 to $1 as at Feb 08, 2023
+      </p>
+    </div>
+  </div>
+</div>
+<!-- END OF MY ACCOUNTS TAB -->`,
+acc3:`  <div class="myaccounts_Header">
+<button class="pageBackBtn">
+  <span class="material-symbols-outlined"> arrow_back </span>
+  Add Money
+</button>
+</div>
+
+<!-- MY ACCOUNTS TAB -->
+
+<!-- Select currency card -->
+<div class="select_currency_card">
+<div class="accountForm_container">
+  <div class="final_accountForm_header">
+    <div class="faf_content">
+      <h5>Add Money by card</h5>
+      <button class="faf_btn">
+        <span class="material-symbols-rounded"> edit_note </span>
+        Edit details
+      </button>
+    </div>
+    <h6>Card details</h6>
+  </div>
+  <div class="accountForm_content">
+    <!--Card name  -->
+    <div class="dynamicInputContainer accountSelect">
+      <label for="amountTopUpId">Card name</label>
+      <input
+        type="text"
+        placeholder="Peter Obi"
+        id="cardNameId"
+        class="selectControlInput"
+      />
+    </div>
+    <!-- Card number -->
+    <div class="dynamicInputContainer accountSelect">
+      <label for="amountTopUpId">Card Number</label>
+      <input
+        type="number"
+        placeholder="0000 0000 0000 0000"
+        id="cardNumId"
+        class="selectControlInput"
+      />
+    </div>
+
+    <div class="expiry_security_code">
+      <!-- Card expiry -->
+      <div class="dynamicInputContainer accountSelect">
+        <label for="amountTopUpId">Expiry Date</label>
+        <input
+          type="date"
+          placeholder="12/22"
+          id="cardNumId"
+          class=" expirysec"
+        />
+      </div>
+      <!-- Card security code -->
+      <div class="dynamicInputContainer accountSelect">
+        <label for="amountTopUpId">Security Code (cvv)</label>
+        <input
+          type="text"
+          placeholder="0000"
+          id="cardNumId"
+          class=" expirysec"
+        />
+      </div>
+    </div>
+    <button onclick="addMoneyPrompt()" class="page_progress_btn">Add money</button>
+  </div>
+
+</div>
+<!-- ADD MONEY success Modal -->
+<div id="addMoneySuccessModal" class="add_money_success">
+  <div class="add_money_success_content">
+    <img src="./../assets/success.png" alt="added money successfully"/>
+    <p>Account funded successfully!</p>
+    <button onclick='renderPage("accounts")' class="page_progress_btn">Go to Accounts</button>
+  </div>
+</div>
+</div>
+<!-- END OF MY ACCOUNTS TAB -->`,
+acc4: `
+<div class="myaccounts_Header">
+  <button class="pageBackBtn">
+    <span class="material-symbols-outlined"> arrow_back </span>
+    Swap Money
+  </button>
+</div>
+
+<!--  SWAP MONEY TAB -->
+
+<!-- Select currency card -->
+<div class="select_currency_card">
+  <div class="accountForm_container">
+    <div class="accountForm_header">
+      <h5>Swap Money</h5>
+    </div>
+    <div class="accountForm_content">
+      <div class="dynamicInputContainer accountSelect">
+        <label>Account to transfer from (Select account)</label>
+        <div
+          onclick="showAccountOptions()"
+          class="selectControlInput"
+        >
+          <div class="sci_left">
+            <img
+              src="./../assets/USA.png"
+              alt=""
+              id="sci_currency_img"
+              class="currency_img"
+            />
+            <span id="accountTypeValue">USD</span>
+          </div>
+          <span class="material-symbols-rounded"> expand_more </span>
+        </div>
+        <ul id="accountSelectListID" class="accountSelectList">
+          <li onclick="setAccountType('USD')" class="asl_item">
+            <img
+              src="./../assets/USA.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>USD</span>
+          </li>
+          <li onclick="setAccountType('GBP')" class="asl_item">
+            <img
+              src="./../assets/britain.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>GBP</span>
+          </li>
+          <li onclick="setAccountType('EUR')" class="asl_item">
+            <img
+              src="./../assets/euro.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>EUR</span>
+          </li>
+          <li onclick="setAccountType('NGN')" class="asl_item">
+            <img
+              src="./../assets/nigeria.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>NGN</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Wallet to transfer to -->
+      <div class="dynamicInputContainer accountSelect">
+        <label>Wallet to transfer to</label>
+        <div
+          onclick="showWalletOptions()"
+          class="selectControlInput"
+        >
+          <div class="sci_left">
+            <img
+              src="./../assets/USA.png"
+              alt=""
+              id="wallet_currency_img"
+              class="currency_img"
+            />
+            <span id="walletAccountTypeValue">USD</span>
+          </div>
+          <span class="material-symbols-rounded"> expand_more </span>
+        </div>
+        <ul id="walletAccID" class="accountSelectList">
+          <li onclick="setWalletAccountType('GBP')" class="asl_item">
+            <img
+              src="./../assets/britain.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>GBP</span>
+          </li>
+          <li onclick="setWalletAccountType('EUR')" class="asl_item">
+            <img
+              src="./../assets/euro.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>EUR</span>
+          </li>
+          <li onclick="setWalletAccountType('USD')" class="asl_item">
+            <img
+              src="./../assets/USA.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>USD</span>
+          </li>
+
+          <li onclick="setWalletAccountType('NGN')" class="asl_item">
+            <img
+              src="./../assets/nigeria.png"
+              alt=""
+              class="currency_img"
+            />
+            <span>NGN</span>
+          </li>
+        </ul>
+      </div>
+      <!-- amount to swap -->
+      <div class="dynamicInputContainer accountSelect">
+        <label for="amountTopUpId">Amount to swap</label>
+        <input
+          type="number"
+          placeholder="$"
+          id="amountSwapId"
+          class="selectControlInput"
+        />
+      </div>
+      <!-- amount to receive -->
+      <div class="dynamicInputContainer accountSelect">
+        <label for="amountTopUpId">Amount you will receive</label>
+        <div
+          type="number"
+          placeholder="USD"
+          id="amountTopUpId"
+          class="selectControlInput"
+        >
+          0.00
+        </div>
+      </div>
+
+      <button
+        onclick='processMoneySwap()'
+        class="page_progress_btn"
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+  <!-- ADD MONEY success Modal -->
+  <div id="swapMoneySuccessModal" class="add_money_success">
+    <div class="add_money_success_content">
+      <img
+        src="./../assets/success.png"
+        alt="added money successfully"
+      />
+      <p>Account funded successfully!</p>
+      <button
+        onclick='renderPage("accounts")'
+        class="page_progress_btn"
+      >
+        Go to Accounts
+      </button>
+    </div>
+  </div>
+</div>
+<!-- END OF SWAP MONEY TAB -->
+`
 };
+
+
+// Rendering the internal pages for ACCOUNTS
+function renderAccountPages(page) {
+  console.log(page);
+  document.getElementById("dashboard_content_container").innerHTML = accountPages[page];
+}
+
+// renderAccountPages(acc2)
+
+function ShowAccPageTwo() {
+  console.log("acc2");
+  renderAccountPages("acc2");
+
+  // Make the menu button active
+  document.getElementById('accountsNav').classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
+
+// renderAccountPages(acc3)
+
+function ShowAccPageThree() {
+  console.log("acc3");
+  renderAccountPages("acc3");
+}
+
+
+// renderAccountPages(acc4) 
+
+function ShowAccPageFour() {
+  console.log("acc4");
+  renderAccountPages("acc4");
+
+  // Make the menu button active
+  document.getElementById('accountsNav').classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
+
+
 
 // functions for account type input
 function setAccountType(n) {
@@ -3033,6 +3463,27 @@ function setAccountType(n) {
   document.getElementById("accountSelectListID").style.display = "none";
 }
 
+
+
+// functions for WALLET SWAP ACCOUNT TYPE
+function setWalletAccountType(n) {
+  document.getElementById("walletAccountTypeValue").innerText = n;
+  if (n == "USD") {
+    
+    document.getElementById("wallet_currency_img").src = "./../assets/USA.png";
+  } else if (n == "GBP") {
+    console.log('uba')
+    document.getElementById("wallet_currency_img").src = "./../assets/britain.png";
+  } else if (n === "EUR") {
+    document.getElementById("wallet_currency_img").src = "./../assets/euro.png";
+  } else {
+    document.getElementById("wallet_currency_img").src = "./../assets/nigeria.png";
+  }
+
+  document.getElementById("walletAccID").style.display = "none";
+}
+
+
 function showAccountOptions() {
   const accountsElement = document.getElementById("accountSelectListID");
   if (accountsElement.style.display === "none") {
@@ -3042,6 +3493,14 @@ function showAccountOptions() {
   }
 }
 
+function showWalletOptions() {
+  const accountsElement = document.getElementById("walletAccID");
+  if (accountsElement.style.display === "none") {
+    accountsElement.style.display = "flex";
+  } else {
+    accountsElement.style.display = "none";
+  }
+}
 
 // functions for payment type input
 
@@ -3062,4 +3521,35 @@ function showPaymentOptions() {
   } else {
     paymentElement.style.display = "none";
   }
+}
+
+
+// ADD MONEY PROMPT
+
+function addMoneyPrompt(){
+  document.getElementById('addMoneySuccessModal').style.display='flex'
+}
+
+
+//send to Global Transfer Page
+
+function sendViaGlobalTransfer(){
+  renderPage("global");
+  document.getElementById('globalNav').classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
+
+
+//Process Money Swap
+
+function processMoneySwap(){
+  document.getElementById('swapMoneySuccessModal').style.display='flex'
 }

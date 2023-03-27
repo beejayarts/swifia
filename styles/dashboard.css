@@ -696,6 +696,7 @@ MY ACCOUNT PAGE CONTENT STYLES
   background-color: transparent;
   cursor: pointer;
   transition: 0.5s all ease;
+  /* display: flex; */
 }
 
 .myaccounts_Header_btn_active {
@@ -1240,12 +1241,48 @@ MY ACCOUNT PAGE CONTENT STYLES
 
 }
 
+
+
 .accountForm_header h5{
   font-size: 1.8rem;
   color: var(--gray-text);
   font-weight: 600;
 }
 
+.final_accountForm_header{
+  margin: 3vh 0;
+}
+.faf_content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faf_btn{
+  color: #8969FC;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: .4s all ease;
+}
+
+.faf_btn:hover{
+  color: var(--dark-purple);
+}
+
+.final_accountForm_header h6{
+  font-size: 1rem;
+  color: var(--gray-text);
+  font-weight: 500;
+  margin: 2vh 0;
+}
+.faf_content h5{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gray-text);
+}
 .selectControlInput{
   background: #F5F6FA;
   width: 100%;
@@ -1263,7 +1300,20 @@ MY ACCOUNT PAGE CONTENT STYLES
 
 }
 
-
+.expirysec{
+  background: #F5F6FA;
+  width: 95%;
+  height: 6vh;
+  border-radius: 3rem;
+  padding: 0 5%;
+  
+  justify-content: space-between;
+  border: 1px solid #EAEAEA;
+  font-size: .8rem;
+  color: var(--gray-text);
+  cursor: pointer;
+  margin: 1vh 0;
+}
 
 .accountSelectList{
   width: 50%;
@@ -1276,10 +1326,14 @@ flex-direction: column;
 row-gap: 2vh;
 position: absolute;
 z-index: 2000;
-
-
 }
 
+
+
+.expiry_security_code{
+  display: flex;
+  justify-content: space-between;
+}
 .paymentSelectList{
   width: 50%;
   background-color: white;
@@ -1336,12 +1390,59 @@ z-index: 2000;
 
 }
 
+.fee_percentage{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3vh 0;
+  color: var(--gray-text);
+}
+
+.fee_percentage p:nth-child(2) span{
+  color: #9D9D9D;
+}
 .footerSubText{
   color: var(--dark-purple);
   font-size: 14px;
   text-align: center;
   margin-top: 3vh;
 }
+
+.add_money_success_content{
+  background-color: white;
+  border-radius: 1rem;
+  height: 50vh;
+  width: 23%;
+  padding:2rem 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+.add_money_success_content p{
+  font-weight: 500;
+  color: var(--gray-text);
+  width: 70%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.add_money_success{
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: .4s all ease;
+}
+
+
+
+
+
 
 /* 
 
@@ -1932,7 +2033,7 @@ input:checked + .slider:before {
   justify-content: center;
   gap: 1vw;
   font-size: 1rem;
-  width: 12vw;
+  width: 15vw;
   height: 6vh;
   color: var(--white-color);
   background-color: #33ce6d;
