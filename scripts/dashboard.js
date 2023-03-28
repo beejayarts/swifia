@@ -1,5 +1,5 @@
 // import {pages} from './dashboardPages'
-
+// commercial break
 const pages = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
