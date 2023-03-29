@@ -562,6 +562,7 @@ DASHBOARD PAGE CONTENT STYLES
   align-items: center;
   justify-content: space-between;
   gap: 4%;
+  position: relative;
 }
 
 .currency_to_box {
@@ -574,6 +575,7 @@ DASHBOARD PAGE CONTENT STYLES
 .currency_from_value_left,
 .currency_from_type_right {
   width: 48%;
+  position: relative;
 }
 
 .currency_input {
@@ -609,14 +611,14 @@ DASHBOARD PAGE CONTENT STYLES
 
 .select_currency_modal_top {
   background-color: var(--white-color);
-  width: 20rem;
+  width: 15rem;
   padding: 0.5rem;
   height: fit-content;
   border-radius: 0.5rem;
   box-shadow: -10px 17px 43px 12px rgba(107, 67, 251, 0.32);
   position: absolute;
-  top: -3000;
-  right: 68;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;

@@ -319,22 +319,7 @@
                 <div class="ccc_bottom_right_content">
                   <!-- CONVERTING FROM HERE -->
                   <div class="currency_from_box">
-                    <div class="currency_from_value_left">
-                      <label for="currency_from_value_id">Currency from</label>
-                      <input
-                        type="text"
-                        value="1.00"
-                        id="currency_from_value_id"
-                        class="currency_input"
-                      />
-                    </div>
-                    <div class="currency_from_type_right">
-                      <label for="currency_from_type_id1">Currency Type</label>
-                      <div
-                        onclick="openCurrencyModal(1)"
-                        class="currency_input currency_flag"
-                        id="currency_from_type_id1"
-                      >
+                    
                         <!-- SELECT CURRENCY modal (CONVERT FROM) -->
                         <div
                           id="convert_from_modal"
@@ -375,8 +360,25 @@
                             >
                           </button>
                         </div>
+                         <!-- end of SELECT CURRENCY modal (CONVERT FROM) -->
+                    <div class="currency_from_value_left">
+                      <label for="currency_from_value_id">Currency from</label>
+                      <input
+                        type="text"
+                        value="1.00"
+                        id="currency_from_value_id"
+                        class="currency_input"
+                      />
+                    </div>
+                    <div class="currency_from_type_right">
+                      <label for="currency_from_type_id1">Currency Type</label>
+                      <div
+                        onclick="openCurrencyModal(1)"
+                        class="currency_input currency_flag"
+                        id="currency_from_type_id1"
+                      >
 
-                        <!-- end of SELECT CURRENCY modal (CONVERT FROM) -->
+                       
                         <div class="currency_visuals">
                           <img
                             src="./../assets/USA.png"

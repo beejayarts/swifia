@@ -1,6 +1,6 @@
 // import {pages} from './dashboardPages'
 // commercial break
-const pages = {
+const pagesx = {
   dashboard: ` <div class="dcHeader">
       <p>Welcome <span>Peter</span></p>
     </div>
@@ -1903,7 +1903,7 @@ function renderPage(page) {
     pages[page];
 }
 
-renderPage("dashboard");
+// renderPage("dashboard");
 
 //end of rendering the different dashboard pages
 
@@ -1912,9 +1912,10 @@ renderPage("dashboard");
 function openCurrencyModal ()  {
   const convertFromModal = document.getElementById("convert_from_modal");
   const convertToModal = document.getElementById("convert_to_modal");
-  console.log("hello Peter obi");
-  console.log(convertFromModal);
+ 
+  
   convertFromModal.style.display = "block";
+  console.log(convertFromModal, 'obi');
   // convertToModal.style.display = "none";
 };
 
