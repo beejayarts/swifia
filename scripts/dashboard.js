@@ -27,7 +27,7 @@ const pages = {
       </div>
       <div class="aoc_bottom">
         <!-- BRITISH POUNDS CARD -->
-        <div class="currency_card">
+        <div onclick='goBritishCard()' class="currency_card">
           <div class="currency_card_top">
             <img
               src="./../assets/britain.png"
@@ -49,7 +49,7 @@ const pages = {
           </div>
         </div>
         <!-- USA DOLLARS CARD -->
-        <div class="currency_card">
+        <div onclick='goDollarCard()'  class="currency_card">
           <div class="currency_card_top">
             <img
               src="./../assets/USA.png"
@@ -71,7 +71,7 @@ const pages = {
           </div>
         </div>
         <!-- EUROS  CARD -->
-        <div class="currency_card">
+        <div onclick='goEuroCard()' class="currency_card">
           <div class="currency_card_top">
             <img
               src="./../assets/euro.png"
@@ -93,7 +93,7 @@ const pages = {
           </div>
         </div>
         <!-- NIGERAN NAIRA CARD -->
-        <div class="currency_card">
+        <div onclick='goNaijaCard()' class="currency_card">
           <div class="currency_card_top">
             <img
               src="./../assets/nigeria.png"
@@ -1909,17 +1909,20 @@ renderPage("dashboard");
 
 // Handling the Modals on Dashboard home
 
-const openCurrencyModal = () => {
+function openCurrencyModal ()  {
   const convertFromModal = document.getElementById("convert_from_modal");
   const convertToModal = document.getElementById("convert_to_modal");
   console.log("hello Peter obi");
   console.log(convertFromModal);
   convertFromModal.style.display = "block";
-  convertToModal.style.display = "none";
+  // convertToModal.style.display = "none";
 };
 
-const closeCurrencyModal = () => {
+function closeCurrencyModal() {
+  const convertFromModal = document.getElementById("convert_from_modal");
+  
   convertFromModal.style.display = "none";
+  console.log(convertFromModal)
 };
 
 const openConvertToModal = () => {
@@ -3010,7 +3013,6 @@ function menuLogout() {
   document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 }
 
-
 // =========================ACCOUNTS PAGES=========================================
 
 const accountPages = {
@@ -3136,7 +3138,7 @@ const accountPages = {
   </div>
 </div>
 <!-- END OF MY ACCOUNTS TAB -->`,
-acc3:`  <div class="myaccounts_Header">
+  acc3: `  <div class="myaccounts_Header">
 <button class="pageBackBtn">
   <span class="material-symbols-outlined"> arrow_back </span>
   Add Money
@@ -3216,7 +3218,7 @@ acc3:`  <div class="myaccounts_Header">
 </div>
 </div>
 <!-- END OF MY ACCOUNTS TAB -->`,
-acc4: `
+  acc4: `
 <div class="myaccounts_Header">
   <button class="pageBackBtn">
     <span class="material-symbols-outlined"> arrow_back </span>
@@ -3389,14 +3391,14 @@ acc4: `
   </div>
 </div>
 <!-- END OF SWAP MONEY TAB -->
-`
+`,
 };
-
 
 // Rendering the internal pages for ACCOUNTS
 function renderAccountPages(page) {
   console.log(page);
-  document.getElementById("dashboard_content_container").innerHTML = accountPages[page];
+  document.getElementById("dashboard_content_container").innerHTML =
+    accountPages[page];
 }
 
 // renderAccountPages(acc2)
@@ -3406,7 +3408,7 @@ function ShowAccPageTwo() {
   renderAccountPages("acc2");
 
   // Make the menu button active
-  document.getElementById('accountsNav').classList.add("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.add("active_sidebar_btn");
   document
     .getElementById("dashboardNav")
     .classList.remove("active_sidebar_btn");
@@ -3425,15 +3427,14 @@ function ShowAccPageThree() {
   renderAccountPages("acc3");
 }
 
-
-// renderAccountPages(acc4) 
+// renderAccountPages(acc4)
 
 function ShowAccPageFour() {
   console.log("acc4");
   renderAccountPages("acc4");
 
   // Make the menu button active
-  document.getElementById('accountsNav').classList.add("active_sidebar_btn");
+  document.getElementById("accountsNav").classList.add("active_sidebar_btn");
   document
     .getElementById("dashboardNav")
     .classList.remove("active_sidebar_btn");
@@ -3444,8 +3445,6 @@ function ShowAccPageFour() {
   document.getElementById("profileNav").classList.remove("active_sidebar_btn");
   document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 }
-
-
 
 // functions for account type input
 function setAccountType(n) {
@@ -3463,26 +3462,24 @@ function setAccountType(n) {
   document.getElementById("accountSelectListID").style.display = "none";
 }
 
-
-
 // functions for WALLET SWAP ACCOUNT TYPE
 function setWalletAccountType(n) {
   document.getElementById("walletAccountTypeValue").innerText = n;
   if (n == "USD") {
-    
     document.getElementById("wallet_currency_img").src = "./../assets/USA.png";
   } else if (n == "GBP") {
-    console.log('uba')
-    document.getElementById("wallet_currency_img").src = "./../assets/britain.png";
+    console.log("uba");
+    document.getElementById("wallet_currency_img").src =
+      "./../assets/britain.png";
   } else if (n === "EUR") {
     document.getElementById("wallet_currency_img").src = "./../assets/euro.png";
   } else {
-    document.getElementById("wallet_currency_img").src = "./../assets/nigeria.png";
+    document.getElementById("wallet_currency_img").src =
+      "./../assets/nigeria.png";
   }
 
   document.getElementById("walletAccID").style.display = "none";
 }
-
 
 function showAccountOptions() {
   const accountsElement = document.getElementById("accountSelectListID");
@@ -3504,14 +3501,14 @@ function showWalletOptions() {
 
 // functions for payment type input
 
-function setPaymentType(n){
-if (n=='card'){
- document.getElementById('paymentTypeValue').innerText='via Card'
-}else{
-  document.getElementById('paymentTypeValue').innerText='via Transfer'
-}
+function setPaymentType(n) {
+  if (n == "card") {
+    document.getElementById("paymentTypeValue").innerText = "via Card";
+  } else {
+    document.getElementById("paymentTypeValue").innerText = "via Transfer";
+  }
 
-document.getElementById("paymentSelectListID").style.display = "none";
+  document.getElementById("paymentSelectListID").style.display = "none";
 }
 
 function showPaymentOptions() {
@@ -3523,19 +3520,17 @@ function showPaymentOptions() {
   }
 }
 
-
 // ADD MONEY PROMPT
 
-function addMoneyPrompt(){
-  document.getElementById('addMoneySuccessModal').style.display='flex'
+function addMoneyPrompt() {
+  document.getElementById("addMoneySuccessModal").style.display = "flex";
 }
-
 
 //send to Global Transfer Page
 
-function sendViaGlobalTransfer(){
+function sendViaGlobalTransfer() {
   renderPage("global");
-  document.getElementById('globalNav').classList.add("active_sidebar_btn");
+  document.getElementById("globalNav").classList.add("active_sidebar_btn");
   document
     .getElementById("dashboardNav")
     .classList.remove("active_sidebar_btn");
@@ -3547,9 +3542,36 @@ function sendViaGlobalTransfer(){
   document.getElementById("supportNav").classList.remove("active_sidebar_btn");
 }
 
-
 //Process Money Swap
 
-function processMoneySwap(){
-  document.getElementById('swapMoneySuccessModal').style.display='flex'
+function processMoneySwap() {
+  document.getElementById("swapMoneySuccessModal").style.display = "flex";
+}
+
+// Move from DASHBOARD to CURRENCY CARDS
+function goBritishCard() {
+  renderPage("accounts");
+  document.getElementById("accountsNav").classList.add("active_sidebar_btn");
+  document
+    .getElementById("dashboardNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("globalNav").classList.remove("active_sidebar_btn");
+  document
+    .getElementById("transactionsNav")
+    .classList.remove("active_sidebar_btn");
+  document.getElementById("profileNav").classList.remove("active_sidebar_btn");
+  document.getElementById("supportNav").classList.remove("active_sidebar_btn");
+}
+function goDollarCard() {
+  goBritishCard();
+  console.log("dollllaaaaaaaaaaaaa");
+  showDollarsBoard();
+}
+function goEuroCard() {
+  goBritishCard();
+  showEurosBoard();
+}
+function goNaijaCard() {
+  goBritishCard();
+  showNaijaBoard();
 }

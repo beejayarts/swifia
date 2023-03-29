@@ -118,7 +118,317 @@
       <main class="main_section">
         <!-- PRINCIPAL CONTAINER -->
         <div id="dashboard_content_container" class="dashboard_content">
-     
+          <div class="dcHeader">
+            <p>Welcome <span>Peter</span></p>
+          </div>
+          <div class="account_overview_card">
+            <div class="aoc_top">
+              <h6 class="card_title">Account Overview</h6>
+              <div class="add_send_swap_group">
+                <button onclick="ShowAccPageTwo()" class="aoc_top_btn">
+                  <img src="./../assets/addmoney.png" alt="add money" /><span
+                    >Add money</span
+                  >
+                </button>
+                <button onclick="sendViaGlobalTransfer()" class="aoc_top_btn">
+                  <img src="./../assets/sendmoney.png" alt="send money" /><span
+                    >Send</span
+                  >
+                </button>
+                <button onclick="ShowAccPageFour()" class="aoc_top_btn">
+                  <img src="./../assets/swapmoney.png" alt="swap money" /><span
+                    >Swap currency</span
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="aoc_bottom">
+              <!-- BRITISH POUNDS CARD -->
+              <div onclick="goBritishCard()" class="currency_card">
+                <div class="currency_card_top">
+                  <img
+                    src="./../assets/britain.png"
+                    alt="Britain"
+                    class="country_flag"
+                  />
+                  <h6>Great Britain Pounds</h6>
+                </div>
+                <div class="currency_card_bottom">
+                  <div class="currency_card_bottom_left">
+                    <small>Available Balance</small>
+                    <h4>£0.00</h4>
+                  </div>
+                  <div class="currency_card_bottom_right">
+                    <span class="material-symbols-rounded currency_arrow">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- USA DOLLARS CARD -->
+              <div onclick="goDollarCard()" class="currency_card">
+                <div class="currency_card_top">
+                  <img
+                    src="./../assets/USA.png"
+                    alt="Britain"
+                    class="country_flag"
+                  />
+                  <h6>United states Dollars</h6>
+                </div>
+                <div class="currency_card_bottom">
+                  <div class="currency_card_bottom_left">
+                    <small>Available Balance</small>
+                    <h4>$0.00</h4>
+                  </div>
+                  <div class="currency_card_bottom_right">
+                    <span class="material-symbols-rounded currency_arrow">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- EUROS  CARD -->
+              <div onclick="goEuroCard()" class="currency_card">
+                <div class="currency_card_top">
+                  <img
+                    src="./../assets/euro.png"
+                    alt="Britain"
+                    class="country_flag"
+                  />
+                  <h6>Euro</h6>
+                </div>
+                <div class="currency_card_bottom">
+                  <div class="currency_card_bottom_left">
+                    <small>Available Balance</small>
+                    <h4>€0.00</h4>
+                  </div>
+                  <div class="currency_card_bottom_right">
+                    <span class="material-symbols-rounded currency_arrow">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- NIGERAN NAIRA CARD -->
+              <div onclick="goNaijaCard()" class="currency_card">
+                <div class="currency_card_top">
+                  <img
+                    src="./../assets/nigeria.png"
+                    alt="Britain"
+                    class="country_flag"
+                  />
+                  <h6>Nigerian Naira</h6>
+                </div>
+                <div class="currency_card_bottom">
+                  <div class="currency_card_bottom_left">
+                    <small>Available Balance</small>
+                    <h4>₦0.00</h4>
+                  </div>
+                  <div class="currency_card_bottom_right">
+                    <span class="material-symbols-rounded currency_arrow">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RECENT TRANSACTIONS card -->
+
+          <div class="recent_transactions_card">
+            <div class="rtc_top">
+              <h6 class="card_title">Recent Transactions</h6>
+            </div>
+            <table class="rtc_table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Tendered</th>
+                  <th>Received</th>
+                  <th>Fee</th>
+                  <th>Reference</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Feb 08, 2023, 12:00AM</td>
+                  <td>Deposit</td>
+                  <td>$5000</td>
+                  <td>$4990</td>
+                  <td>$10</td>
+                  <td>5SWYVODSBP6</td>
+                  <td><span class="success_tag">Successful</span></td>
+                </tr>
+                <tr>
+                  <td>Feb 08, 2023, 12:00AM</td>
+                  <td>Deposit</td>
+                  <td>$5000</td>
+                  <td>$4990</td>
+                  <td>$10</td>
+                  <td>5SWYVODSBP6</td>
+                  <td><span class="pending_tag">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Feb 08, 2023, 12:00AM</td>
+                  <td>Deposit</td>
+                  <td>$5000</td>
+                  <td>$4990</td>
+                  <td>$10</td>
+                  <td>5SWYVODSBP6</td>
+                  <td><span class="pending_tag">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Feb 08, 2023, 12:00AM</td>
+                  <td>Deposit</td>
+                  <td>$5000</td>
+                  <td>$4990</td>
+                  <td>$10</td>
+                  <td>5SWYVODSBP6</td>
+                  <td><span class="success_tag">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="card_control_btn_container">
+              <button id="test" type button class="card_control_btn">
+                View all transactions
+              </button>
+            </div>
+          </div>
+
+          <!-- CURRENCY CONVERTER card -->
+
+          <div class="currency_converter_card">
+            <div class="rtc_top">
+              <h6 class="card_title">Currency Converter</h6>
+            </div>
+            <div class="ccc_bottom">
+              <div class="ccc_bottom_left ccc-cards">
+                <div>
+                  <small class="exchange_rate_display">Exchange rate</small>
+                  <div class="ccc_conversion">
+                    <p>1 USD equals</p>
+                    <h5>0.8067 GDP</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="ccc_bottom_right ccc-cards">
+                <div class="ccc_bottom_right_content">
+                  <!-- CONVERTING FROM HERE -->
+                  <div class="currency_from_box">
+                    <div class="currency_from_value_left">
+                      <label for="currency_from_value_id">Currency from</label>
+                      <input
+                        type="text"
+                        value="1.00"
+                        id="currency_from_value_id"
+                        class="currency_input"
+                      />
+                    </div>
+                    <div class="currency_from_type_right">
+                      <label for="currency_from_type_id1">Currency Type</label>
+                      <div
+                        onclick="openCurrencyModal(1)"
+                        class="currency_input currency_flag"
+                        id="currency_from_type_id1"
+                      >
+                        <!-- SELECT CURRENCY modal (CONVERT FROM) -->
+                        <div
+                          id="convert_from_modal"
+                          class="select_currency_modal_top"
+                        >
+                          <button
+                            onclick="closeCurrencyModal()"
+                            class="choose_currency_btn close_choose_currency"
+                          >
+                            <span class="material-symbols-outlined">
+                              close
+                            </span>
+                          </button>
+                          <button
+                            id="choose_dollars"
+                            class="choose_currency_btn"
+                          >
+                            <img src="./../assets/USA.png" alt="USD" /><span
+                              >USD</span
+                            >
+                          </button>
+                          <button
+                            id="choose_pounds"
+                            class="choose_currency_btn"
+                          >
+                            <img src="./../assets/britain.png" alt="GBP" /><span
+                              >GBP</span
+                            >
+                          </button>
+                          <button id="choose_euro" class="choose_currency_btn">
+                            <img src="./../assets/euro.png" alt="EUR" /><span
+                              >EUR</span
+                            >
+                          </button>
+                          <button id="choose_naira" class="choose_currency_btn">
+                            <img src="./../assets/nigeria.png" alt="NGN" /><span
+                              >NGN</span
+                            >
+                          </button>
+                        </div>
+
+                        <!-- end of SELECT CURRENCY modal (CONVERT FROM) -->
+                        <div class="currency_visuals">
+                          <img
+                            src="./../assets/USA.png"
+                            alt="convertToCurrencyType"
+                          />
+                          <p>USD</p>
+                        </div>
+
+                        <span class="material-symbols-outlined">
+                          keyboard_arrow_down
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CONVERTING TO HERE -->
+                  <div class="currency_to_box">
+                    <div class="currency_from_value_left">
+                      <label for="currency_from_value_id">Currency To</label>
+                      <input
+                        class="currency_input"
+                        type="text"
+                        value="0.81"
+                        id="currency_from_value_id"
+                      />
+                    </div>
+                    <div class="currency_from_type_right">
+                      <label for="currency_from_type_id2">Currency Type</label>
+                      <div
+                        onclick="openConvertToModal()"
+                        class="currency_input currency_flag"
+                        id="currency_from_type_id2"
+                      >
+                      
+                        <div class="currency_visuals">
+                          <img
+                            src="./../assets/britain.png"
+                            alt="convertToCurrencyType"
+                          />
+                          <p>GBP</p>
+                        </div>
+
+                        <span class="material-symbols-outlined">
+                          keyboard_arrow_down
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- END OF PRINCIPAL CONTAINER -->
       </main>
